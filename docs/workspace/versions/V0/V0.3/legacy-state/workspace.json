@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "profile": {
+    "origin": "https://blog.agent.kiloapp.ir",
+    "preferred_origin": "https://blog.kiloapp.ir"
+  },
+  "job": {
+    "name": "blog-publisher",
+    "version": "0.1.0",
+    "origin": {
+      "kind": "embedded",
+      "name": "blog-publisher",
+      "version": "0.1.0"
+    },
+    "docs": "docs/job/versions/V0/V0.1/"
+  },
+  "active_project": "004-agent-presentation",
+  "first_project": "001-workshop-7",
+  "projects": {
+    "000-index": {
+      "title": "Index",
+      "version": "0.1.2",
+      "docs": "docs/projects/000-index/versions/V0.1.2"
+    },
+    "001-workshop-7": {
+      "title": "Workshop 7",
+      "version": "0.1.1",
+      "docs": "docs/projects/001-workshop-7/versions/V0.1.1"
+    },
+    "002-claude-server": {
+      "title": "Claude on Server",
+      "version": "0.2",
+      "docs": "docs/projects/002-claude-server/versions/V0.2"
+    },
+    "003-brah-paper": {
+      "title": "BRAH Security Paper",
+      "version": "6.2",
+      "docs": "docs/projects/003-brah-paper/versions/V6/V6.2"
+    },
+    "004-agent-presentation": {
+      "title": "Agent Presentation (167 slides)",
+      "version": "7.4",
+      "docs": "docs/projects/004-agent-presentation/versions/V7/V7.4"
+    }
+  },
+  "workspace": {
+    "version": "0.3.0",
+    "docs": "docs/workspace/living/README.md"
+  },
+  "catalog_removed": true
+}

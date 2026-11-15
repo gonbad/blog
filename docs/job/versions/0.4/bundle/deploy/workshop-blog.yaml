@@ -1,0 +1,23 @@
+# Dedicated first-post route. Existing *.agent.kiloapp.ir certificate is reused.
+http:
+  routers:
+    workshop-blog-http:
+      entryPoints: [http]
+      rule: Host(`blog.agent.kiloapp.ir`)
+      middlewares: [workshop-blog-https]
+      service: workshop-blog
+    workshop-blog:
+      entryPoints: [https]
+      rule: Host(`blog.agent.kiloapp.ir`)
+      service: workshop-blog
+      tls: {}
+  middlewares:
+    workshop-blog-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
+  services:
+    workshop-blog:
+      loadBalancer:
+        servers:
+          - url: http://10.0.1.1:8014

@@ -1,0 +1,7 @@
+{
+  "origin": "https://blog.agent.kiloapp.ir",
+  "preferred_origin": "https://blog.kiloapp.ir",
+  "deployment": {
+    "adapter": "shared/deploy.py"
+  }
+}

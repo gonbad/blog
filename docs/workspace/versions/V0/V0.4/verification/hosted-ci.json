@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "moom_version": "0.4.1",
+  "moom_commit": "355b6bb89b13c0fe26e64672365e655299578a59",
+  "url": "https://github.com/gonbad/moom/actions/runs/43154265964",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "lifecycle (macos-latest, 3.12)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gonbad/moom/actions/runs/43154265964/job/130970421355"
+    },
+    {
+      "name": "lifecycle (windows-latest, 3.12)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gonbad/moom/actions/runs/43154265964/job/130970421589"
+    },
+    {
+      "name": "lifecycle (windows-latest, 3.10)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gonbad/moom/actions/runs/43154265964/job/130970421646"
+    },
+    {
+      "name": "lifecycle (ubuntu-latest, 3.10)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gonbad/moom/actions/runs/43154265964/job/130970421766"
+    },
+    {
+      "name": "lifecycle (ubuntu-latest, 3.12)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gonbad/moom/actions/runs/43154265964/job/130970421803"
+    },
+    {
+      "name": "lifecycle (macos-latest, 3.10)",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gonbad/moom/actions/runs/43154265964/job/130970421816"
+    }
+  ]
+}

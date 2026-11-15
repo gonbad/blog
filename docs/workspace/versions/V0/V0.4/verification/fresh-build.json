@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "fresh_publication": {
+    "ok": true,
+    "files": 85,
+    "offline_archives": 5,
+    "projects": [
+      "000-index",
+      "001-workshop-7",
+      "002-claude-server",
+      "003-brah-paper",
+      "004-agent-presentation",
+      "005-workshop-7-handbook"
+    ]
+  },
+  "legacy_workshops_present": false,
+  "generated_materials_reused": false,
+  "participant_moom": "0.4.1",
+  "legacy_download_aliases": "match current kit",
+  "runtime_services": "not deployed by this check"
+}

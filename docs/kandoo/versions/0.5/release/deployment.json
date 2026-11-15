@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "origin": "https://blog.agent.kiloapp.ir",
+  "post": "https://blog.agent.kiloapp.ir/007-islamic-astronomy/",
+  "host": "vm10709-13184.vpsmarket.org",
+  "release": "0.1-d95b61e9bf7a",
+  "upload_root": "dist/",
+  "uploaded_files": 89,
+  "artifacts_verified": 88,
+  "serving_server": "Caddy",
+  "offline_download_verified": true,
+  "projects": [
+    "000-index",
+    "001-workshop-7",
+    "002-claude-server",
+    "003-brah-paper",
+    "004-agent-presentation",
+    "005-workshop-7-handbook",
+    "007-islamic-astronomy"
+  ],
+  "release_manifest_sha256": "d95b61e9bf7a16592736c7cae91e669cb0ef92c35e5bedbe531c5ae4c9ddaad8",
+  "publication_health": true,
+  "server_configuration_unchanged": true
+}

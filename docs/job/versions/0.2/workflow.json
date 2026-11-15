@@ -1,0 +1,169 @@
+{
+  "id": "publish-a-post",
+  "title": "Publish an independent instructional post",
+  "revision": "0.2",
+  "status": "candidate",
+  "owner_review": {
+    "file": "docs/projects/ID/questions.md",
+    "response_channel": "file",
+    "before_implementation": true,
+    "blank_answer": "pending",
+    "uncertain_decisions": "explicit confirmation or override",
+    "enforcement": "assistant procedure"
+  },
+  "project_layout": {
+    "source": "site",
+    "kind": "post",
+    "metadata": {
+      "publish": false
+    }
+  },
+  "steps": [
+    {
+      "id": "blog-brief",
+      "title": "Brief and confirmed inputs",
+      "procedure": "procedures/brief.md",
+      "depends_on": []
+    },
+    {
+      "id": "blog-story",
+      "title": "Story and reading structure",
+      "procedure": "procedures/story.md",
+      "depends_on": [
+        "blog-brief"
+      ]
+    },
+    {
+      "id": "blog-content",
+      "title": "Claims and useful content",
+      "procedure": "procedures/content.md",
+      "depends_on": [
+        "blog-story"
+      ]
+    },
+    {
+      "id": "blog-style",
+      "title": "Visual and interaction direction",
+      "procedure": "procedures/style.md",
+      "depends_on": [
+        "blog-content"
+      ]
+    },
+    {
+      "id": "blog-sample",
+      "title": "Representative working sequence",
+      "procedure": "procedures/sample.md",
+      "depends_on": [
+        "blog-style"
+      ],
+      "helpers": [
+        "preview"
+      ]
+    },
+    {
+      "id": "blog-build",
+      "title": "Complete the post",
+      "procedure": "procedures/build.md",
+      "depends_on": [
+        "blog-sample"
+      ],
+      "helpers": [
+        "preview"
+      ]
+    },
+    {
+      "id": "blog-check",
+      "title": "Interaction and layout review",
+      "procedure": "procedures/check.md",
+      "depends_on": [
+        "blog-build"
+      ],
+      "helpers": [
+        "verify"
+      ]
+    },
+    {
+      "id": "blog-package",
+      "title": "Offline package and real downloads",
+      "procedure": "procedures/package.md",
+      "depends_on": [
+        "blog-check"
+      ],
+      "helpers": [
+        "build"
+      ]
+    },
+    {
+      "id": "blog-publish",
+      "title": "Publish and edit the root",
+      "procedure": "procedures/publish.md",
+      "depends_on": [
+        "blog-package"
+      ],
+      "helpers": [
+        "deploy"
+      ]
+    }
+  ],
+  "resources": [
+    "deploy/Caddyfile",
+    "deploy/workshop-blog.service",
+    "deploy/workshop-blog.yaml"
+  ],
+  "helpers": {
+    "preview": {
+      "path": "bundle/tools/build.py",
+      "command": [
+        "python3",
+        "{helper}",
+        "--preview",
+        "{project}"
+      ],
+      "source_path": "tools/build.py",
+      "bundled": true,
+      "sha256": "32fe8aca53a717fb9df209258f098995f7d97e7ae8d9413031b67548e622621d"
+    },
+    "build": {
+      "path": "bundle/tools/build.py",
+      "command": [
+        "python3",
+        "{helper}"
+      ],
+      "source_path": "tools/build.py",
+      "bundled": true,
+      "sha256": "32fe8aca53a717fb9df209258f098995f7d97e7ae8d9413031b67548e622621d"
+    },
+    "verify": {
+      "path": "bundle/tools/verify.cjs",
+      "command": [
+        "node",
+        "{helper}"
+      ],
+      "source_path": "tools/verify.cjs",
+      "bundled": true,
+      "sha256": "e7da60304faa79f4a046f87c1f53997a8e2939958a69ed3f6323df92eaa172e7"
+    },
+    "deploy": {
+      "path": "bundle/tools/deploy.py",
+      "command": [
+        "python3",
+        "{helper}"
+      ],
+      "resources": [
+        "deploy/Caddyfile",
+        "deploy/workshop-blog.service",
+        "deploy/workshop-blog.yaml"
+      ],
+      "source_path": "tools/deploy.py",
+      "bundled": true,
+      "sha256": "3d16f2fe6d1f08bee82efdaf2827002f17242a7803f2621f07de044b0e5c8936"
+    }
+  },
+  "review_reference": null,
+  "resources_bundled": true,
+  "resource_sha256": {
+    "deploy/Caddyfile": "05594fcd94e75065d4afc77c2ab1d81769c587c67f3f1537e258f3e0829d834b",
+    "deploy/workshop-blog.service": "7c61001a47997cf71ce3380ea4150c8f4c12e6d955235af20f658fa0ba7b4fd7",
+    "deploy/workshop-blog.yaml": "1ecd1ebad7cbdd07fee3be38b8f7e784fefb0bba058a984e051e8f76eecc135c"
+  }
+}

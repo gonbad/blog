@@ -1,0 +1,15 @@
+{
+  "version": "0.2",
+  "primary_input": "docs/projects/002-claude-server/versions/V0.2/01-transcription.md",
+  "scene_order": ["problem", "solution", "server", "server-details", "github", "repository-details", "prompt", "reconnect", "new-session", "login", "controls", "local-edit"],
+  "removed_scene_ids": ["handoffs", "clone", "project-rule"],
+  "primary_problem": "Claude account closures affecting Iranian users and the 21 Aban change",
+  "solution": "Run Claude on a server outside Iran; implementation belongs in later scenes",
+  "prompt_language": "English",
+  "reader_inputs": ["server IP", "username", "password", "SSH port", "GitHub repository URL", "GitHub token"],
+  "prompt_actor": "AI running on the reader's own computer with execution access",
+  "delegated_actions": ["install local SSH public key", "install Git if absent", "install tmux", "install Claude", "clone repository", "create tmux session", "edit CLAUDE.md pull-before/push-after rule", "commit and push that edit"],
+  "prompt_controls": ["short faded preview", "complete-view modal", "copy complete English prompt", "download complete English prompt"],
+  "session_behavior": "create or attach by user-entered name, preserving other sessions",
+  "local_edit": "main/master/custom selector with actual pull and commit/push commands"
+}

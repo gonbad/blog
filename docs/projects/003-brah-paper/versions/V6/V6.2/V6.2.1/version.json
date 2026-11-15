@@ -1,0 +1,12 @@
+{
+  "version": "6.2.1",
+  "status": "published",
+  "change_input": {
+    "file": "docs/projects/003-brah-paper/versions/V6/V6.2/V6.2.1/01-request.md",
+    "sha256": "8429dfd0a9e53b922c1b746bf12644450b647ba4a26ce86465bf6af10f8fccb5",
+    "entry_mode": "agent-assisted"
+  },
+  "created_at": "2026-11-11T04:57:00+00:00",
+  "published_release": "7.4.1-32b147ce732e",
+  "publication_evidence": "docs/workspace/versions/V0/V0.3/release/public-verification.json"
+}

@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-13T15:58:33.025Z",
+  "url": "http://127.0.0.1:4173",
+  "project": "002-claude-server",
+  "version": "0.2",
+  "primary_input": "docs/projects/002-claude-server/versions/V0.2/01-transcription.md",
+  "checks": [
+    "generator validation, exact synthetic credentials in English JSON, PAT/HTTPS conversion",
+    "real Bash Git transactions on main/master/custom, spaced/Persian/apostrophe paths, pull, commit/push and no-change push",
+    "source fidelity: exact twelve-scene order, account-closure opening, solution visual, buy action/URL, GitHub guide, removed AI-owned teaching scenes",
+    "complete English prompt includes exact entered credentials; short faded preview, modal focus/escape, full clipboard and download, input/native Space/arrows",
+    "independent create-or-attach named sessions; main/master/custom Git selector, shell quoting and post-click navigation",
+    "all scenes and modal layout 1440×960",
+    "all scenes and modal layout 1366×768",
+    "all scenes and modal layout 390×844",
+    "all scenes and modal layout 320×640",
+    "credential edits invalidate output; reading mode; refresh clears credentials; no storage or runtime credential requests",
+    "actual downloaded V0.2 ZIP: file:// Persian/spaced path, offline fonts, credentials/generation/modal/fallback copy/navigation, zero network requests"
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "real_server_provisioning_tested": false,
+  "powershell_execution_tested": false,
+  "credential_fixtures": "synthetic only"
+}

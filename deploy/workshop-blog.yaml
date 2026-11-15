@@ -1,0 +1,31 @@
+# Both approved journal hostnames route to the same static service. The old
+# hostname keeps using the existing wildcard certificate; Traefik obtains and
+# renews a dedicated certificate for the new hostname with its HTTP-01 resolver.
+http:
+  routers:
+    workshop-blog-http:
+      entryPoints: [http]
+      rule: Host(`blog.kiloapp.ir`) || Host(`blog.agent.kiloapp.ir`)
+      middlewares: [workshop-blog-https]
+      service: workshop-blog
+    workshop-blog:
+      entryPoints: [https]
+      rule: Host(`blog.agent.kiloapp.ir`)
+      service: workshop-blog
+      tls: {}
+    workshop-blog-primary:
+      entryPoints: [https]
+      rule: Host(`blog.kiloapp.ir`)
+      service: workshop-blog
+      tls:
+        certResolver: letsencrypt
+  middlewares:
+    workshop-blog-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
+  services:
+    workshop-blog:
+      loadBalancer:
+        servers:
+          - url: http://10.0.1.1:8014

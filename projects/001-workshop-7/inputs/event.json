@@ -1,0 +1,10 @@
+{
+  "event": "workshop-7",
+  "working_name": "موم",
+  "dates": ["2026-11-19", "2026-11-20"],
+  "persian_dates": ["1405-08-28", "1405-08-29"],
+  "source": "Owner's chat instruction and V8 recordings/comments",
+  "current_delivery": ["manual vertical presentation", "offline ZIP", "worksheet", "calendar", "Moom starter kit", "participant handbook"],
+  "deferred": ["narration", "video", "automatic advancement"],
+  "unconfirmed": ["venue", "daily hours", "fees", "registration availability"]
+}

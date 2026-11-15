@@ -1,0 +1,22 @@
+[
+  {
+    "archive": "workshops/public-agent/dist/codo-agent-7.5.zip",
+    "files": 98,
+    "commands": 16,
+    "native_copies": 48,
+    "markdown_only": true,
+    "source_parity": true,
+    "session_artifacts_excluded": true,
+    "sha256": "1451ee3414443ddc2f9a0a0d7a09b3a8af1698edbe4af13ba4c02f9f49c98051"
+  },
+  {
+    "archive": "workshops/public-agent/dist/codo-7.5.zip",
+    "files": 98,
+    "commands": 16,
+    "native_copies": 48,
+    "markdown_only": true,
+    "source_parity": true,
+    "session_artifacts_excluded": true,
+    "sha256": "1451ee3414443ddc2f9a0a0d7a09b3a8af1698edbe4af13ba4c02f9f49c98051"
+  }
+]

@@ -1,0 +1,172 @@
+{
+  "id": "002-claude-server",
+  "title": "Claude Code on your own server",
+  "version": "0.2",
+  "workflow": "docs/job/versions/0.5/workflow.json",
+  "created_at": "2026-11-09T12:08:19+00:00",
+  "milestones": {
+    "blog-brief": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.2/brief.md",
+      "sha256": "a2e494b7d3870e47a3e0873366df56409d8549282cb40c0d6811c92d47622a18",
+      "evidence": null,
+      "at": "2026-11-09T16:58:58+00:00"
+    },
+    "blog-story": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.2/story.md",
+      "sha256": "45bbcaa22f407d4f00357dd7a12d518309ebc305b679f26ee6c0b5a6ae4cfcbe",
+      "evidence": null,
+      "at": "2026-11-09T16:58:58+00:00"
+    },
+    "blog-content": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.2/claims.md",
+      "sha256": "76959d4b343f21f436c586ebb1d4cbb82c4a7bd48cc7d7d2ee4bcc5b18f627b0",
+      "evidence": null,
+      "at": "2026-11-09T16:58:58+00:00"
+    },
+    "blog-fidelity": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.2/fidelity.md",
+      "sha256": "0ff6ee2ccb8166fca19e2289a5956b46dc9697af8eb75b156d57eaa8f2eec047",
+      "evidence": null,
+      "at": "2026-11-09T16:58:58+00:00"
+    },
+    "blog-style": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.2/style.md",
+      "sha256": "11e938878c7cb9db7b788d5f811ed1242e31a315a0f7cb1e973fa07b1af2b73d",
+      "evidence": null,
+      "at": "2026-11-09T16:58:58+00:00"
+    },
+    "blog-sample": {
+      "state": "ready",
+      "artifact": "projects/002-claude-server/site",
+      "sha256": "01bac872fc3389e1f5f3b3df4696a31c6c6e4026be3e7e4016e0d88195b958bc",
+      "evidence": null,
+      "at": "2026-11-09T16:58:58+00:00"
+    },
+    "blog-build": {
+      "state": "ready",
+      "artifact": "projects/002-claude-server/site",
+      "sha256": "01bac872fc3389e1f5f3b3df4696a31c6c6e4026be3e7e4016e0d88195b958bc",
+      "evidence": null,
+      "at": "2026-11-09T16:58:58+00:00"
+    },
+    "blog-check": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.2/releases/0.2/verification.json",
+      "sha256": "4e2cbdaf67a733ace94e070b8f88bb2aa9759416ea8e061f0e4b82b063c3393f",
+      "evidence": null,
+      "at": "2026-11-09T17:05:30+00:00"
+    },
+    "blog-package": {
+      "state": "ready",
+      "artifact": "dist/002-claude-server/downloads/claude-server-v0.2.zip",
+      "sha256": "1300bcdea4cb74236dfa9a13cac0a354c0943a71a4e2ea25c615036b10b317fe",
+      "evidence": null,
+      "at": "2026-11-09T17:05:30+00:00"
+    },
+    "blog-publish": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.2/releases/0.2/deployment.json",
+      "sha256": "79cb94ac64af4ceaa46c792926d2db250b40e1bcc5133f6e9a1f2a88b4e4859d",
+      "evidence": null,
+      "at": "2026-11-09T17:05:30+00:00"
+    }
+  },
+  "issues": [],
+  "migrations": [
+    {
+      "from": "docs/job/versions/0.1/workflow.json",
+      "to": "docs/job/versions/0.2/workflow.json",
+      "affected": [
+        "blog-brief",
+        "blog-build",
+        "blog-check",
+        "blog-content",
+        "blog-package",
+        "blog-publish",
+        "blog-sample",
+        "blog-story",
+        "blog-style"
+      ],
+      "note": "Apply the owner-requested file review procedure to post 002; wait for saved answers before implementation",
+      "at": "2026-11-09T12:16:38+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.2/workflow.json",
+      "to": "docs/job/versions/0.3/workflow.json",
+      "affected": [
+        "blog-brief",
+        "blog-build",
+        "blog-check",
+        "blog-content",
+        "blog-package",
+        "blog-publish",
+        "blog-sample",
+        "blog-story",
+        "blog-style"
+      ],
+      "note": "Use numbered review rounds, separate question/decision formats, versioned documents, project roadmaps and snapshot-aware builds for post 002",
+      "at": "2026-11-09T13:05:21+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.3/workflow.json",
+      "to": "docs/job/versions/0.4/workflow.json",
+      "affected": [
+        "blog-brief",
+        "blog-build",
+        "blog-check",
+        "blog-content",
+        "blog-package",
+        "blog-publish",
+        "blog-sample",
+        "blog-story",
+        "blog-style"
+      ],
+      "note": "Apply submitted-review delegation and selected-post QA/deployment corrections",
+      "at": "2026-11-09T13:43:41+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.4/workflow.json",
+      "to": "docs/job/versions/0.4.1/workflow.json",
+      "affected": [
+        "blog-check",
+        "blog-package",
+        "blog-publish"
+      ],
+      "note": "Reject unknown-project acceptance dispatch instead of certifying a different post",
+      "at": "2026-11-09T13:49:18+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.4.1/workflow.json",
+      "to": "docs/job/versions/0.5/workflow.json",
+      "affected": [
+        "blog-brief",
+        "blog-build",
+        "blog-check",
+        "blog-content",
+        "blog-fidelity",
+        "blog-package",
+        "blog-publish",
+        "blog-sample",
+        "blog-story",
+        "blog-style"
+      ],
+      "note": "Apply diagnosed source-fidelity and manual-version-entry corrections to post 002 V0.2",
+      "at": "2026-11-09T16:54:35+00:00"
+    }
+  ],
+  "docs": "docs/projects/002-claude-server/versions/V0.2",
+  "releases": [
+    {
+      "version": "0.1",
+      "next_version": "0.2",
+      "note": "Apply the owner-provided V0.2 transcription after diagnosing and correcting source/actor drift",
+      "snapshot": "projects/002-claude-server/versions/V0.1",
+      "at": "2026-11-09T16:30:16+00:00"
+    }
+  ]
+}

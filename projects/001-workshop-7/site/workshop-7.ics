@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Workshop Journal//Moom Workshop 7//FA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:workshop-7-20261119@blog.kiloapp.ir
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261121
+SUMMARY:کارگاه موم — از کار تکراری به روش قابل استفادهٔ دوباره
+DESCRIPTION:کارگاه هفتم؛ ۱۹ و ۲۰ نوامبر ۲۰۲۶ / ۲۸ و ۲۹ آبان ۱۴۰۵. ساعت برگزاری در این یادآوری مشخص نشده است.
+URL:https://blog.kiloapp.ir/001-workshop-7/
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

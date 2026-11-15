@@ -1,0 +1,46 @@
+---
+name: job-build
+description: Assemble and verify the web publication and any intentional materials.
+---
+
+# /job-build
+
+Read `AGENTS.md`, the four `docs/constitution/` documents and `docs/kandoo/living/profile.md`,
+`job.md`, `server.md` and `status.md`. Resolve the active Project `ID` and `VERSION` from
+status; all paths are workspace-root paths. Read only the installed references
+`docs/kandoo/living/references/workflow.md`, `distribution.md` and `quality.md`, plus
+`docs/projects/ID/living/idea.md`, `layout.md`, `publication.md` (when present) and
+submitted rounds in `docs/projects/ID/versions/VERSION/`. Preserve earlier outputs and
+authorization.
+
+Gate: `docs/projects/ID/living/layout.md` and public source under `projects/ID/` are
+ready. Use or generate only needed Kandoo (`kandoo/`) or Project (`projects/ID/`) build
+helpers. Stage public files strictly from the allowlisted source directory, excluding
+inputs, secrets, `docs/` and version history. Unfinished unrelated drafts must never
+break a build; a draft preview build remains marked preview-only and undeployable.
+
+Imported materials are local checksum-pinned artifacts; never invoke sibling template
+sources, parent maintainer tools or network fetches during a build. Produce compiled web
+output and SHA-256 inventories. Check web links, assets, RTL/mobile reading and actual
+interactive behavior. Do not create a post ZIP by default. Validate any explicitly
+selected downloads as part of the release. Run browser checks
+with Project-owned dependencies under `projects/ID/checks/` when available; if a browser
+binary or package download is unavailable, preserve the verified static output,
+use the prepared local check fallback and record blocked browser evidence honestly in a
+`.md` verification report under `docs/projects/ID/versions/VERSION/`. Never refer the
+participant to non-`.md` files outside `docs/`. Route to `/job-deploy` with separate
+technical build, source fidelity and human acceptance states.
+
+Apply the file-review/certainty protocol on `.md` files inside `docs/` and assess updates
+to the Job, shared Kandoo, active Project and write-only creator feedback. Persist what
+changed, evidence, pending review and next action in `docs/projects/ID/living/status.md`
+and mirror `docs/kandoo/living/status.md`. Finish every reply with the current Job's full ordered
+steps localized and one exact next action (`/job-deploy` or the `.md` review file in `docs/`).
+
+## Journal operation
+
+From the workspace root run `python3 kandoo/build.py` and `python3 kandoo/check.py`.
+For a draft use `--preview ID --output .preview/ID`; it cannot deploy. A publication
+contract with no `Archive` produces web output only. A named `Archive` explicitly
+opts in, as for retained presentations; validate that artifact too. Preserve material
+contracts and private/output ownership checks.

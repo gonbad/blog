@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-11-09T13:49:42.835Z",
+  "url": "https://blog.agent.kiloapp.ir",
+  "project": "002-claude-server",
+  "checks": [
+    "generator rejects unsafe/malformed inputs; Persian digits, IPv6 and SSH URI supported",
+    "form validation, generation, prompt download, native editing keys, arrows after buttons",
+    "stale generated output invalidated on edits, personalized commands, reading mode",
+    "layout 1440×960",
+    "layout 1366×768",
+    "layout 390×844",
+    "layout 320×640",
+    "OS-specific terminal choices, memory-only inputs, reload/reset clears configuration",
+    "actual downloaded ZIP: file://, Persian/spaced path, offline fonts, generator/copy/navigation, zero network requests"
+  ],
+  "page_errors": [],
+  "failed_requests": [],
+  "real_server_provisioning_tested": false,
+  "workflow": "0.4.1",
+  "release_manifest_sha256": "17111bd0339723503164ea02f81f7ee3b28fa0fc4f0f951020b217f1c862142e",
+  "moom_lifecycle_tests": 9,
+  "first_post_regression": {
+    "passed": true,
+    "checks": [
+      "examples, native tab keys and Space activation, decision buttons followed by vertical navigation, direct seeking",
+      "reading mode, Up/Down after focused navigation buttons, native text editing",
+      "layout at 1440×960",
+      "layout at 1366×768",
+      "layout at 390×844",
+      "layout at 320×640",
+      "Up after clicking a download link, real Moom and handbook downloads",
+      "calendar dates and UTF-8 line folding",
+      "ZIP extraction in Persian/space path, offline navigation, interactions and clipboard fallback"
+    ],
+    "browserErrors": [],
+    "failedRequests": [],
+    "screenshots": "/tmp/workshop-first-post-regression"
+  }
+}

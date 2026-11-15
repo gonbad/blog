@@ -1,0 +1,112 @@
+{
+  "id": "001-workshop-7",
+  "title": "Workshop 7 introduction",
+  "version": "0.1.1",
+  "workflow": "docs/job/versions/0.1/workflow.json",
+  "created_at": "2026-11-09T11:17:18+00:00",
+  "milestones": {
+    "blog-brief": {
+      "state": "ready",
+      "artifact": "docs/projects/001-workshop-7/versions/V0.1.1/brief.md",
+      "sha256": "9258ba04a58fe394e6c97260b3c285064d49970c18c34cd699231e4a0ee40195",
+      "evidence": null,
+      "at": "2026-11-09T11:56:05+00:00"
+    },
+    "blog-story": {
+      "state": "ready",
+      "artifact": "docs/projects/001-workshop-7/versions/V0.1.1/story.md",
+      "sha256": "738b7b3be5d5376d0d29845939c488d95af8a8b40c0a9f7c816102a35f33c5ad",
+      "evidence": null,
+      "at": "2026-11-09T11:56:05+00:00"
+    },
+    "blog-content": {
+      "state": "ready",
+      "artifact": "docs/projects/001-workshop-7/versions/V0.1.1/claims.md",
+      "sha256": "2cc8a5aa1ed21282da1d17dbaf3f6465e70bdaeb8dcbe12261d54921584571a4",
+      "evidence": null,
+      "at": "2026-11-09T11:56:06+00:00"
+    },
+    "blog-style": {
+      "state": "ready",
+      "artifact": "docs/projects/001-workshop-7/versions/V0.1.1/style.md",
+      "sha256": "c8d286036444028d57ab40ef43306cd3e37ca5e0145a696ec00efcb7b510d3e8",
+      "evidence": null,
+      "at": "2026-11-09T11:56:06+00:00"
+    },
+    "blog-sample": {
+      "state": "ready",
+      "artifact": "projects/001-workshop-7/site",
+      "sha256": "2c987ce400bf29c337a81ae502eec668523fcebdd9c69501c2977fb4ae0d69b5",
+      "evidence": null,
+      "at": "2026-11-09T11:56:06+00:00"
+    },
+    "blog-build": {
+      "state": "ready",
+      "artifact": "projects/001-workshop-7/site",
+      "sha256": "2c987ce400bf29c337a81ae502eec668523fcebdd9c69501c2977fb4ae0d69b5",
+      "evidence": null,
+      "at": "2026-11-09T11:56:06+00:00"
+    },
+    "blog-check": {
+      "state": "ready",
+      "artifact": "docs/projects/001-workshop-7/versions/V0.1.1/releases/0.1.1/verification.json",
+      "sha256": "32524a22ccc9a8df7d339a8d46556dd404b00185cfe72e05c225f38e67f6b279",
+      "evidence": null,
+      "at": "2026-11-09T11:56:06+00:00"
+    },
+    "blog-package": {
+      "state": "ready",
+      "artifact": "dist/001-workshop-7/downloads/workshop-7-v0.1.1.zip",
+      "sha256": "974b214cf927ac744c983ce87a973862261581e2b44ff7704174f94480f4b0ee",
+      "evidence": null,
+      "at": "2026-11-09T11:56:06+00:00"
+    },
+    "blog-publish": {
+      "state": "ready",
+      "artifact": "docs/projects/001-workshop-7/versions/V0.1.1/releases/0.1.1/deployment.json",
+      "sha256": "0004227702811819cf90b2ce48a70dc1ac7cebc159966396d67c91c82fbbdfa8",
+      "evidence": null,
+      "at": "2026-11-09T11:56:06+00:00"
+    }
+  },
+  "issues": [
+    {
+      "path": "docs/projects/001-workshop-7/issues/001.md",
+      "scope": "helper",
+      "state": "closed",
+      "title": "Direct seeking marked skipped sections visited"
+    },
+    {
+      "path": "docs/projects/001-workshop-7/issues/002.md",
+      "scope": "workflow",
+      "state": "closed",
+      "title": "Hosting preflight differed from historical notes"
+    },
+    {
+      "path": "docs/projects/001-workshop-7/issues/003.md",
+      "scope": "helper",
+      "state": "closed",
+      "title": "Up/Down stop after clicking a slide control",
+      "verified_release": "0.1.1-1c43ab914ef6",
+      "verification": "docs/projects/001-workshop-7/versions/V0.1.1/releases/0.1.1/verification.json"
+    },
+    {
+      "path": "docs/projects/001-workshop-7/issues/004.md",
+      "scope": "moom",
+      "state": "closed",
+      "title": "Missing fifth workshop, real projects and executable workflow",
+      "verified_release": "0.1.1-1c43ab914ef6",
+      "verification": "docs/projects/001-workshop-7/versions/V0.1.1/releases/0.1.1/verification.json"
+    }
+  ],
+  "migrations": [
+    {
+      "from": "docs/job/workflow.json",
+      "to": "docs/job/versions/0.1/workflow.json",
+      "affected": [],
+      "note": "Pin the real publishing procedures, helpers and deployment resources",
+      "at": "2026-11-09T11:37:38+00:00"
+    }
+  ],
+  "docs": "docs/projects/001-workshop-7/versions/V0.1.1"
+}

@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "historical_files_verified": {
+    "003-brah-paper": 174,
+    "004-agent-presentation": 172
+  },
+  "checks": [
+    "verbatim original requests, analyses, feedback, attachments and hashes",
+    "fresh publication build with no pre-existing dist or ignored materials",
+    "participant ZIP and handbook regenerated from tracked sources",
+    "five published Projects and four verified offline archives",
+    "native Project switch, concrete receipt, adaptation, iteration and source snapshot",
+    "engine integrity after the isolated operations",
+    "managed update preview against a separately compiled newer release"
+  ],
+  "newer_release_preview": {
+    "from": "0.3.1",
+    "to": "0.3.2",
+    "files": [
+      "VERSION"
+    ],
+    "conflicts": [],
+    "catalog_skipped": true
+  }
+}

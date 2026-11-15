@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    "examples, native tab keys and Space activation, decision buttons followed by vertical navigation, direct seeking",
+    "reading mode, Up/Down after focused navigation buttons, native text editing",
+    "layout at 1440×960",
+    "layout at 1366×768",
+    "layout at 390×844",
+    "layout at 320×640",
+    "Up after clicking a download link, real Moom and handbook downloads",
+    "calendar dates and UTF-8 line folding",
+    "ZIP extraction in Persian/space path, offline navigation, interactions and clipboard fallback"
+  ],
+  "browserErrors": [],
+  "failedRequests": [],
+  "screenshots": "/tmp/workshop-v92-announcement"
+}

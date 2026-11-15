@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f1e9" />
+    <title>ایجنت — از خواستن تا انجام‌شدن</title>
+    <meta
+      name="description"
+      content="از مدل تا هارنس؛ ساختن، فهمیدن و زندگی با ایجنت‌ها"
+    />
+    <link rel="stylesheet" href="deck.css" />
+    <link rel="stylesheet" href="repair.css" />
+    <link rel="stylesheet" href="story.css" />
+    <link rel="stylesheet" href="lessons.css" />
+    <link rel="stylesheet" href="journeys.css" />
+  </head>
+  <body>
+    <main id="viewport" aria-label="ارائهٔ ایجنت">
+      <div id="stage"></div>
+    </main>
+    <nav id="controls" aria-label="کنترل ارائه">
+      <button id="overviewBtn" title="نمای کلی · G" aria-label="نمای کلی">
+        ▦
+      </button>
+      <button id="backBtn" title="قبلی · →" aria-label="قبلی">→</button>
+      <button id="nextBtn" title="بعدی · ← یا Space" aria-label="بعدی">
+        ←
+      </button>
+      <span id="counter" dir="ltr"></span>
+      <span class="control-divider"></span>
+      <span id="sectionName"></span>
+      <div class="control-spacer"></div>
+      <button
+        id="notesBtn"
+        title="یادداشت سخنران · N"
+        aria-label="یادداشت سخنران"
+      >
+        یادداشت
+      </button>
+      <button id="helpBtn" title="راهنما · ?" aria-label="راهنما">?</button>
+      <button id="fullBtn" title="تمام‌صفحه · F" aria-label="تمام‌صفحه">
+        ⛶
+      </button>
+    </nav>
+    <div id="progress" aria-hidden="true"><i></i></div>
+    <dialog id="overview">
+      <div class="dialog-head">
+        <div>
+          <small>ایجنت</small>
+          <h2>از کجا ادامه بدهیم؟</h2>
+        </div>
+        <button data-close="overview" aria-label="بستن">×</button>
+      </div>
+      <input
+        id="search"
+        placeholder="جستجوی عنوان یا شماره…"
+        aria-label="جستجو در ارائه"
+      />
+      <div id="overviewGrid"></div>
+    </dialog>
+    <dialog id="notes">
+      <div class="dialog-head">
+        <h2>یادداشت سخنران</h2>
+        <button data-close="notes" aria-label="بستن">×</button>
+      </div>
+      <div id="notesBody"></div>
+    </dialog>
+    <dialog id="help">
+      <div class="dialog-head">
+        <h2>کنترل ارائه</h2>
+        <button data-close="help" aria-label="بستن">×</button>
+      </div>
+      <div class="help-grid">
+        <kbd>← / Space</kbd><span>گام بعدی، سپس صفحهٔ بعد</span><kbd>→</kbd
+        ><span>صفحهٔ قبل</span><kbd>PageDown</kbd
+        ><span>صفحهٔ بعد، بدون گام‌های میانی</span><kbd>G</kbd
+        ><span>نمای کلی و جستجو</span><kbd>F</kbd><span>تمام‌صفحه</span
+        ><kbd>N</kbd><span>یادداشت و منابع</span><kbd>B</kbd
+        ><span>توقف تصویر</span><kbd>H</kbd
+        ><span>نمایش یا پنهان‌کردن کنترل‌ها</span><kbd>Home / End</kbd
+        ><span>آغاز / پایان</span><kbd>Esc</kbd><span>بستن پنجره</span>
+      </div>
+      <p>
+        روی تصویر نمودارها بزنید تا بزرگ شوند. همهٔ نمونه‌ها در همین پوشه اجرا
+        می‌شوند.
+      </p>
+    </dialog>
+    <dialog id="lightbox">
+      <button data-close="lightbox" aria-label="بستن">×</button
+      ><img alt="نمودار بزرگ‌شده" />
+    </dialog>
+    <div id="blackout" hidden></div>
+    <script src="deck-data.js"></script>
+    <script src="learning.js"></script>
+    <script src="tickets.js"></script>
+    <script src="lessons.js"></script>
+    <script src="journeys.js"></script>
+    <script src="story.js"></script>
+    <script src="deck.js"></script>
+  </body>
+</html>

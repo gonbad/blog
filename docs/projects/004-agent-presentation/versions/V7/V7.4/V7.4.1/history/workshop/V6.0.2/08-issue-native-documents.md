@@ -1,0 +1,5 @@
+# V6.0.2 — Issue #8: documents must be authored natively, never translated
+
+> **Source:** organizer, 2026-10-19. Documents language is فارسی; `event/docs/living/prd.md` reads translated («حضانت پول», «می‌گرداند», «ارتقا به قطعی», «پاسخ‌گویی از متن‌های برگزارکننده», stacked parentheticals) — English-first drafting with Persian words.
+> **Fix:** new 00-rules section `Documents language — write native, never translate`: compose directly in the documents language (think it first, write it first), with the concrete banned patterns from this prd as negative examples, the participant-book voice as the positive bar, and a re-read gate («a document that reads translated is unfinished»). 00-rules is read at every session start, so no per-command repetition was added.
+> **Note:** if the organizer ever prefers English documents, changing `Documents language` in `docs/profile.md` to English is sufficient — the same rule applies mirrored (compose directly in English). The existing `event/prd.md` was left untouched (organizer's folder); it can be rewritten in a fresh pass under the new rule.

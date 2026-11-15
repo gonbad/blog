@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "moom_version": "0.4.1",
+  "moom_commit": "355b6bb89b13c0fe26e64672365e655299578a59",
+  "tests": 32,
+  "seconds": 35.883,
+  "command": "python3 -m unittest discover -s tests -v",
+  "host": "Linux",
+  "coverage": [
+    "existing lifecycle/presentation/publishing tests",
+    "release ZIP setup of all three software Jobs",
+    "two-Project preservation and resume",
+    "catalog rejection of unindexed/duplicate/incomplete packages",
+    "Project path ownership rejection",
+    "Compose variable requirements, isolated ports/volumes and container service DNS",
+    "real ASGI SPA navigation and API/asset/method errors",
+    "Windows-normalized SPA paths preserve API/asset errors"
+  ],
+  "live_vps_messenger_model_checks": "not executed; these jobs generate participant applications whose live verification is required by their procedures"
+}

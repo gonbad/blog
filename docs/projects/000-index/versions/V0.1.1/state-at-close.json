@@ -1,0 +1,103 @@
+{
+  "id": "000-index",
+  "title": "Workshop journal index",
+  "version": "0.1.1",
+  "workflow": "docs/job/versions/0.5/workflow.json",
+  "created_at": "2026-11-09T11:17:18+00:00",
+  "milestones": {
+    "blog-brief": {
+      "state": "stale",
+      "artifact": "docs/projects/000-index/versions/V0.1.1/brief.md",
+      "sha256": "72126b76d4772c451e1911526eb3375fd8bcb49d7f10d8350a6f0445775e45c7",
+      "evidence": null,
+      "at": "2026-11-09T13:51:12+00:00"
+    },
+    "blog-build": {
+      "state": "stale",
+      "artifact": "projects/000-index/site",
+      "sha256": "93f702bdc8ee085028b134ea6589b4b64ab29483e8eaf81a9aeedf03897ecbb2",
+      "evidence": null,
+      "at": "2026-11-09T13:51:12+00:00"
+    },
+    "blog-check": {
+      "state": "stale",
+      "artifact": "docs/projects/000-index/versions/V0.1.1/release-reference.md",
+      "sha256": "e399dc1257f9cc40a4cf55f33a74c64248bb3424c4da6a7a7399ea7250986fec",
+      "evidence": null,
+      "at": "2026-11-09T13:51:12+00:00"
+    },
+    "blog-publish": {
+      "state": "stale",
+      "artifact": "docs/projects/000-index/versions/V0.1.1/release-reference.md",
+      "sha256": "e399dc1257f9cc40a4cf55f33a74c64248bb3424c4da6a7a7399ea7250986fec",
+      "evidence": null,
+      "at": "2026-11-09T13:51:12+00:00"
+    }
+  },
+  "issues": [],
+  "migrations": [
+    {
+      "from": "docs/job/workflow.json",
+      "to": "docs/job/versions/0.1/workflow.json",
+      "affected": [],
+      "note": "Adopt the actual extracted publishing method",
+      "at": "2026-11-09T11:37:38+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.1/workflow.json",
+      "to": "docs/job/versions/0.4/workflow.json",
+      "affected": [
+        "blog-brief",
+        "blog-build",
+        "blog-check",
+        "blog-content",
+        "blog-package",
+        "blog-publish",
+        "blog-sample",
+        "blog-story",
+        "blog-style"
+      ],
+      "note": "Use the snapshot-aware publisher for the index update",
+      "at": "2026-11-09T13:43:41+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.4/workflow.json",
+      "to": "docs/job/versions/0.4.1/workflow.json",
+      "affected": [
+        "blog-check",
+        "blog-package",
+        "blog-publish"
+      ],
+      "note": "Use explicit verification dispatch guard",
+      "at": "2026-11-09T13:49:18+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.4.1/workflow.json",
+      "to": "docs/job/versions/0.5/workflow.json",
+      "affected": [
+        "blog-brief",
+        "blog-build",
+        "blog-check",
+        "blog-content",
+        "blog-fidelity",
+        "blog-package",
+        "blog-publish",
+        "blog-sample",
+        "blog-story",
+        "blog-style"
+      ],
+      "note": "Use current version-entry and fidelity-aware publishing mechanics for the index summary correction",
+      "at": "2026-11-09T16:54:36+00:00"
+    }
+  ],
+  "docs": "docs/projects/000-index/versions/V0.1.1",
+  "releases": [
+    {
+      "version": "0.1",
+      "next_version": "0.1.1",
+      "note": "Add the authored link to the published Claude server post while preserving the previous index",
+      "snapshot": "projects/000-index/versions/V0.1",
+      "at": "2026-11-09T13:43:41+00:00"
+    }
+  ]
+}

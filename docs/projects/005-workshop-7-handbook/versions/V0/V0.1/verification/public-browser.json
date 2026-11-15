@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "checks": [
+    "journal link, complete chapters, configurable start prompt, copy fallback, persisted/reset readiness",
+    "desktop/tablet/mobile widths and keyboard-accessible native controls",
+    "current and legacy downloads; readable print layout",
+    "offline ZIP and single-file legacy handbook without network runtime"
+  ],
+  "evidence": "/tmp/workshop-v92-live-browser",
+  "errors": [],
+  "bad": []
+}

@@ -1,0 +1,1039 @@
+{
+  "source_commit": "a9020c7b64aab51965cc7bf062fef7edcf3b5638",
+  "mode": "verbatim import, including creator comments; not reconstructed owner answers",
+  "rendered_presentation_archives": "Not restored: intentionally retained in Git history only.",
+  "files": [
+    {
+      "source": "workshop_docs/versions/V6.0/01-transcription.md",
+      "copy": "history/workshop/V6.0/01-transcription.md",
+      "sha256": "7a05336f41c56155da3674d9f049ca583db88b32e1c9fe29753cc8a0487114eb",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0/02-analysis.md",
+      "copy": "history/workshop/V6.0/02-analysis.md",
+      "sha256": "944196bfdcb8cb1954c89571d4bf26c22cab979a39c0105f3f6e695116f5c586",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0/03-analysis-round2.md",
+      "copy": "history/workshop/V6.0/03-analysis-round2.md",
+      "sha256": "016ea697641a2fbe9a48a7bc091ad0694d0ea41c96af38a67e402adf5d0a7927",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0/04-transcription.md",
+      "copy": "history/workshop/V6.0/04-transcription.md",
+      "sha256": "44d685ef307c6669f0e8976dba3bb030c3b62c6b1dac644a6ed71d8fc135ea17",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0/05-analysis-round3.md",
+      "copy": "history/workshop/V6.0/05-analysis-round3.md",
+      "sha256": "8e7aaa10b75a9da8c981e14a07519f9972214ddf289c791bb959c425461efc9d",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0/06-analysis-round4.md",
+      "copy": "history/workshop/V6.0/06-analysis-round4.md",
+      "sha256": "aa9bf0a47b5ea274ecb7a75bf19a83ac97165ccbb87368033ae779b1ba1f2179",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0/07-idea-input-neda.md",
+      "copy": "history/workshop/V6.0/07-idea-input-neda.md",
+      "sha256": "476e3d5b9000a297a46b1963006fdc0e19865c57c2980e9f511742160ecf5eaa",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0/08-idea-input-hanieh.md",
+      "copy": "history/workshop/V6.0/08-idea-input-hanieh.md",
+      "sha256": "faec9d2bf38e46fa370ff7d6d531481789d0a6794ff4be1feafb883dde6132db",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.1/09-transcription.md",
+      "copy": "history/workshop/V6.0.1/09-transcription.md",
+      "sha256": "3d27ef2cf0cb822ba05c8378707b6edc60e4820354ae54ae159e6ed7fd74e455",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.1/10-analysis-round5.md",
+      "copy": "history/workshop/V6.0.1/10-analysis-round5.md",
+      "sha256": "b813f3286c5865889bece75cfcd2eae437f8237bbaea8ffbd3e4ed698b58b9e3",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.1/11-transcription.md",
+      "copy": "history/workshop/V6.0.1/11-transcription.md",
+      "sha256": "42975f121436225602908be540dd5d82441dcb0a5b40928a6679e73bdaf1d086",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.1/12-analysis-round6.md",
+      "copy": "history/workshop/V6.0.1/12-analysis-round6.md",
+      "sha256": "91b697ab6aabbebece1f1df67f649b253c810ee2c66d2e2d2c5af7f9c8fcbdac",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.1/13-transcription.md",
+      "copy": "history/workshop/V6.0.1/13-transcription.md",
+      "sha256": "1af6baa608234635ffcce7e5fe015c6c4a4c2460b5cee7a597d083abad874b91",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.1/14-architecture.md",
+      "copy": "history/workshop/V6.0.1/14-architecture.md",
+      "sha256": "72a0066abcfb68394332634b70cb150a5f2697076cf6ecd2a3edbb69fa4c0e2e",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.1/15-plan.md",
+      "copy": "history/workshop/V6.0.1/15-plan.md",
+      "sha256": "1115b72df27988cbcb52bd4a2078580ade800dd754822cde0cb1b96c2e72bfb9",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.1/16-idea-input-event-organizer.md",
+      "copy": "history/workshop/V6.0.1/16-idea-input-event-organizer.md",
+      "sha256": "9b2f72b93b663e8c8401a2738b0c06659e0056eac2f3196a489b36020e768d6b",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.1/17-idea-input-agency.md",
+      "copy": "history/workshop/V6.0.1/17-idea-input-agency.md",
+      "sha256": "8bdddb6644c8baa9047563f34de11f1a214723b862d6a92fe11ebc6dfecf10a2",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/01-issue-wrong-workshop-mcp.md",
+      "copy": "history/workshop/V6.0.2/01-issue-wrong-workshop-mcp.md",
+      "sha256": "1050201c6a3f3af71a96351742054a441a5b232695b18bd68c39dc7e8241da51",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/02-issue-seat-token-multitenancy.md",
+      "copy": "history/workshop/V6.0.2/02-issue-seat-token-multitenancy.md",
+      "sha256": "ea891c62399eb31490976c218ef93c3f82637346313d537c80305f73373a06f8",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/03-issue-polluted-global-mcp.md",
+      "copy": "history/workshop/V6.0.2/03-issue-polluted-global-mcp.md",
+      "sha256": "5e21597f0410f6c0452593dffa8c74b5b947145fac7217c0556b02fa4bf84cb9",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/04-issue-start-cleanup-and-wire-key.md",
+      "copy": "history/workshop/V6.0.2/04-issue-start-cleanup-and-wire-key.md",
+      "sha256": "5ef77b210718d7b6b9b6746e69ce408c1b8d88e3a4c74c7c58c10282d25e4029",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/05-issue-create-repo-ssh-url.md",
+      "copy": "history/workshop/V6.0.2/05-issue-create-repo-ssh-url.md",
+      "sha256": "da0f04028fe56f2c7e7b0c4526fee472733e446552fb43cde7367446afc08192",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/06-issue-first-clean-start-verified.md",
+      "copy": "history/workshop/V6.0.2/06-issue-first-clean-start-verified.md",
+      "sha256": "201462cec447d3ef2c74fca58cf10f03cf0691409ba266989a90ac8619add3bc",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/07-issue-stale-vocabulary-purge.md",
+      "copy": "history/workshop/V6.0.2/07-issue-stale-vocabulary-purge.md",
+      "sha256": "1e5a85bb91c98f4582e4a14b3c7acd650fb9cbf310c0f7eac1fbaae3bf2ed1de",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/08-issue-native-documents.md",
+      "copy": "history/workshop/V6.0.2/08-issue-native-documents.md",
+      "sha256": "8a52b05ce9c0343822bd4a85c971b2724b18dd02f1aee9310243d66ff5ed1e31",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/09-issue-plan-acceptance-and-model-question.md",
+      "copy": "history/workshop/V6.0.2/09-issue-plan-acceptance-and-model-question.md",
+      "sha256": "070c40c32c2f5eb8667eca0b53e9e6e47b0d592f99b482ce19fdfb3361c4f55d",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/10-issue-better-kit-handover-plan-search-sealed.md",
+      "copy": "history/workshop/V6.0.2/10-issue-better-kit-handover-plan-search-sealed.md",
+      "sha256": "6dd8a39266eb168065bf703deb407a0b37df65bb0e940e453e4c204f0dc5fd66",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/11-issue-living-ideacore-and-market.md",
+      "copy": "history/workshop/V6.0.2/11-issue-living-ideacore-and-market.md",
+      "sha256": "8f9b8b28dfaff7da38692dd72d8d5d11d19b56eb74af2cd312699c02b8b3a50e",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.2/12-issue-parallel-key-ownership.md",
+      "copy": "history/workshop/V6.0.2/12-issue-parallel-key-ownership.md",
+      "sha256": "b65f30e996b9bcca209d5effe49a5e0bec301547836c42f95386f6862ca3be38",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.3/18-transcription.md",
+      "copy": "history/workshop/V6.0.3/18-transcription.md",
+      "sha256": "f44a7cfcbb9ed931ed5af2c0741b060d0624850b8ca2543cb6967ce4a0f88c7c",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.3/19-analysis-round7.md",
+      "copy": "history/workshop/V6.0.3/19-analysis-round7.md",
+      "sha256": "698b227301d6bb6927d8a35eea2371ddb645477201a63096f02130ef67b53b83",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.3/20-architecture.md",
+      "copy": "history/workshop/V6.0.3/20-architecture.md",
+      "sha256": "1b71c3e5757cb883b8ceb3b154192b3d8e46ae1b0e306e5ad79dd2b57c5d2050",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.3/21-adversarial-review.md",
+      "copy": "history/workshop/V6.0.3/21-adversarial-review.md",
+      "sha256": "a019c2f1218b14a265bbb8735c65992a78c1f2bb04446af4cf44d4f29e07b044",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.3/22-adversarial-review.md",
+      "copy": "history/workshop/V6.0.3/22-adversarial-review.md",
+      "sha256": "ed844cabe29fdfc14371c350c00fb62226611b2f63219c60e617842990452ebf",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.3/23-adversarial-review.md",
+      "copy": "history/workshop/V6.0.3/23-adversarial-review.md",
+      "sha256": "40701561ba7d35490fd2f7c28c32db265072ae8911397d110b91d814ce6b7800",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.0.4/01-issue-start-silent-on-existing-product.md",
+      "copy": "history/workshop/V6.0.4/01-issue-start-silent-on-existing-product.md",
+      "sha256": "abeb67eca8cb73e20e5023bd1f5fa1dd5652f9dac50f1ccf358dde82411fbcd8",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1/01-transcription.md",
+      "copy": "history/workshop/V6.1/01-transcription.md",
+      "sha256": "81d82ec7db8e7bd0504841e290294138de0b470f658f916b2b0992f2a9fb4849",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1/02-analysis.md",
+      "copy": "history/workshop/V6.1/02-analysis.md",
+      "sha256": "0d46d52a48f6fccd7afb169f7a8226dd076278daed4933c54fa48b03996b162e",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1/03-transcription.md",
+      "copy": "history/workshop/V6.1/03-transcription.md",
+      "sha256": "cdc0345dcf7320d2cb8c185ce2320a6ba7ad3073ad89dd4bab311d03bf012322",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1/04-analysis-round2.md",
+      "copy": "history/workshop/V6.1/04-analysis-round2.md",
+      "sha256": "3815b4d814b0d1f79e14c9a4168357d636ac37a13d05d4db32c8cff4e80f9bbb",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1/05-analysis-round3.md",
+      "copy": "history/workshop/V6.1/05-analysis-round3.md",
+      "sha256": "fd5c83915fa1c79963373843db906a3d1bcf68f7396f5cadc59bd921abc2fa4d",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1/06-idea-input-event-organizer.md",
+      "copy": "history/workshop/V6.1/06-idea-input-event-organizer.md",
+      "sha256": "f2a8b0c086fd862f2a98f82343c8dffeeff23e2f966c16eb29cea5ab6bef138e",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1/07-idea-input-neda.md",
+      "copy": "history/workshop/V6.1/07-idea-input-neda.md",
+      "sha256": "d9bbc1a769193bb480ced3c990cc847ca102d049420249f460b99fd3d6936fe0",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1/08-idea-input-hanieh.md",
+      "copy": "history/workshop/V6.1/08-idea-input-hanieh.md",
+      "sha256": "8ec97ce8175d35b275b4a5a3a87c681b614140c56d6c08e54c062387cab0498a",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1/09-idea-input-kandoo-cloud.md",
+      "copy": "history/workshop/V6.1/09-idea-input-kandoo-cloud.md",
+      "sha256": "68d2eecf53845a9b3622fa7c80607dd4ce6f10d34a3d000c66906bd4035c3ad2",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1.1/01-issue-start-cached-401-after-token.md",
+      "copy": "history/workshop/V6.1.1/01-issue-start-cached-401-after-token.md",
+      "sha256": "3c01709d275a42405a06d0944442759b5f3796149f6f2f19cd00705c33be782c",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1.1/02-issue-mcp-sleep-disconnect-and-websearch-fallback.md",
+      "copy": "history/workshop/V6.1.1/02-issue-mcp-sleep-disconnect-and-websearch-fallback.md",
+      "sha256": "f37d223a77a0392e047e046c3b8aa30bd98168058ba1ab0e70048b968ed4ed3d",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1.1/03-issue-idea-core-duplicate-and-numbered-roadmap.md",
+      "copy": "history/workshop/V6.1.1/03-issue-idea-core-duplicate-and-numbered-roadmap.md",
+      "sha256": "8075159290482ba19d0c677bfc51f0c2d49bfa1817d2a51785d819cf2cfac3a5",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1.1/04-issue-commandcode-mid-session-system-role.md",
+      "copy": "history/workshop/V6.1.1/04-issue-commandcode-mid-session-system-role.md",
+      "sha256": "b96efead8cfb4596f706620ef0139f55e66b920e6d3197e92366b7af38dc80f2",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1.1/05-issue-day1-curiosity-post-payment-and-faq.md",
+      "copy": "history/workshop/V6.1.1/05-issue-day1-curiosity-post-payment-and-faq.md",
+      "sha256": "c00bfc223ef14be131dda021dfb9779c5ffd7425cff8c4a52246dbd366254a86",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V6.1.1/06-issue-open-knowledge-base-box-and-infrastructure-questions.md",
+      "copy": "history/workshop/V6.1.1/06-issue-open-knowledge-base-box-and-infrastructure-questions.md",
+      "sha256": "ed32d83198bf2fe98f3979973c055a5798fd276c4b670f7c9e92218f531c5a18",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/01-transcription.md",
+      "copy": "history/workshop/V7.0/01-transcription.md",
+      "sha256": "b63ef7cde7dc9b42fbaeccd7417dc99805aa2886f969c1adc96ba575db07cd56",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/02-analysis.md",
+      "copy": "history/workshop/V7.0/02-analysis.md",
+      "sha256": "e61d059cbde126723c653ca87a2c1673759cdb4d3eb240b195e247551f6463ac",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/03-transcription.md",
+      "copy": "history/workshop/V7.0/03-transcription.md",
+      "sha256": "3ee959b59de3e69144a47cfdcc7d8749b0114aadc18013b7188837450e885891",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/04-analysis-round2.md",
+      "copy": "history/workshop/V7.0/04-analysis-round2.md",
+      "sha256": "9612e3461c25c44573d219d08660f1aad02d016c4d40aae1e695cb6eee1762ee",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/05-transcription.md",
+      "copy": "history/workshop/V7.0/05-transcription.md",
+      "sha256": "ae0e48b6116959d83d05508f68522ccff01708b7313825ac97cbe1128bfd347b",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/06-analysis-round3.md",
+      "copy": "history/workshop/V7.0/06-analysis-round3.md",
+      "sha256": "41a691cd1bb412c5707343be7f87428d2960a3e896b87ae8151d96554f32e464",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/07-transcription.md",
+      "copy": "history/workshop/V7.0/07-transcription.md",
+      "sha256": "def58b245a193b47f010132f5e320603a0c9a7a6bf29312af61dfb126a97e8fa",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/08-analysis-round4.md",
+      "copy": "history/workshop/V7.0/08-analysis-round4.md",
+      "sha256": "eef538f120b958c6c81edea67e4a5719992e5fc998d5aa09050d4cd16b8482f7",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/09-transcription.md",
+      "copy": "history/workshop/V7.0/09-transcription.md",
+      "sha256": "38e10224f595ad3fac8efd012d2e611ffbba07b21c6d26ef38bd5bb33ef48a6a",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/10-analysis-round5.md",
+      "copy": "history/workshop/V7.0/10-analysis-round5.md",
+      "sha256": "c22179124b0c6e5431e5f044278966769472824409619317320d1cd3190a5f66",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/11-analysis-round6.md",
+      "copy": "history/workshop/V7.0/11-analysis-round6.md",
+      "sha256": "644c616d05bb3cde21fc521d61b5a0a574f91f109e228d2d876400c80f34e5fb",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/12-analysis-round7.md",
+      "copy": "history/workshop/V7.0/12-analysis-round7.md",
+      "sha256": "ee36ddba48617e81d286b1643fc2df36caeac6ca885224535208810653a0ae2d",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/13-presentation-issues.md",
+      "copy": "history/workshop/V7.0/13-presentation-issues.md",
+      "sha256": "ab19a64d0879616c4e961cbfe0a6d6689a6f7a6d543bda4368bdcc2fc3dc58e3",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/14-transcription.md",
+      "copy": "history/workshop/V7.0/14-transcription.md",
+      "sha256": "c44720650543f07bf38047b14409442cbd930bf6bd20b0eecc18ce5f03860a0a",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/15-analysis-round8.md",
+      "copy": "history/workshop/V7.0/15-analysis-round8.md",
+      "sha256": "3728d01c81d075c6206c2efef68604deea781ebf5c08221f98df49a38a72d611",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/16-presentation-issues-round2.md",
+      "copy": "history/workshop/V7.0/16-presentation-issues-round2.md",
+      "sha256": "5975bff9ef639edd1c36fb075d57e9041b7b818f99e790d0067b63eb1e5dd15f",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/01-transcription.md",
+      "copy": "history/workshop/V7.0/presentation1/01-transcription.md",
+      "sha256": "9c1d10fe2bf31c8f2a0598b2b448a87756a0982e5e79bb21e6a623e73143b3a3",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/02-analysis-round1.md",
+      "copy": "history/workshop/V7.0/presentation1/02-analysis-round1.md",
+      "sha256": "654f817ea30da155ed21fe7dc89d631b4da7080b95b3d47a8ae9d5f0090384fa",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/03-analysis-round2.md",
+      "copy": "history/workshop/V7.0/presentation1/03-analysis-round2.md",
+      "sha256": "4000c468e2088beff27dd3fdcf3a16236211f5ee7f5d599fb4624d9f85af3cd6",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/04-analysis-round3.md",
+      "copy": "history/workshop/V7.0/presentation1/04-analysis-round3.md",
+      "sha256": "3c01e78e771dbcf96597d05af4440360180cd3bac11fc59d3dade5ddabfd562b",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/05-analysis-round4.md",
+      "copy": "history/workshop/V7.0/presentation1/05-analysis-round4.md",
+      "sha256": "7508deef22f4128da0b3758c8e6592d02d4ff714f30594207c3843f8f4ed129c",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/06-raw-slides-fa.md",
+      "copy": "history/workshop/V7.0/presentation1/06-raw-slides-fa.md",
+      "sha256": "fa270a222816c87eb916d7e6f82cc587e25208f775402a5d39fcc8a86e3fa110",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/07-analysis-round5.md",
+      "copy": "history/workshop/V7.0/presentation1/07-analysis-round5.md",
+      "sha256": "82349d7708ac84959888cb3c576950784455e7fcd73316963c3f7042ae325a37",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/09-transcription.md",
+      "copy": "history/workshop/V7.0/presentation1/09-transcription.md",
+      "sha256": "a0e1924e1333a19df676b5bba995633abd24e2ff9382f3d4f52f4a00dac2680b",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/10-analysis-round6.md",
+      "copy": "history/workshop/V7.0/presentation1/10-analysis-round6.md",
+      "sha256": "ad43b7adbe35dbc2b4f8202ed7b8b8547f288bf78cefc73de6ebe1c4a9e74e15",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/assets/aa-index.png",
+      "copy": "history/workshop/V7.0/presentation1/assets/aa-index.png",
+      "sha256": "aab2578b67c569a4d0156a347acc52d9441728316fc738bfb2a13dab3c4ebbab",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.0/presentation1/assets/arena-code.png",
+      "copy": "history/workshop/V7.0/presentation1/assets/arena-code.png",
+      "sha256": "2bac868f176edc5a1dc03c7eff5417094ce1ab607ca82b990d05c55e02bce37c",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.1/00-codo-handoff.md",
+      "copy": "history/workshop/V7.1/00-codo-handoff.md",
+      "sha256": "d9e5643eafa08d373f085dcb04ea99986107be8d43bdc9307f7f6f08ae7e1712",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.1/01-transcription.md",
+      "copy": "history/workshop/V7.1/01-transcription.md",
+      "sha256": "4d789731ee89db75aea3258dece89c995b0e877592e77427ce7612ee0a4a01f3",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.1/02-analysis.md",
+      "copy": "history/workshop/V7.1/02-analysis.md",
+      "sha256": "4abefa7ed01a4ec41ce0b339539e1cab7382415f5cad57d31e3db17aa30bae88",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.1/03-analysis-round2.md",
+      "copy": "history/workshop/V7.1/03-analysis-round2.md",
+      "sha256": "4c83e17dd90dd0c3f6a83661ca0575773722616b95d8efce21b99cbd64eab7d2",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.1/04-analysis-round3.md",
+      "copy": "history/workshop/V7.1/04-analysis-round3.md",
+      "sha256": "9438120f72f3e7ed9ea40be3ec24ddcb2d5e9837fa7e33d46c6be7008c9c9e82",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.1/05-analysis-round4.md",
+      "copy": "history/workshop/V7.1/05-analysis-round4.md",
+      "sha256": "b57ac0ef8572c7965e8944c8e4cf51806ee71498d1008575e6cee1e2b9711ab5",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/01-transcription.md",
+      "copy": "history/workshop/V7.2/01-transcription.md",
+      "sha256": "20e24227a8f39a4affd9bf54a9a33b61ad496c15fda16be67de23816ac6917ec",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/02-analysis.md",
+      "copy": "history/workshop/V7.2/02-analysis.md",
+      "sha256": "b7f1ac5867b84451dbe1a2bd917cf22a2f05290345730838a3dd93d3056660b3",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/03-analysis-round2.md",
+      "copy": "history/workshop/V7.2/03-analysis-round2.md",
+      "sha256": "1280b7ab8bf820d5615d0a03ae53b638a69a6082e4fdc6fd91e6eb0bffcaa856",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/04-analysis-round3.md",
+      "copy": "history/workshop/V7.2/04-analysis-round3.md",
+      "sha256": "a616d62a9199e91ddafaca9a552f36d111dbc6c0e0e211f6ac18704b7d49cbaf",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/05-implementation.md",
+      "copy": "history/workshop/V7.2/05-implementation.md",
+      "sha256": "07370b8bf73d28bd7c7629e016e915b3578eabe529ebf1dfef888e3e9851c371",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/06-semantic-name-rehearsal.md",
+      "copy": "history/workshop/V7.2/06-semantic-name-rehearsal.md",
+      "sha256": "4d212f19c1cd7a4d97afd1570dde073628f555fee448e8c9f2bb7f0e10879fc5",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/07-local-host-availability.md",
+      "copy": "history/workshop/V7.2/07-local-host-availability.md",
+      "sha256": "0eb0a59ceed88665e70efb39998c1e9198a6f41a4ae46a433c71ecb9d5e36640",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/08-verified-agent-recovery.md",
+      "copy": "history/workshop/V7.2/08-verified-agent-recovery.md",
+      "sha256": "4c5a857d8f77dfb3da021cf7328ba4b8d16b9f4c9d55f1a7e8f45afe698a6394",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/09-payment-lifecycle-truth.md",
+      "copy": "history/workshop/V7.2/09-payment-lifecycle-truth.md",
+      "sha256": "0a75e60a24835a4996f07b7aef72d804f30ca65634bcaff12f5e4b711e0c534e",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/10-payment-failure-diagnosis.md",
+      "copy": "history/workshop/V7.2/10-payment-failure-diagnosis.md",
+      "sha256": "523c3b480618b6e0a9d8fad16f179999beb8b7abf618a8d12d51cc79bb60c1b5",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.2/11-deployment-clock-sync.md",
+      "copy": "history/workshop/V7.2/11-deployment-clock-sync.md",
+      "sha256": "aa26c085b9e5fe767997189877e15f945f16df9d583ceff122637d01809a67e9",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.3/01-transcription.md",
+      "copy": "history/workshop/V7.3/01-transcription.md",
+      "sha256": "411a6ab02354782bc226861800d8a6422001881a19c626fa6dc596f102a167c4",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.3/02-analysis.md",
+      "copy": "history/workshop/V7.3/02-analysis.md",
+      "sha256": "95913f88b84492811403bfabf7d5d9d8028689a536d82313a23df3d1f709a7b7",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.3/03-verification.md",
+      "copy": "history/workshop/V7.3/03-verification.md",
+      "sha256": "95859270015189fcccd4bf559e2f2d3876565ca21e307bd9b07132981f7572b1",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.3/04-soft-confirmation.md",
+      "copy": "history/workshop/V7.3/04-soft-confirmation.md",
+      "sha256": "66c25990d51dffe548a127a5d077c84f7188b287361c1b1e8ae6e8e3cf213a06",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.3/05-simplify-capabilities.md",
+      "copy": "history/workshop/V7.3/05-simplify-capabilities.md",
+      "sha256": "864bdacc34a12ec54bb1554ae95f9a593b6bf97d1e2774735cf1f49817c0eb3f",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/01-transcription.md",
+      "copy": "history/workshop/V7.4/01-transcription.md",
+      "sha256": "f365a57933471d99cf110778d3c2eb1fec5c5a8ef62842a774dd56dc98a1e0a6",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/02-analysis.md",
+      "copy": "history/workshop/V7.4/02-analysis.md",
+      "sha256": "70e0e318f7f915f6f6ad239055535a992350425a0440643a982700d8efa969af",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/03-presentation-outline.md",
+      "copy": "history/workshop/V7.4/03-presentation-outline.md",
+      "sha256": "8070986f314deb8517aae8b614536dbbb63febebe45d66928301102748f5f823",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/04-presentation-build.md",
+      "copy": "history/workshop/V7.4/04-presentation-build.md",
+      "sha256": "f1ec0b28c88ba5a2192ed27dd8579dc0cfb243e194394e19ac8ea2d9a62dfe5c",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/05-visual-prompts.md",
+      "copy": "history/workshop/V7.4/05-visual-prompts.md",
+      "sha256": "36114fc1a5dbf7103679f506217e80a37fb28ded923e5943652b9472f8db3800",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/06-feedback.md",
+      "copy": "history/workshop/V7.4/06-feedback.md",
+      "sha256": "df5f1594c71a84e000275129019c2cccf47874f37195181726f93f7c49338db5",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/07-response-to-feedback.md",
+      "copy": "history/workshop/V7.4/07-response-to-feedback.md",
+      "sha256": "e5f4d5098d0a8b299cdaf365fe4a58a343ffe8061ac9dec3956c11743a35ab4c",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/08-public-agent-codo.md",
+      "copy": "history/workshop/V7.4/08-public-agent-codo.md",
+      "sha256": "bb776e1320c10263ef3f05afe5cd13f76010048bcf0d43b1c7c33c08d0b7cfbc",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/09-presentation-repair.md",
+      "copy": "history/workshop/V7.4/09-presentation-repair.md",
+      "sha256": "38586178db094b240bc4c640723e3f8a5cf0ba2fc9b3ebf658a397660400a687",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/10-presentation-full-rewrite.md",
+      "copy": "history/workshop/V7.4/10-presentation-full-rewrite.md",
+      "sha256": "240df73b9331013ef717839a6b76e34f023e8107ab3ada5b2362aa7bcb19653d",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/11-feedback.md",
+      "copy": "history/workshop/V7.4/11-feedback.md",
+      "sha256": "d48a8ebc7ccc357987da84ef696d45aa81b2bb2a1129a296d1514383163becbb",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/12-feedback-analysis.md",
+      "copy": "history/workshop/V7.4/12-feedback-analysis.md",
+      "sha256": "966c281cd8f713e4d51442a6ab3d460e387c219d68afb5b71a317798a585a307",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/13-structural-revision.md",
+      "copy": "history/workshop/V7.4/13-structural-revision.md",
+      "sha256": "55842b49cffa0d364ef1f83edd640582ffe84cc9e4158c5c2cd8939b6fb9ac6c",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/14-feedback.md",
+      "copy": "history/workshop/V7.4/14-feedback.md",
+      "sha256": "8ed709d3bbbe3f2a0721665e6953df272f1c32355cb29381fda91269e45b02fc",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/15-feedback-analysis.md",
+      "copy": "history/workshop/V7.4/15-feedback-analysis.md",
+      "sha256": "96d5ffcc122dcca6ab2927219828b834089d9734112f3aa8ae6c3bca7ab6c582",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/16-five-part-revision.md",
+      "copy": "history/workshop/V7.4/16-five-part-revision.md",
+      "sha256": "f9db8746bdb333b05d5ab2f2128a9052f6442ce05e60f30fceed2f3cc9fc08fc",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/approval-preview.png",
+      "copy": "history/workshop/V7.4/assets/approval-preview.png",
+      "sha256": "d19d4b5daa92451800c510c5c629e84e47946ac2ba7f23d03051b2da0a17a052",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/artificial-analysis-cost-2026-11-04.png",
+      "copy": "history/workshop/V7.4/assets/artificial-analysis-cost-2026-11-04.png",
+      "sha256": "b6359524d40159e8fa1575a2bb475df4860ff809a3883650048844d3d28958f1",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/artificial-analysis-intelligence-2026-11-04.png",
+      "copy": "history/workshop/V7.4/assets/artificial-analysis-intelligence-2026-11-04.png",
+      "sha256": "ef52e9f5c18c1e250130d033eef6bae71dc6891efec1936ebe8bc71ff041ddc6",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/context-preview.png",
+      "copy": "history/workshop/V7.4/assets/context-preview.png",
+      "sha256": "411713894e63872c2fb0e5518fb601198a3dbd862b824a8194cdf895b87de51b",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/coordination-preview.png",
+      "copy": "history/workshop/V7.4/assets/coordination-preview.png",
+      "sha256": "7fa0a032f56728a9f20db2ba183cc3dec7674113f9257abbeab010bc614afce2",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/agent-loop.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/agent-loop.png",
+      "sha256": "6d274b0a3dd8da7f67bbc94216303f784e3226a0710a688342655fbb006d869e",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/approval-gate.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/approval-gate.png",
+      "sha256": "f264aa30b2ef8843d0c9ca765478a1f95247204658701ff2ddeea1e99a188f98",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/build-runtime.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/build-runtime.png",
+      "sha256": "197458549c67de893bedd3255c46b7f26bedd58095e13539c3e30da88d981d68",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/context.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/context.png",
+      "sha256": "9536db2eabe94ef4cced14a9d0ad286a1c9366a67a1ad3c21319fb211d785a5b",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/extracted-new-interactions.json",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/extracted-new-interactions.json",
+      "sha256": "209792beec4d0c51c0468e305852b36a8d2c98a372d7b96c5c502b0467f815d0",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/extracted-retained-interactions.json",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/extracted-retained-interactions.json",
+      "sha256": "8c4a95a4167d769b01126cf6da7717c0a37908e88b5e72c85d00bce99fab9a07",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/history.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/history.png",
+      "sha256": "a7a750b3e051e4650b0e2ceb6ddcb022c771bb9baa6d7bb69936ce376596ca7e",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/layout.json",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/layout.json",
+      "sha256": "f1d0d7551446f4e14bada9a29e9b361c29a1bf484fbb26d9f930f214f1fa8648",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/mcp.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/mcp.png",
+      "sha256": "f8705da2005e1e4800cadd6fc446873e90014133861003983b53aeaf3a70b624",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/new-interactions.json",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/new-interactions.json",
+      "sha256": "13d1761e3107016232220fdf4c52663623c61cddc633a641ebb42be0e4f16c40",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/os.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/os.png",
+      "sha256": "c4e86c51eb216c4ce88df4d0f13a0abc15052c09305a19cdef5007f424c7b3c0",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/package-checks.json",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/package-checks.json",
+      "sha256": "ecedbdcbcb7343615c6a9d255655da2f1629d54c88b3aa8b78d0f8747a010799",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/political-change.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/political-change.png",
+      "sha256": "a29be15bb8fcafce2ab2d896835d00909b68a7e2037e4aa84bed79b2dc72e9e5",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/retained-interactions.json",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/retained-interactions.json",
+      "sha256": "557639039709d0bb3bb71dded209458b5650de86b4a5ec99dbc39baec8037e2d",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/search-services.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/search-services.png",
+      "sha256": "e379c4c9228a2c71680f978a2808c6de1724a1bf5db5b8b5e6dcd36227ea0ed0",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/slide-index.json",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/slide-index.json",
+      "sha256": "a6592ccbf0d110efb9fa5259d84adbe0b27189afa6c219d29900dfebffd29b80",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/translation-review.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/translation-review.png",
+      "sha256": "16e6ee66ef45322aed084880056bbe8ff06ef21b67f7e25de6293729c232ec7e",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/five-part-revision/working-environments.png",
+      "copy": "history/workshop/V7.4/assets/five-part-revision/working-environments.png",
+      "sha256": "e61953a5762fe57e5fd2a98e50682219f625c7bb5ad4a675b82337c4918fccec",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/full-rewrite-checks.json",
+      "copy": "history/workshop/V7.4/assets/full-rewrite-checks.json",
+      "sha256": "51e524cf794c907d70bb1c2a6fe41be66cc969c8576af6b6a15cd8f35dfa3d21",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/learning-preview.png",
+      "copy": "history/workshop/V7.4/assets/learning-preview.png",
+      "sha256": "435684958e1726b30d9b0d901ba13f9b9d3d4fd8f46aff75709c6513277e5742",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/presentation-preview.png",
+      "copy": "history/workshop/V7.4/assets/presentation-preview.png",
+      "sha256": "52ac3cc51e8dca4562edcf6ba197d96cd2fccf94ff76d274dac0770230c4d093",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/presentation-repair-checks.json",
+      "copy": "history/workshop/V7.4/assets/presentation-repair-checks.json",
+      "sha256": "f528a577fd8dfe55189819ad589cf3eca6f400911d79a0a8252dad90bbb52796",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/protected-data-preview.png",
+      "copy": "history/workshop/V7.4/assets/protected-data-preview.png",
+      "sha256": "1fb08bf8e77cdcc0236448dc85a9968c56dee047d0de161a6f83a9574c7a7021",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/structural-revision/cache-preview.png",
+      "copy": "history/workshop/V7.4/assets/structural-revision/cache-preview.png",
+      "sha256": "496a12c31807c56245db730dc931c2db05232be15691984f622feecf0c7635c4",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/structural-revision/cosine-preview.png",
+      "copy": "history/workshop/V7.4/assets/structural-revision/cosine-preview.png",
+      "sha256": "a1cc204dadaa62a62c36f8ff6b6c731d9494f28c589c28d2e35815b1c8307519",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/structural-revision/extracted-interaction-checks.json",
+      "copy": "history/workshop/V7.4/assets/structural-revision/extracted-interaction-checks.json",
+      "sha256": "bb330ad62bbbb1d0ee604fa4be88db4428bc2d31fe2da77d58caa2dc4e384e2e",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/structural-revision/heldout-preview.png",
+      "copy": "history/workshop/V7.4/assets/structural-revision/heldout-preview.png",
+      "sha256": "b6cacf7dc5039fab6951ac572ca545ac81cc2c1d54a2df9f0109210472ff1bcd",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/structural-revision/language-preview.png",
+      "copy": "history/workshop/V7.4/assets/structural-revision/language-preview.png",
+      "sha256": "259abee1fbff676b01370c54618ee8163334fb232dbefb184db4b830ee018475",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/structural-revision/layout-checks.json",
+      "copy": "history/workshop/V7.4/assets/structural-revision/layout-checks.json",
+      "sha256": "44c7a5d4eb55bf3c90a4aead9e9d601929aa649d47c1ff9fdd60a37d1c0ad743",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/structural-revision/package-checks.json",
+      "copy": "history/workshop/V7.4/assets/structural-revision/package-checks.json",
+      "sha256": "d0eb80dcb0e7fd21e5b0f1f3f882e7ff77e7dc5b56df7963dd728a25bcd91b0c",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/structural-revision/slide-index.json",
+      "copy": "history/workshop/V7.4/assets/structural-revision/slide-index.json",
+      "sha256": "07b866ad2427e5f48d4bcc3354ea7b14a613048c9fbf44104336659c5dadebc9",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/structural-revision/source-interaction-checks.json",
+      "copy": "history/workshop/V7.4/assets/structural-revision/source-interaction-checks.json",
+      "sha256": "04b24437f453bf5bc010349df04859f261e1f1e16c2fdcc791d2ae94b7d23f18",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.4/assets/structural-revision/trust-preview.png",
+      "copy": "history/workshop/V7.4/assets/structural-revision/trust-preview.png",
+      "sha256": "a04892eed78ea8d4c4437c877e878ee83e20244c7eaf0fa5a4f1f722d81c1a20",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/01-transcription.md",
+      "copy": "history/workshop/V7.5/01-transcription.md",
+      "sha256": "8a8c627390615b81e1e99746d8963c16a26c00f624da3c5412191eb73b5e1f63",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/02-analysis.md",
+      "copy": "history/workshop/V7.5/02-analysis.md",
+      "sha256": "1d79fc948d4f38fe72b4efce4f3e19ae46c6f130193fc5bd0d7423b75a2c3ae1",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/03-implementation.md",
+      "copy": "history/workshop/V7.5/03-implementation.md",
+      "sha256": "68d3d25752911946c9502647cb4e1fbc611c32c17b4e95b42a7037092690c0f7",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/assets/authorship.png",
+      "copy": "history/workshop/V7.5/assets/authorship.png",
+      "sha256": "c2c0bdeb6ae1a3299f929c1d7aeb6fd12fe198f6682ad4e63f6d38e5457d018d",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/assets/comparison.png",
+      "copy": "history/workshop/V7.5/assets/comparison.png",
+      "sha256": "752bedc15ab76623136e3c79af57401995be4468b243b0ffddf1172c1ba98ef4",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/assets/hermes-reuse.png",
+      "copy": "history/workshop/V7.5/assets/hermes-reuse.png",
+      "sha256": "7039c09adef99055d9173d7b075721da30bac2228411a9fa6207e902d536e6fd",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/assets/package-checks.json",
+      "copy": "history/workshop/V7.5/assets/package-checks.json",
+      "sha256": "25c7ef1a11f7c157e57fef4e6643d07b259955d9ae4d1e76c09a181b01b82677",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/assets/portable-production-checks.json",
+      "copy": "history/workshop/V7.5/assets/portable-production-checks.json",
+      "sha256": "5f5a3092c58d7a726406ec77cee8c44ac521a67eaf8aa9408e154b54e03ae6c4",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/assets/portable-retained-checks.json",
+      "copy": "history/workshop/V7.5/assets/portable-retained-checks.json",
+      "sha256": "02727e6c4addc98d3d51d5c3cdb03c902eb40920f438a017e66034e512b337d6",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/assets/presentation-interactions.json",
+      "copy": "history/workshop/V7.5/assets/presentation-interactions.json",
+      "sha256": "1759db87aced14dee46f92d24125029b7b9fad2c80a7a8ae274ea106150a0179",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/assets/presentation-package.json",
+      "copy": "history/workshop/V7.5/assets/presentation-package.json",
+      "sha256": "ef4dc64da2b0fce5ada46c0e3ee9a3c0c02b39429f3e004ba7cd649c0fdb3963",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V7.5/assets/production-browser-checks.json",
+      "copy": "history/workshop/V7.5/assets/production-browser-checks.json",
+      "sha256": "55535869d380716ea8a8184111e37a4d2385fe1cf0a8e839dd8d5d75a25a79f3",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V9.1/01-transcription.md",
+      "copy": "history/workshop/V9.1/01-transcription.md",
+      "sha256": "51b440130d966743187ecaaf3d914e9fb9388de5bc148ae084ea696cb296f1e0",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V9.1/02-analysis.md",
+      "copy": "history/workshop/V9.1/02-analysis.md",
+      "sha256": "fd9ea78815dea665c8f6ab223995717c42fc5e393a380922c5bc7d5cd82a22ae",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V9.1/03-analysis-round-2.md",
+      "copy": "history/workshop/V9.1/03-analysis-round-2.md",
+      "sha256": "01efe2702374de63bb3b37d43656aebabfb2ff88efaccbc3fbd4aae901d65171",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V9.1/04-analysis-round-3.md",
+      "copy": "history/workshop/V9.1/04-analysis-round-3.md",
+      "sha256": "ab5ef17612eff383fdcb854d56424c1a1030a8efe183a88ceee9aefa62da3db7",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V9.1/05-implementation.md",
+      "copy": "history/workshop/V9.1/05-implementation.md",
+      "sha256": "6442029d8d1c1e42b9caea1dab1d573bcc3e0eaa88df985fd3d6324588d86a67",
+      "source_revision": "a9020c7b64aab51965cc7bf062fef7edcf3b5638"
+    },
+    {
+      "source": "workshop_docs/versions/V9.1/06-adversarial-review.md",
+      "copy": "history/workshop/V9.1/06-adversarial-review.md",
+      "sha256": "9bc3e88c42af82ddb98300ff080fde0b719b994486527d53d1b46e270715dd16",
+      "source_revision": "working-tree"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "checks": [
+    "examples, native tab keys and Space activation, decision buttons followed by vertical navigation, direct seeking",
+    "reading mode, Up/Down after focused navigation buttons, native text editing",
+    "layout at 1440×960",
+    "layout at 1366×768",
+    "layout at 390×844",
+    "layout at 320×640",
+    "Up after clicking a download link, real Moom and handbook downloads",
+    "calendar dates and UTF-8 line folding",
+    "ZIP extraction in Persian/space path, offline navigation, interactions and clipboard fallback"
+  ],
+  "browserErrors": [],
+  "failedRequests": [],
+  "release": "0.1.1-1c43ab914ef6",
+  "browser_verified_release": "0.1.1-1d60b781c528",
+  "frontend_hashes_verified_on_final_release": true,
+  "latest_public_kit_and_handbook_hashes_verified": true,
+  "workspace_lifecycle_tests": 6,
+  "participant_zip_bootstrap": "passed",
+  "actual_job_export_import_and_new_input_build": "passed"
+}

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "examples, keyboard tabs, decision preview, direct seeking",
+    "reading mode and vertical keyboard navigation",
+    "layout at 1440×960",
+    "layout at 1366×768",
+    "layout at 390×844",
+    "layout at 320×640",
+    "calendar dates and UTF-8 line folding",
+    "ZIP extraction in Persian/space path, offline navigation, interactions and clipboard fallback"
+  ],
+  "browserErrors": [],
+  "failedRequests": [],
+  "origin": "https://blog.agent.kiloapp.ir",
+  "offline_network_requests": 0,
+  "release": "0.1-50dbb6e3449c"
+}

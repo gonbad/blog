@@ -1,0 +1,169 @@
+{
+  "id": "publish-a-post",
+  "title": "Publish an independent instructional post",
+  "revision": "working",
+  "status": "candidate",
+  "owner_review": {
+    "file": "docs/projects/ID/versions/VVERSION/NNN-review.md",
+    "response_channel": "file",
+    "rounds": "new numbered file for each round; preserve submitted rounds",
+    "questions": "options with exactly one Recommended",
+    "uncertain_decisions": "Confirmation / override",
+    "before_implementation": true,
+    "blank_answer": "on owner submission: delegated soft project default; not explicit acceptance or a reusable hard rule",
+    "enforcement": "assistant procedure"
+  },
+  "project_layout": {
+    "source": "site",
+    "kind": "post",
+    "metadata": {
+      "publish": false
+    }
+  },
+  "steps": [
+    {
+      "id": "blog-brief",
+      "title": "Brief and confirmed inputs",
+      "procedure": "procedures/brief.md",
+      "depends_on": []
+    },
+    {
+      "id": "blog-story",
+      "title": "Story and reading structure",
+      "procedure": "procedures/story.md",
+      "depends_on": [
+        "blog-brief"
+      ]
+    },
+    {
+      "id": "blog-content",
+      "title": "Claims and useful content",
+      "procedure": "procedures/content.md",
+      "depends_on": [
+        "blog-story"
+      ]
+    },
+    {
+      "id": "blog-fidelity",
+      "title": "Source-to-result content fidelity",
+      "procedure": "procedures/fidelity.md",
+      "depends_on": [
+        "blog-content"
+      ]
+    },
+    {
+      "id": "blog-style",
+      "title": "Visual and interaction direction",
+      "procedure": "procedures/style.md",
+      "depends_on": [
+        "blog-fidelity"
+      ]
+    },
+    {
+      "id": "blog-sample",
+      "title": "Representative working sequence",
+      "procedure": "procedures/sample.md",
+      "depends_on": [
+        "blog-style"
+      ],
+      "helpers": [
+        "preview"
+      ]
+    },
+    {
+      "id": "blog-build",
+      "title": "Complete the post",
+      "procedure": "procedures/build.md",
+      "depends_on": [
+        "blog-sample"
+      ],
+      "helpers": [
+        "preview"
+      ]
+    },
+    {
+      "id": "blog-check",
+      "title": "Interaction and layout review",
+      "procedure": "procedures/check.md",
+      "depends_on": [
+        "blog-build"
+      ],
+      "helpers": [
+        "verify"
+      ]
+    },
+    {
+      "id": "blog-package",
+      "title": "Offline package and real downloads",
+      "procedure": "procedures/package.md",
+      "depends_on": [
+        "blog-check"
+      ],
+      "helpers": [
+        "build"
+      ]
+    },
+    {
+      "id": "blog-publish",
+      "title": "Publish and edit the root",
+      "procedure": "procedures/publish.md",
+      "depends_on": [
+        "blog-package"
+      ],
+      "helpers": [
+        "deploy"
+      ]
+    }
+  ],
+  "resources": [
+    "deploy/Caddyfile",
+    "deploy/workshop-blog.service",
+    "deploy/workshop-blog.yaml",
+    "tools/verify-server.cjs"
+  ],
+  "helpers": {
+    "preview": {
+      "path": "tools/build.py",
+      "command": [
+        "python3",
+        "{helper}",
+        "--preview",
+        "{project}"
+      ]
+    },
+    "build": {
+      "path": "tools/build.py",
+      "command": [
+        "python3",
+        "{helper}"
+      ]
+    },
+    "verify": {
+      "path": "tools/verify.cjs",
+      "command": [
+        "node",
+        "{helper}"
+      ],
+      "resources": [
+        "tools/verify-server.cjs"
+      ]
+    },
+    "deploy": {
+      "path": "tools/deploy.py",
+      "command": [
+        "python3",
+        "{helper}"
+      ],
+      "resources": [
+        "deploy/Caddyfile",
+        "deploy/workshop-blog.service",
+        "deploy/workshop-blog.yaml"
+      ]
+    }
+  },
+  "project_versioning": "Version documents, source snapshots and published_snapshot support",
+  "version_entries": [
+    "agent-assisted folder + 01-request.md",
+    "owner-prepared folder + primary 01-*.md adopted with --input"
+  ]
+}

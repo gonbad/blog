@@ -1,0 +1,15 @@
+{
+  "title": "Agent Presentation (167 slides)",
+  "version": "7.4",
+  "docs": "docs/projects/004-agent-presentation/versions/V7/V7.4",
+  "id": "004-agent-presentation",
+  "milestones": {},
+  "job_observed": "6aca59dd44daa9c5d2c992aa693809de5ad616d9784542722a04639de77650e2",
+  "job_adaptations": [
+    {
+      "note": "Imported complete state; reviewed public source and delivery contract. New output verification pending.",
+      "at": "2026-11-11T04:57:00+00:00",
+      "sha256": "6aca59dd44daa9c5d2c992aa693809de5ad616d9784542722a04639de77650e2"
+    }
+  ]
+}

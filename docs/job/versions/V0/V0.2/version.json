@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "status": "verified",
+  "change_input": {
+    "file": "docs/job/versions/V0/V0.2/01-request.md",
+    "sha256": "286f3cfccc32164edb2dabe7a178b4c82073aabe8c43185859b8d266fc0d3669",
+    "entry_mode": "agent-assisted"
+  },
+  "created_at": "2026-11-11T04:57:00+00:00",
+  "job_sha256": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2"
+}

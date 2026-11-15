@@ -1,0 +1,10 @@
+{
+  "name": "005-workshop-7-handbook-checks",
+  "private": true,
+  "scripts": {
+    "check": "node verify-handbook.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": "0.1.2",
+  "previous": "0.1.1",
+  "status": "published",
+  "workflow_at_start": "docs/job/versions/0.5/workflow.json",
+  "change": "Match the index card to post 002 V0.2: account-closure problem, foreign-server solution and English setup prompt",
+  "change_input": {
+    "file": "docs/projects/000-index/versions/V0.1.2/01-request.md",
+    "entry_mode": "agent-assisted",
+    "sha256": "13e910c9c9a17e0865550e1d4ad1301c0155754dfcbbf6012a23cdd9c5ce02b5"
+  },
+  "created_at": "2026-11-09T16:54:36+00:00",
+  "published_release": "0.2-6945b5be2ece",
+  "workflow_at_publication": "0.5",
+  "publication_evidence": "docs/projects/002-claude-server/versions/V0.2/releases/0.2/deployment.json"
+}

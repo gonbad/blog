@@ -1,0 +1,11 @@
+{
+  "version": "7.4",
+  "status": "historical-import",
+  "change_input": {
+    "file": "docs/projects/004-agent-presentation/versions/V7/V7.4/01-input.md",
+    "entry_mode": "reconstructed",
+    "sha256": "2fd1d24b18a943fdadf9a2483587bbfdf496cf0ad86779854a430df7e9582b46"
+  },
+  "created_at": "2026-11-10T18:50:00+00:00",
+  "correction": "The prior AI-generated migration summary was not an owner-prepared input or evidence of publication at the blog URL. See the current version's complete original records."
+}

@@ -1,0 +1,10 @@
+{
+  "version": "0.1.2",
+  "status": "draft",
+  "change_input": {
+    "file": "docs/projects/001-workshop-7/versions/V0/V0.1/V0.1.2/01-request.md",
+    "sha256": "0a1bdf8abc830356b4e5a98e6b7a468231d8bcb9b78f2000bc8b1b5962e04ca2",
+    "entry_mode": "agent-assisted"
+  },
+  "created_at": "2026-11-11T19:18:36+00:00"
+}

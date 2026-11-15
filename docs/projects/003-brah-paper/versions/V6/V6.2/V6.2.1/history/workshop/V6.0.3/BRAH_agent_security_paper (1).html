@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Byzantine-Resilient Agent Harnesses: Enforcing Availability, Integrity, and Confidentiality When Both the Caller and the LLM Planner Are Untrusted</title>
+<style>
+@page { size: A4; margin: 22mm 20mm 22mm 20mm; @bottom-center { content: counter(page); font-family: Georgia, "Times New Roman", serif; font-size: 9pt; color: #444; } }
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { background: #eceae6; }
+body { font-family: "Times New Roman", Times, "Liberation Serif", Georgia, serif; font-size: 11pt; line-height: 1.5; color: #111; background: #fff; max-width: 800px; margin: 24px auto; padding: 56px 64px; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+h1.title { font-size: 19pt; line-height: 1.25; text-align: center; margin: 0 0 14pt; font-weight: bold; hyphens: none; }
+.authors { text-align: center; font-size: 11.5pt; margin: 0 0 3pt; }
+.affil { text-align: center; font-size: 10pt; color: #333; margin: 0 0 16pt; font-style: italic; }
+.abstract { margin: 0 0 14pt; padding: 10pt 0; border-top: 0.75pt solid #000; border-bottom: 0.75pt solid #000; font-size: 10.5pt; line-height: 1.42; }
+.abstract h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 4pt; text-align: left; }
+.abstract p { margin: 0 0 5pt; }
+.keywords { margin-top: 6pt; }
+h2 { font-size: 13pt; margin: 20pt 0 6pt; text-align: left; break-after: avoid; page-break-after: avoid; hyphens: none; }
+h3 { font-size: 11.5pt; margin: 13pt 0 4pt; text-align: left; break-after: avoid; page-break-after: avoid; hyphens: none; }
+p { margin: 0 0 8pt; orphans: 3; widows: 3; }
+code { font-family: "Courier New", Courier, "Liberation Mono", monospace; font-size: 9.3pt; background: #f3f3f1; padding: 0 2px; border-radius: 2px; hyphens: none; word-break: break-word; }
+pre { font-family: "Courier New", Courier, "Liberation Mono", monospace; font-size: 8.6pt; line-height: 1.35; background: #f6f6f4; border: 0.5pt solid #bbb; padding: 8pt 10pt; overflow-x: auto; text-align: left; break-inside: avoid; page-break-inside: avoid; margin: 8pt 0 10pt; white-space: pre; hyphens: none; }
+pre code { background: none; padding: 0; font-size: inherit; word-break: normal; }
+.m { font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif; font-style: italic; white-space: nowrap; }
+.m .r { font-style: normal; }
+.eq { display: flex; justify-content: space-between; align-items: center; margin: 7pt 0 9pt; padding: 0 4pt; break-inside: avoid; page-break-inside: avoid; }
+.eq .body { flex: 1; text-align: center; overflow-x: auto; }
+.eq .no { width: 36pt; text-align: right; font-size: 10.5pt; }
+.thm, .def { margin: 9pt 0; padding: 6pt 10pt; border-left: 2.5pt solid #444; background: #f7f7f5; break-inside: avoid; page-break-inside: avoid; }
+.thm p, .def p { margin: 0; }
+.proof { margin: 4pt 0 10pt; }
+.proof p { margin: 0; }
+.qed { float: right; }
+figure { margin: 12pt 0; break-inside: avoid; page-break-inside: avoid; text-align: center; }
+figure svg { max-width: 100%; height: auto; }
+figcaption { font-size: 9.5pt; text-align: justify; margin-top: 4pt; }
+.tablewrap { margin: 8pt 0 12pt; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 8.7pt; line-height: 1.3; text-align: left; hyphens: none; }
+caption { caption-side: top; text-align: left; font-size: 9.5pt; font-weight: bold; padding-bottom: 4pt; break-after: avoid; page-break-after: avoid; }
+caption span { font-weight: normal; }
+th, td { border-top: 0.5pt solid #777; border-bottom: 0.5pt solid #777; padding: 3pt 4pt; vertical-align: top; }
+thead th { background: #e9e9e6; border-top: 1pt solid #000; border-bottom: 1pt solid #000; font-weight: bold; }
+tbody tr:last-child td { border-bottom: 1pt solid #000; }
+tr { break-inside: avoid; page-break-inside: avoid; }
+thead { display: table-header-group; }
+ol.refs { padding-left: 22pt; font-size: 10pt; line-height: 1.4; text-align: left; }
+ol.refs li { margin-bottom: 4pt; break-inside: avoid; page-break-inside: avoid; }
+.note { border: 1pt dashed #a05a00; background: #fff6e8; padding: 6pt 9pt; font-size: 9.5pt; margin: 8pt 0 10pt; text-align: left; break-inside: avoid; }
+.screen-note { position: sticky; top: 0; font-family: Arial, Helvetica, sans-serif; font-size: 11px; text-align: center; background: #26323f; color: #fff; padding: 6px; margin: -56px -64px 40px; }
+@media print {
+  html { background: #fff; }
+  body { max-width: none; margin: 0; padding: 0; font-size: 10.5pt; }
+  .screen-note { display: none; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: inherit; text-decoration: none; }
+}
+@media (max-width: 700px) { body { padding: 24px 18px; margin: 0; } .screen-note { margin: -24px -18px 24px; } .eq .no { width: 28pt; } }
+
+.m sub, .m sup { font-style: normal; font-size: 0.75em; }
+.m .vec { text-decoration: overline; }
+.m .xar { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1; margin: 0 2px; }
+.m .xar .t { font-size: .7em; font-style: italic; }
+.eq .m { white-space: normal; }
+table.idcol th:first-child, table.idcol td:first-child { white-space: nowrap; }
+.eq .body { overflow-x: auto; }
+.cases { display: inline-flex; align-items: center; text-align: left; }
+.cases .brace { font-size: 40pt; font-weight: 100; line-height: 1; margin-right: 6pt; font-family: "Times New Roman", serif; }
+.cases .rows > div { margin: 3pt 0; }
+@media print { .eq .body { overflow: visible; } }
+</style>
+</head>
+<body>
+<div class="screen-note">To save as PDF: File &rarr; Print &rarr; Destination &ldquo;Save as PDF&rdquo; &middot; Paper size A4 &middot; Margins: Default &middot; enable &ldquo;Background graphics&rdquo;</div>
+
+<h1 class="title">Byzantine-Resilient Agent Harnesses: Enforcing Availability, Integrity, and Confidentiality When Both the Caller and the LLM Planner Are Untrusted</h1>
+<p class="authors">Omid Baharloo</p>
+<p class="affil">baharloo.omid@gmail.com</p>
+
+<div class="abstract">
+<h2>Abstract</h2>
+<p>Large language model (LLM) agents are increasingly given operational authority over multi-tenant services that handle transactions, customer records, and organizational state. Existing defenses either rely on model alignment and prompt-level instructions, or assume a personal-assistant setting in which the party issuing instructions is a trusted owner. In public, multi-tenant deployments neither assumption holds: any anonymous caller may be an adversary, and the LLM planner itself, which is subject to stochastic failure, adversarial manipulation, and observation by its hosting provider, must be treated as an untrusted component. We present the Byzantine-Resilient Agent Harness (BRAH), an architecture that enforces availability, integrity, and confidentiality without depending on model compliance. BRAH rests on three mechanisms. First, <i>LLM-Zero Completeness</i> requires that every business state transition reachable through natural-language interaction is also reachable through a deterministic, model-free port state machine, so that service continues during a total model outage or budget exhaustion. Second, <i>split authority</i> removes all state-mutating capabilities from the planner, which may only propose typed actions that the authenticated principal confirms out of band, while a reference monitor binds every identity and tenant parameter from an immutable execution context. Third, <i>principal-owned, sink-typed opaque handles</i> replace sensitive identifiers in the model&rsquo;s context, and parameter-free introspection removes existence oracles. We formalize a dual-adversary threat model, state and prove three invariants under explicit assumptions, describe a declarative programming model with compile-time verification gates in a reference runtime, trace four deployment scenarios, and analyze ten classes of attack against the design.</p>
+<p class="keywords"><b>Keywords:</b> LLM agents; prompt injection; reference monitor; confused deputy; object capabilities; multi-tenant security; information-flow control; Byzantine fault tolerance</p>
+</div>
+
+<h2>1. Introduction</h2>
+<p>Large language models have moved from passive text generators to goal-directed agents that perceive digital environments and execute multi-step workflows. In enterprise settings, such agents are given tool interfaces that let them query relational databases, call third-party REST and Model Context Protocol (MCP) endpoints, manage content systems, and mediate commercial transactions over public messaging platforms.</p>
+<p>This shift exposes a structural weakness. An autoregressive model receives control instructions and untrusted data in a single, undifferentiated token sequence. Classical systems separate the two by construction: the Harvard architecture, write-xor-execute page permissions, and parameterized database queries all prevent data from being interpreted as code. An LLM offers no corresponding separation between system prompts, developer policy, conversation history, and external content.</p>
+
+<h3>1.1 Model alignment is not a security boundary</h3>
+<p>Most agent frameworks attempt to prevent unauthorized state changes and data leakage through model-level measures: reinforcement learning from human feedback, instruction-hierarchy fine-tuning, defensive system prompts, and secondary LLM-based filters. Benchmarks of tool-integrated agents show that such measures fail under adaptive attack [9, 10]. Direct injection, indirect injection embedded in retrieved pages or database rows [11], multi-turn social engineering, and syntactic obfuscation all bypass prompt-level guardrails with regularity. Requiring a stochastic model to enforce access-control invariants while it interprets adversarial tokens contradicts two established design principles, separation of duty and complete mediation [5].</p>
+
+<h3>1.2 Two threat models</h3>
+<p>Recent work applies software-security techniques, notably information-flow control (IFC) and capability-based enforcement, to LLM agents [6, 7, 8]. These systems are designed for what we call the <i>personal-assistant threat model</i>, which rests on four assumptions. (i) The prompter is a single authenticated, trusted owner. (ii) The adversary is a third party that plants instructions in passive data fetched during execution, such as a document or an email body. (iii) The inference provider is trusted, so confidential documents may be placed in the model context in plaintext. (iv) Availability is secondary to fail-closed behavior, so halting when a policy is violated or the model is unreachable is acceptable.</p>
+<p>Public service agents, such as event-registration desks, customer-support agents, and multi-tenant brokerage platforms, operate under a different model, the <i>public multi-tenant service-agent threat model</i>, in which all four assumptions fail together. Any anonymous user of a messaging network can open a session, so the conversational caller is the primary adversary and may attempt to read other customers&rsquo; records, manipulate prices, or trigger unauthorized broadcasts. Because the planner processes the caller&rsquo;s input directly, and is itself subject to hallucination and jailbreaking, it must be modeled as an untrusted, possibly compromised component. Cloud-hosted inference spans third-party jurisdictions and proxies, so sending regulated personal data to the model in plaintext is itself a disclosure. Finally, availability is a business requirement: a commercial agent cannot stop working because a provider suffers a network partition, returns gateway errors, or because an abusive caller exhausts the token budget.</p>
+
+<h3>1.3 Contributions</h3>
+<p>Rather than strengthening prompt compliance, BRAH encapsulates the untrusted planner inside a deterministic reference monitor. The contributions are as follows.</p>
+<ol>
+<li>A <i>dual-adversary service threat model</i> in which the external caller <span class="m">A<sub>caller</sub></span> and the internal planner <span class="m">A<sub>LLM</sub></span> are both untrusted and may collude (Section 3).</li>
+<li><i>LLM-Zero Completeness</i> for availability: every business transition that can be reached through model-assisted interaction has an equivalent path through deterministic ports that never invokes the model (Section 5).</li>
+<li><i>Split-authority proposals</i> and <i>context-bound proxies</i> for integrity: state-mutating tools are removed from the planner&rsquo;s schema, mutations become typed proposals ratified by the authenticated principal, and all ambient identifiers are injected by the reference monitor (Section 6).</li>
+<li><i>Principal-owned, sink-typed opaque handles</i> for confidentiality: a tokenization vault, two-tier ingress scrubbing, and zero-argument introspection prevent provider-side disclosure and cross-user existence oracles (Section 7).</li>
+<li>A <i>declarative programming model</i> with compile-time static checks that make insecure tool definitions unregisterable (Section 8), together with an analysis of four deployment scenarios and ten attack classes (Sections 9 and 10).</li>
+</ol>
+
+<h2>2. Background and Related Work</h2>
+<h3>2.1 Classical foundations</h3>
+<p>BRAH adapts four results from systems security. Anderson&rsquo;s reference monitor concept [1] requires that a mediating mechanism be tamper-proof, invoked on every access (non-bypassable), and small enough to be verified. Hardy&rsquo;s confused deputy problem [2] describes how a program holding ambient authority can be induced by a less-privileged caller to misuse it. In a conventional agent, tools whose target parameters (recipient, tenant, record) are chosen by the model make the agent a confused deputy. Object-capability security [3] removes ambient authority by requiring that a subject hold an unforgeable reference that both designates an object and authorizes a set of operations; BRAH transfers this idea to natural-language runtimes through principal-owned, sink-restricted handles. Denning&rsquo;s lattice model of information flow [4] provides the vocabulary of confidentiality and integrity labels used to reason about flows toward public sinks and from low-integrity sources.</p>
+
+<h3>2.2 LLM agent security architectures</h3>
+<p>Benchmarks such as InjecAgent [10] and AgentDojo [9] show that prompt-level defenses fail against adaptive indirect injection, and recent work has moved toward system-level isolation. CaMeL [6] derives control and data flows from the user&rsquo;s trusted query. A privileged LLM compiles the query into a restricted program, a quarantined LLM without tool access parses untrusted data into typed values, and a custom interpreter tracks provenance and enforces capability policies at tool calls. The authors report solving 77% of AgentDojo tasks with provable security, against 84% for an undefended system. The guarantee presupposes a trusted initial query; if that query comes from an adversary, the privileged model compiles the attacker&rsquo;s instructions into the plan. In addition, the quarantined model sees the raw data it parses, and a policy violation causes execution to stop.</p>
+<p>FIDES [7] propagates confidentiality and integrity labels dynamically across planner turns and provides a selective hiding primitive that replaces confidential values with symbolic variables in the model context. It assumes a trusted task initiator and does not address out-of-band principal confirmation or operation when the planner is unavailable. IsolateGPT [8] isolates third-party LLM applications in separate processes mediated by a central hub, which limits cross-application contamination for a single user, but it does not address shared multi-tenant business state manipulated by anonymous callers.</p>
+
+<h3>2.3 Comparison</h3>
+<p>Table 1 summarizes the differences in problem setting. The comparison concerns stated design objectives and threat models, not the quality of the cited systems within their own scope.</p>
+<div class="tablewrap">
+<table>
+<caption>Table 1. <span>Comparison of threat models and mechanisms.</span></caption>
+<thead><tr><th>Dimension</th><th>CaMeL [6]</th><th>FIDES [7]</th><th>IsolateGPT [8]</th><th>BRAH (this work)</th></tr></thead>
+<tbody>
+<tr><td>Primary setting</td><td>Personal assistant: trusted user, untrusted data</td><td>Personal assistant: trusted user, untrusted data</td><td>Single user, multiple third-party apps</td><td>Public multi-tenant service: untrusted caller and untrusted planner</td></tr>
+<tr><td>Trust in initial caller</td><td>Trusted</td><td>Trusted</td><td>Trusted (host user)</td><td>Untrusted</td></tr>
+<tr><td>Trust in planner</td><td>Privileged model trusted for plan; quarantined model untrusted on data</td><td>Untrusted once it receives tainted data</td><td>Untrusted within app processes</td><td>Untrusted; also a potential disclosure channel</td></tr>
+<tr><td>Availability objective</td><td>Not a stated objective; execution halts on policy error</td><td>Not a stated objective</td><td>Not a stated objective; requires live model</td><td>LLM-Zero Completeness</td></tr>
+<tr><td>Integrity mechanism</td><td>Custom interpreter with provenance tracking</td><td>Dynamic label propagation</td><td>Process isolation with hub mediation</td><td>Split-authority proposals, context-bound proxies</td></tr>
+<tr><td>Confidentiality mechanism</td><td>Capabilities on values; quarantined model sees plaintext</td><td>Selective hiding with symbolic variables</td><td>Per-application namespace isolation</td><td>Principal-owned, sink-typed opaque handles</td></tr>
+<tr><td>Text-only channel defense</td><td>Not addressed</td><td>Not addressed</td><td>Not addressed</td><td>Post-turn egress nonces</td></tr>
+<tr><td>Direct state mutation by planner</td><td>Permitted if policy allows</td><td>Permitted if labels satisfy policy</td><td>Permitted after hub routing</td><td>Prohibited for state-mutating commands</td></tr>
+</tbody></table>
+</div>
+
+<h2>3. System Model and Threat Model</h2>
+<p>To state guarantees that do not depend on stochastic model behavior, we model the service agent as a state-transition system mediated by a deterministic reference monitor.</p>
+
+<h3>3.1 Notation</h3>
+<p>A multi-tenant service agent is the tuple <span class="m">S<sub>sys</sub> = ⟨S, P, Γ, C, T_M, M, H, Σ⟩</span>. The set of authenticated principals is <span class="m">S = S<sub>user</sub> ∪ S<sub>op</sub> ∪ S<sub>brk</sub> ∪ S<sub>adm</sub></span>, comprising end users (customers, registrants, channel readers, or programmatic personal assistants), tenant operators (business owners who configure and supervise an isolated tenant instance), wholesale brokers (parties authorized to create tenant instances and settle wholesale usage), and the infrastructure administrator.</p>
+<p>Events enter through four typed ingress ports, <span class="m">P = {P<sub>bot</sub>, P<sub>acct</sub>, P<sub>api</sub>, P<sub>llm</sub>}</span>. The port <span class="m">P<sub>bot</sub></span> carries official messenger-bot webhooks, which deliver verifiable sender identifiers, structured contact cards, and inline-button callback payloads. The port <span class="m">P<sub>acct</sub></span> carries personal-account session streams (for example MTProto-based clients or WhatsApp session gateways), which deliver text and media messages authenticated by platform peer identifiers but offer no structured interface elements. The port <span class="m">P<sub>api</sub></span> carries structured HTTP and MCP endpoints, authenticated by bearer tokens whose SHA-256 digests are stored server-side. The port <span class="m">P<sub>llm</sub></span> is the untrusted output stream (text and tool calls) returned by the inference gateway.</p>
+<p>On an event from any port <span class="m">p ∈ P ∖ {P<sub>llm</sub>}</span>, the harness creates an immutable execution context bound to a turn:</p>
+<div class="eq"><div class="body"><span class="m">Γ = ⟨run_id, tenant_id, port, peer_id, role, σ<sub>db</sub>⟩</span></div><div class="no">(1)</div></div>
+<p>where <span class="m">tenant_id</span> identifies the isolated tenant instance, <span class="m">peer_id</span> is the identity of the caller as verified by the transport, and <span class="m">σ<sub>db</sub></span> is the database state snapshot. The context is held in coroutine-local runtime storage. The planner <span class="m">M</span> has no read or write access to <span class="m">Γ</span> and cannot forge or override any of its fields.</p>
+<p>The domain engine exposes a finite set of deterministic commands <span class="m">C = C<sub>read</sub> ∪ C<sub>mutate</sub></span>, such as querying public information, registering an attendee, issuing an invoice, or approving a listing. Each command <span class="m">c ∈ C</span> is guarded by a deterministic predicate <span class="m"><span class="r">Authz</span>(s, Γ, c, args) ∈ {<span class="r">true</span>, <span class="r">false</span>}</span>. The untrusted planner is a function <span class="m">M : H<sub>san</sub> × T_M → <span class="r">Text</span> ∪ A<sub>proxy</sub></span>. It receives only a sanitized, pseudonymized history <span class="m">H<sub>san</sub></span> and an attenuated proxy toolset <span class="m">T_M</span>. Each proxy tool <span class="m">t̃ ∈ T_M</span> either executes a context-bound read in <span class="m">C<sub>read</sub></span> or emits a non-executing proposal <span class="m">Π(c, args)</span> for some <span class="m">c ∈ C<sub>mutate</sub></span>. The reference monitor <span class="m">H</span> mediates every ingress event, model invocation, and egress side effect. It maintains the opaque handle vault</p>
+<div class="eq"><div class="body"><span class="m">Σ : R → V<sub>secret</sub> × <span class="r">Kind</span> × <span class="r">TenantId</span> × <span class="r">OwnerPeer</span> × 2<sup>T</sup></span></div><div class="no">(2)</div></div>
+<p>which maps unguessable handle strings <span class="m">h ∈ R</span> to the underlying sensitive values, with the set of tools (sinks) permitted to dereference each handle.</p>
+
+<h3>3.2 Dual-adversary model</h3>
+<p>The first adversary, the <i>untrusted external caller</i> <span class="m">A<sub>caller</sub></span>, interacts over <span class="m">P<sub>bot</sub></span>, <span class="m">P<sub>acct</sub></span>, or <span class="m">P<sub>api</sub></span> and controls all inbound payloads. It may send direct injections, spoof system roles, or embed instructions in forwarded messages, documents, or URLs. Its goals include cross-peer and cross-tenant access (<span class="m">peer_id′ ≠ Γ.peer_id</span> or <span class="m">tenant_id′ ≠ Γ.tenant_id</span>); unauthorized mutations such as registering without payment, obtaining discounts outside the operator&rsquo;s negotiation limits, or forging payment confirmations to the operator; and sending messages to third parties. It may also mount denial-of-wallet attacks by flooding the agent with token-intensive requests to exhaust a tenant budget or the host&rsquo;s inference quota.</p>
+<p>The second adversary is the <i>Byzantine planner</i> [12] <span class="m">A<sub>LLM</sub></span>, which represents the model together with its hosting infrastructure in two roles. As an <i>active subverter</i>, whether through <span class="m">A<sub>caller</sub></span>&rsquo;s injections, poisoned weights, or ordinary hallucination, the model may emit arbitrary tool calls with fabricated arguments, supply another user&rsquo;s identifier or handle, produce deceptive text next to a legitimate confirmation control, or claim that an operation has completed. As a <i>passive observer</i>, the cloud provider, network relays, and logging pipelines can read every token of the prompt. Any plaintext personal data, credential, or platform identifier in the prompt is therefore assumed to be disclosed. The two adversaries may collude.</p>
+<p>We assume that transport-level authentication (Layer 1) is not compromised, that the reference monitor and the domain engine are correctly implemented, and that cryptographic primitives and the random-number generator behave as specified.</p>
+
+<h3>3.3 Security objectives</h3>
+<p>A harness is <i>Byzantine-resilient</i> if it enforces three invariants under this model.</p>
+<p><b>Availability invariant (A).</b> Every domain command <span class="m">c ∈ C</span> assigned to a principal role remains executable, with latency bounded independently of <span class="m">M</span>, when <span class="m">M</span> returns arbitrary errors, times out, or is unreachable.</p>
+<p><b>Integrity invariant (I).</b> No state-mutating command <span class="m">c ∈ C<sub>mutate</sub></span> and no cross-peer outbound transmission can be executed by <span class="m">M</span> directly. Every mutation requires an explicit confirmation originating from the authorized principal over a deterministic port, with all tenant and identity parameters taken from <span class="m">Γ</span>.</p>
+<p><b>Confidentiality invariant (C).</b> For the protected classes of secrets <span class="m">V<sub>secret</sub></span> (Section 7), the mutual information between the prompt observed by <span class="m">M</span> and <span class="m">V<sub>secret</sub></span> is zero, <span class="m">I(<span class="r">Prompt</span>; V<sub>secret</sub>) = 0</span>, and no caller <span class="m">s</span> can infer or dereference any datum owned by a principal <span class="m">s′ ≠ s</span>.</p>
+
+<h2>4. Architecture</h2>
+<p>BRAH replaces the usual topology in which the model acts as controller with a three-layer reference monitor. The planner is an advisory leaf node outside the trusted computing base (TCB). Figure 1 shows the layers and the data crossing each boundary.</p>
+<figure>
+<svg viewBox="0 0 840 372" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three-layer reference monitor architecture with the untrusted planner outside the trusted computing base" font-family="Times New Roman, Times, serif" font-size="12">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<rect x="8" y="8" width="520" height="356" fill="none" stroke="#222" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="18" y="26" font-style="italic">Trusted computing base</text>
+<rect x="24" y="40" width="140" height="62" fill="#fff" stroke="#222"/>
+<text x="94" y="58" text-anchor="middle" font-weight="bold">Ingress ports</text>
+<text x="94" y="75" text-anchor="middle">P<tspan baseline-shift="sub" font-size="9">bot</tspan>, P<tspan baseline-shift="sub" font-size="9">acct</tspan>, P<tspan baseline-shift="sub" font-size="9">api</tspan></text>
+<text x="94" y="91" text-anchor="middle" font-size="11">callers (untrusted)</text>
+<rect x="24" y="126" width="480" height="62" fill="#efefec" stroke="#222"/>
+<text x="264" y="144" text-anchor="middle" font-weight="bold">Layer 1: ingress authentication and normalization</text>
+<text x="264" y="161" text-anchor="middle">transport authentication · deterministic port-FSM interception</text>
+<text x="264" y="177" text-anchor="middle">two-tier PII scrubbing · metadata pseudonymization</text>
+<rect x="24" y="212" width="480" height="76" fill="#e2e2de" stroke="#222"/>
+<text x="264" y="230" text-anchor="middle" font-weight="bold">Layer 2: reference monitor</text>
+<text x="264" y="247" text-anchor="middle">immutable context Γ · implicit parameter binding</text>
+<text x="264" y="263" text-anchor="middle">split-authority gate · scoped handle dereferencing · vault Σ</text>
+<text x="264" y="279" text-anchor="middle">circuit breaker · per-peer quotas · WYSIWYS rendering</text>
+<rect x="24" y="312" width="480" height="40" fill="#fff" stroke="#222"/>
+<text x="264" y="330" text-anchor="middle" font-weight="bold">Layer 3: deterministic domain engine</text>
+<text x="264" y="345" text-anchor="middle" font-size="11">commands C · append-only ledgers · outbound notification routers</text>
+<line x1="94" y1="102" x2="94" y2="126" stroke="#222" marker-end="url(#ar)"/>
+<line x1="264" y1="188" x2="264" y2="212" stroke="#222" marker-end="url(#ar)"/>
+<line x1="264" y1="288" x2="264" y2="312" stroke="#222" marker-end="url(#ar)"/>
+<rect x="650" y="190" width="176" height="96" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<text x="738" y="212" text-anchor="middle" font-weight="bold">Planner M</text>
+<text x="738" y="229" text-anchor="middle">untrusted, outside TCB</text>
+<text x="738" y="246" text-anchor="middle" font-size="11">no access to Γ, Σ, or C<tspan baseline-shift="sub" font-size="8">mutate</tspan></text>
+<text x="738" y="262" text-anchor="middle" font-size="11">sees H<tspan baseline-shift="sub" font-size="8">san</tspan> and T<tspan baseline-shift="sub" font-size="8">M</tspan> only</text>
+<line x1="504" y1="238" x2="648" y2="224" stroke="#222" marker-end="url(#ar)"/>
+<line x1="648" y1="256" x2="504" y2="264" stroke="#222" marker-end="url(#ar)"/>
+<text x="576" y="216" text-anchor="middle" font-size="10.5">H<tspan baseline-shift="sub" font-size="8">san</tspan>, T<tspan baseline-shift="sub" font-size="8">M</tspan></text>
+<text x="576" y="284" text-anchor="middle" font-size="10.5">reads, Π(c, args)</text>
+<text x="738" y="160" text-anchor="middle" font-size="11" font-style="italic">third-party inference provider</text>
+<text x="738" y="174" text-anchor="middle" font-size="11" font-style="italic">(passive observer)</text>
+</svg>
+<figcaption><b>Figure 1.</b> Three-layer reference monitor. All traffic between callers and the domain engine, and between the engine and the planner, crosses Layers 1 and 2. The planner receives sanitized history and an attenuated toolset, and returns only text, read requests, and typed proposals.</figcaption>
+</figure>
+
+<h3>4.1 Layer 1: ingress authentication, port normalization, and tokenization</h3>
+<p>Layer 1 terminates network connections from messaging servers and API clients and performs three operations before any downstream logic runs. First, it authenticates at the transport level. For bot webhooks it validates a secret path component or header known only to the harness and the messaging platform and extracts the unforgeable sender identifier, any button callback payload, and any verified contact card. For personal-account streams it binds the sender&rsquo;s platform peer identifier to the account session wired to the tenant. For structured API and MCP ports, authentication middleware extracts the bearer token, computes its SHA-256 digest, compares it with the stored digest, and rejects failures with <code>401 Unauthorized</code> before any tool function is reached.</p>
+<p>Second, Layer 1 intercepts deterministic triggers. If an authenticated event is an inline-button callback, a slash command, or a numeric state-machine code (including a confirmation nonce), the model is bypassed and the command is dispatched through Layer 2 to Layer 3. Third, if the event is free text for the model, Layer 1 applies the two-tier PII scrubber (Section 7.1), replacing structured contact payloads and pattern-matched digit sequences with opaque handles <span class="m">h ∈ R</span> stored in <span class="m">Σ</span>.</p>
+
+<h3>4.2 Layer 2: reference monitor and context binder</h3>
+<p>Layer 2 is the core of the TCB. It instantiates <span class="m">Γ</span> and enforces three mediation rules. <i>Implicit context binding:</i> whenever a tool or command is invoked, Layer 2 reads <code>tenant_id</code>, <code>peer_id</code>, and, where applicable, the broker identifier from <span class="m">Γ</span> and injects them into the function&rsquo;s typed context parameter. These fields do not appear in the schema presented to the model, so the model cannot specify or alter tenant or recipient boundaries. <i>Split-authority gate:</i> direct principal triggers arriving on <span class="m">P<sub>bot</sub></span>, <span class="m">P<sub>acct</sub></span>, or <span class="m">P<sub>api</sub></span> may invoke authorized commands in <span class="m">C<sub>mutate</sub></span>, while calls originating from <span class="m">P<sub>llm</sub></span> are restricted to read-only queries in <span class="m">C<sub>read</sub></span> and non-mutating proposal generators <span class="m">Π(c, args)</span>. <i>Scoped handle dereferencing:</i> before any handle argument reaches Layer 3, Layer 2 checks it against <span class="m">Σ</span>, verifying that it belongs to the current tenant, is owned by the current caller, and is permitted for the target sink (Equation 4).</p>
+
+<h3>4.3 Layer 3: deterministic domain engine</h3>
+<p>Layer 3 contains the domain logic, persistence models, append-only financial ledgers, and outbound notification routers. It contains no model calls. Its inputs are commands whose parameters were validated and bound by Layer 2, and its outputs are state changes and notifications generated by code.</p>
+
+<h3>4.4 Administrative planes and delegated authority</h3>
+<p>Authority over the system is partitioned across four planes, each with its own credential type and fixed tool schema, so that compromise of one credential does not confer the authority of another. The <i>administration plane</i> serves the infrastructure owner: it manages brokers and their credit limits, exposes usage metrics, and permits row-capped, redacted, read-only diagnostic queries; every mutating call requires a two-step confirmation token. The <i>broker plane</i> allows a broker to inspect a manifest, ask read-only pre-sales questions, create isolated tenant instances, set per-tenant spending ceilings, suspend or resume tenants, and audit wholesale payables. The <i>operator plane</i> allows a tenant operator to configure persona and behavior, add knowledge entries, wire platform credentials, configure notifications, review pending approvals, and read reports, together with any role-specific management tools. The <i>end-user plane</i> is the surface used by customers through messenger bots, personal-account channels, companion web services, or programmatic assistants.</p>
+<p>Two properties follow. First, because every configuration action is available through a deterministic management interface, administrative continuity does not depend on the model. Second, a deterministic wholesale ledger enforces the per-tenant spending ceiling set on the broker plane and halts a tenant the moment its usage reaches the ceiling, which bounds the loss caused by a buggy or malicious tenant agent regardless of what the planner does.</p>
+
+<h2>5. Pillar I: Availability through LLM-Zero Completeness</h2>
+<p>A common failure mode in agent engineering is <i>LLM-monolithic coupling</i>, in which the model sits on the critical path of every interaction. If the provider is unavailable, throttles requests, or responds slowly, or if an attacker consumes a tenant&rsquo;s token budget, such an agent stops responding altogether. For a commercial service this is a violation of basic availability requirements.</p>
+
+<h3>5.1 Definition</h3>
+<div class="def"><p><b>Definition 1 (LLM-Zero Completeness).</b> Let <span class="m">Σ<sub>biz</sub></span> denote the domain state space of a tenant instance and let <span class="m">Δ : Σ<sub>biz</sub> × C → Σ<sub>biz</sub></span> be the deterministic transition function over commands. A harness satisfies <i>LLM-Zero Completeness</i> if and only if, for every reachable transition <span class="m">σ <span class="xar"><span class="t">c</span><span class="a">&rarr;</span></span> σ′</span> that can be assisted or proposed by the planner <span class="m">M</span>, there is a finite input sequence <span class="m"><span class="vec">p</span></span> over the deterministic ports <span class="m">P<sub>det</sub> = P<sub>bot</sub> ∪ P<sub>acct</sub> ∪ P<sub>api</sub></span> that produces the same transition without invoking <span class="m">M</span>:</p>
+<div class="eq" style="margin-bottom:0"><div class="body"><span class="m">∀(σ, c) ∈ Σ<sub>biz</sub> × C,&thinsp; ∃&thinsp; <span class="vec">p</span> ∈ P<sub>det</sub><sup>*</sup> &thinsp;&thinsp; <span class="r">such that</span> &thinsp;&thinsp; <span class="r">Exec</span>(<span class="vec">p</span>, σ) = Δ(σ, c) ∧ <span class="r">Calls</span>(M) = 0</span></div><div class="no">(3)</div></div></div>
+<p>Under this definition the model is never the exclusive executor of a business capability. Its role is to help users who write in natural language discover commands and pre-fill their parameters for ports that are executable without it.</p>
+
+<h3>5.2 Deterministic port state machines</h3>
+<p>Because transports differ in their interface primitives, Layer 1 implements one deterministic port state machine (port-FSM) per port class, each exposing the full command set without invoking <span class="m">M</span>. On bot ports, every command declared as principal-triggered is compiled into an interactive menu button and a slash-command handler. In an event-registration agent, for example, the menu offers buttons for event details and remaining capacity, a verified FAQ, registration, sharing a verified contact, and payment. Each button produces a signed callback that Layer 1 routes directly to Layer 3.</p>
+<p>On personal-account channels, which have no inline buttons, Layer 1 maintains a per-peer finite-state automaton driven by numeric codes or keywords. Sending <code>0</code> returns a numbered directory of services, and replying with a number advances a deterministic dialogue that collects the required fields and confirms the action with a four-digit nonce. On structured API and MCP ports, every capability is a typed JSON-RPC tool that deterministic scripts or external orchestrators can call without conversational mediation.</p>
+
+<h3>5.3 Unified command bus</h3>
+<p>Dual-mode systems risk logic divergence between manual menus and model-assisted flows. BRAH removes the risk by routing all execution paths through a single command bus in Layer 3. A registration may be triggered by an inline button, by a numeric code followed by a nonce, by a programmatic call from a personal assistant, or by confirming a card that the model proposed. All four paths invoke the same principal-command function, so authorization, validation, and side effects are implemented once.</p>
+
+<h3>5.4 Circuit breaker and quotas</h3>
+<p>When a user sends free text instead of a menu command, Layer 2 mediates the call to <span class="m">M</span> behind two guards. First, a circuit breaker traps model failures. If the gateway exceeds a timeout (8 s in the reference configuration), returns a 5xx or 429 status, or produces output that fails schema validation, Layer 2 replies with the deterministic menu and a notice that natural-language assistance is temporarily unavailable. Second, per-peer sliding-window quotas bound token consumption by a single caller: at most <span class="m">N<sub>LLM</sub></span> natural-language turns per hour (12 in the reference configuration) and at most <span class="m">K<sub>tools</sub></span> proxy calls per turn (4). When a peer exceeds <span class="m">N<sub>LLM</sub></span>, Layer 1 switches that peer&rsquo;s session to menu-only mode, which stops model token consumption while leaving every command available. A legitimate customer who reaches the limit can therefore still complete registration and payment.</p>
+
+<h3>5.5 Availability theorem</h3>
+<div class="thm"><p><b>Theorem 1 (Availability under planner failure).</b> Consider a service agent built on BRAH that satisfies Definition 1, and assume that the deterministic components (transports, Layers 1 to 3, and the database) are available. For any failure state of the planner <span class="m">M</span>, including complete disconnection, arbitrary malformed output, or per-peer quota exhaustion, the set of executable transitions <span class="m">Δ(σ, c)</span> for all authorized principals is unchanged, and each is reachable within a time bound that does not depend on <span class="m">M</span>.</p></div>
+<div class="proof"><p><i>Proof.</i> Take any authorized command <span class="m">c ∈ C</span> and state <span class="m">σ ∈ Σ<sub>biz</sub></span>. By Definition 1, the command compiler has registered a deterministic trigger sequence <span class="m"><span class="vec">p</span> ∈ P<sub>det</sub><sup>*</sup></span> mapped to <span class="m">c</span> on the command bus. When principal <span class="m">s</span> submits <span class="m"><span class="vec">p</span></span> through a bot callback, a numeric code, or an API call, Layer 1 authenticates <span class="m">s</span>, matches <span class="m"><span class="vec">p</span></span> against a trigger table in <span class="m">O(1)</span> time, and dispatches <span class="m">c</span> through Layer 2 to Layer 3 without invoking <span class="m">M</span>. If instead <span class="m">s</span> submits free text while <span class="m">M</span> is unreachable, malformed, or rate-limited, Layer 2 traps the fault within the timeout and returns the menu that lists <span class="m"><span class="vec">p</span></span>. In both cases <span class="m">s</span> executes <span class="m">Δ(σ, c)</span> with <span class="m"><span class="r">Calls</span>(M) = 0</span>. <span class="qed">&#9632;</span></p></div>
+<p>The theorem concerns the model as a point of failure. It does not protect against failures of the deterministic components, which are part of the TCB and are addressed by conventional redundancy. The coverage premise of Definition 1 is checked at build time (rule AST-04, Section 8.3).</p>
+
+<h2>6. Pillar II: Integrity through Split Authority and Context-Bound Proxies</h2>
+<p>Integrity requires that no unauthorized state change, financial charge, or cross-user communication can occur even when an attacker has complete control over the model&rsquo;s output.</p>
+
+<h3>6.1 The confused deputy in agent tool execution</h3>
+<p>Conventional tool-calling frameworks expose general-purpose functions to the model, for example <code>send_message(chat_id, text)</code>, <code>query_database(event_id, query)</code>, or <code>register_user(event_id, name, phone)</code>. The harness holds the global credentials, so every parameter in a tool&rsquo;s schema is under the model&rsquo;s control. After an injection, the subverted model can supply another user&rsquo;s <code>chat_id</code> or another tenant&rsquo;s <code>event_id</code>, and the harness executes the request with its own ambient authority. This is the confused deputy [2].</p>
+
+<h3>6.2 Context-bound capability proxies</h3>
+<p>BRAH forbids ambient target parameters in the planner&rsquo;s toolset: no tool exposed to <span class="m">M</span> may accept a parameter that designates a message recipient (<code>chat_id</code>, <code>peer_id</code>, <code>user_id</code>), a tenant boundary (<code>tenant_id</code>, <code>broker_id</code>), or a cross-tenant resource (<code>event_id</code>). The model receives narrow proxies such as <code>reply_text_to_current_user(text)</code> and <code>search_current_event_kb(query)</code>. When <span class="m">M</span> calls a proxy, Layer 2 reads the context <span class="m">Γ</span> and rewrites the call deterministically:</p>
+<div class="eq"><div class="body"><code>search_current_event_kb(q)</code> &nbsp;&rarr;&nbsp; <code>SELECT * FROM kb WHERE tenant_id = Γ.tenant_id AND match(q)</code></div></div>
+<div class="eq"><div class="body"><code>reply_text_to_current_user(m)</code> &nbsp;&rarr;&nbsp; <code>transport.send_text(recipient = Γ.peer_id, text = strip_controls(m))</code></div></div>
+<p>Because <span class="m">M</span> cannot alter <span class="m">Γ</span>, a prompt-injected model has no means of addressing a message to another user or reading another tenant&rsquo;s knowledge base.</p>
+
+<h3>6.3 Split-authority action proposals</h3>
+<p>Context-bound proxies make reads and plain replies safe, but they do not suffice for high-consequence mutations <span class="m">c ∈ C<sub>mutate</sub></span> that alter business records, create financial obligations, or trigger external workflows. If <span class="m">M</span> held a tool such as <code>confirm_my_registration()</code>, even one bound to <span class="m">Γ.peer_id</span>, a hallucinating or injected model could register a user who had only asked a question, or attach fabricated parameters to the user&rsquo;s profile.</p>
+<p>BRAH therefore applies <i>split authority</i>: commands in <span class="m">C<sub>mutate</sub></span> are never members of <span class="m">T_M</span>. For each mutating command that permits model assistance, the runtime synthesizes a proposal tool <code>propose_&lt;c&gt;(args)</code>, the proposal <span class="m">Π(c, args)</span>. Calling it changes no state. Layer 2 validates the arguments, computes any monetary quote in deterministic code, stores an inert proposal record, and renders a confirmation element to the authenticated human principal. The mutation <span class="m">Δ(σ, c)</span> is executed in Layer 3 if and only if that principal activates the confirmation button (on <span class="m">P<sub>bot</sub></span>) or returns the post-turn nonce (on <span class="m">P<sub>acct</sub></span>).</p>
+
+<h3>6.4 What-you-see-is-what-you-sign binding and turn preemption</h3>
+<p>An early design let the model emit free text together with a button-rendering tool. That allowed UI phishing (attack class I-1): a subverted model could write &ldquo;Click below to download the free brochure&rdquo; above a button that commits a paid registration. It also allowed the model to alter draft fields before confirmation (class I-3).</p>
+<p>BRAH closes both paths with <i>WYSIWYS draft binding</i> and <i>turn-level message preemption</i>. Whenever <span class="m">M</span> calls a proposal tool, Layer 2 discards all free text that <span class="m">M</span> produced in that turn, so the model cannot frame or disguise the confirmation. Layer 2 then builds the entire confirmation message and button label deterministically from the stored proposal record and the pricing engine. The card begins with a fixed header (&ldquo;Official confirmation form: the button below finalizes the details listed here&rdquo;), lists every bound parameter (full name, masked verified phone number, event title, exact price), and carries a descriptive button label such as &ldquo;Confirm registration: price 2,000,000 units&rdquo;. Generic labels such as &ldquo;OK&rdquo; are rejected by the command compiler.</p>
+
+<h3>6.5 Post-turn egress nonces on text-only channels</h3>
+<p>On personal-account channels there are no inline buttons. If confirmation used a static code (&ldquo;send 9 to confirm&rdquo;), a prompt-injected model could use its text reply to socially engineer the user (&ldquo;to receive a free gift, reply 9&rdquo;) into authorizing a mutation.</p>
+<p>BRAH instead uses <i>dynamic post-turn egress nonces</i>. When <span class="m">M</span> calls a proposal tool on such a channel, Layer 2 ends the model turn immediately. Only after the turn has finished does Layer 2 draw a fresh nonce from a cryptographic generator,</p>
+<div class="eq"><div class="body"><span class="m">n<sub>auth</sub> ←<sub>R</sub> {1000, …, 9999}</span></div></div>
+<p>store <span class="m">⟨prop_id, n<sub>auth</sub>, expires_at = t + 300&thinsp;s, attempts = 0⟩</span>, and append a system footer to the card at the egress boundary (&ldquo;[System]: to finalize this action, send the code 4829&rdquo;). The nonce is never written to the conversation history visible to <span class="m">M</span>, so the planner has no information about it. Three consecutive wrong inputs invalidate the proposal, which limits guessing.</p>
+
+<h3>6.6 Separating system-fact notifications from customer escalations</h3>
+<p>If the agent has a general tool for messaging the operator&rsquo;s notification channel, a compromised model can fabricate a payment or registration confirmation during a customer conversation and thereby induce the operator to deliver goods or services without payment (class I-2). BRAH therefore separates the two kinds of message. Official notifications of state changes, such as confirmed registrations, verified payments, newly submitted listings, or budget alerts, are emitted only from principal-command handlers in Layer 3 after the database commit, and the planner has no tool that can produce one. To let the agent hand an unanswerable question to the operator, the planner is given only <code>escalate_question_to_operator(summary)</code>. That tool is limited to one open escalation per customer thread, and Layer 2 prefixes every escalation with a fixed banner stating that the text is an unverified claim by the customer and carries no system or financial confirmation.</p>
+
+<h3>6.7 Integrity theorem</h3>
+<div class="thm"><p><b>Theorem 2 (Integrity against planner subversion).</b> Consider a service agent that implements context-bound proxies, split-authority proposals, WYSIWYS turn preemption, and post-turn egress nonces, and assume that Layer 1 transport authentication is not compromised. The probability that an active Byzantine planner <span class="m">M</span> executes an unauthorized state mutation <span class="m">c ∈ C<sub>mutate</sub></span>, or transmits a message to a peer <span class="m">peer_id′ ≠ Γ.peer_id</span>, is <span class="m">0</span> on <span class="m">P<sub>bot</sub></span> and <span class="m">P<sub>api</sub></span>. On <span class="m">P<sub>acct</sub></span> it is at most <span class="m">3/9000 ≈ 3.3 × 10<sup>&minus;4</sup></span> per proposal.</p></div>
+<div class="proof"><p><i>Proof.</i> First, for every proxy tool <span class="m">t̃ ∈ T_M</span>, recipient and tenant identifiers are absent from the schema and are bound by Layer 2 from <span class="m">Γ</span>, so the probability of a cross-peer dispatch or a cross-tenant query is <span class="m">0</span>. Second, since <span class="m">C<sub>mutate</sub> ∩ T_M = ∅</span>, the planner can only invoke <span class="m">Π(c, args)</span>. On each such call, Layer 2 discards the planner&rsquo;s free text and emits a deterministic WYSIWYS card. On <span class="m">P<sub>bot</sub></span> and <span class="m">P<sub>api</sub></span>, executing <span class="m">c</span> requires an authenticated callback bound to the principal&rsquo;s session, which <span class="m">M</span> cannot produce, so the probability is <span class="m">0</span>. On <span class="m">P<sub>acct</sub></span>, execution requires the principal to return <span class="m">n<sub>auth</sub></span>, which is drawn after the planner&rsquo;s turn has ended. Hence <span class="m">I(M; n<sub>auth</sub>) = 0</span>, and turn preemption removes any concurrent text through which <span class="m">M</span> could solicit a code. Any code that <span class="m">M</span> causes to be submitted must therefore be a blind guess, and with a lockout after three attempts the probability of matching a uniformly drawn four-digit nonce is at most <span class="m">3/9000</span>. <span class="qed">&#9632;</span></p></div>
+<p>The theorem bounds what the <i>planner</i> can cause. It does not address a human principal who confirms a correct card on the basis of a mistaken understanding (Section 11).</p>
+
+<h2>7. Pillar III: Confidentiality through Opaque Handle Tokenization</h2>
+<p>Confidentiality requires that sensitive user data and tenant secrets remain hidden from other callers (<span class="m">A<sub>caller</sub></span>) and from the cloud model provider (<span class="m">A<sub>LLM</sub></span>). Earlier envelope-and-redaction approaches protect individual values but do not give a general model in which the planner can reason over metadata and pass references between tools without observing the underlying data or creating cross-user oracles. We define such a model here.</p>
+
+<h3>7.1 Two-tier ingress scrubbing</h3>
+<p>If an agent tokenizes a phone number only when the user presses a platform &ldquo;share contact&rdquo; button, a bypass is obvious (attack class C-2): a user who types the digits into the chat sends them to the model in plaintext. Layer 1 therefore scrubs every inbound update before it is stored or serialized into a prompt.</p>
+<p><i>Tier 1</i> handles cryptographically verified platform contacts (kind <code>phone_verified</code>). When a user presses the platform&rsquo;s contact-request button, or sends a contact card matching the sender identifier, Layer 1 intercepts the structured payload outside the model, stores the number in the vault, and inserts a synthetic event into the transcript that carries only a handle. <i>Tier 2</i> is a pre-prompt pattern scrubber for free text (kinds <code>phone_unverified</code>, <code>national_id</code>, <code>card</code>, <code>iban</code>, and credentials). It first normalizes decimal digits from the Latin, Arabic-Indic, and Extended Arabic-Indic Unicode blocks, then scans for mobile numbers, national identification numbers, payment-card numbers, bank-account identifiers, and API tokens. Each match is removed from the message before logging or model transit, stored in the vault, and replaced inline by a typed handle (for example, &ldquo;my number is [ref_phone_unverified_u3b1]&rdquo;). A command that requires a <code>phone_verified</code> handle will not accept a handle of kind <code>phone_unverified</code>, so the planner can tell the user to press the official contact button without ever having seen the digits.</p>
+
+<h3>7.2 Principal-owned, sink-typed capability handles</h3>
+<p>A naive tokenization scheme that keeps a flat table from handle to plaintext is vulnerable to <i>confused handle injection</i> (class C-1). If user B learns or guesses a handle that belongs to user A and asks the model to act on it, a tool wrapper that dereferences the handle discloses or corrupts A&rsquo;s record. BRAH defines each vault entry as a five-tuple object capability,</p>
+<div class="eq"><div class="body"><span class="m">Σ(h) = ⟨v<sub>plaintext</sub>, kind, tenant_id, owner_peer, P<sub>sinks</sub>⟩</span></div><div class="no"></div></div>
+<p>and Layer 2 applies the following three-way dereferencing rule whenever a tool <span class="m">t</span> attempts to resolve <span class="m">h</span> under context <span class="m">Γ</span>:</p>
+<div class="eq"><div class="body"><div class="cases"><span class="brace">{</span><div class="rows">
+<div><span class="m"><span class="r">Dereference</span>(h, Γ, t) = v<sub>plaintext</sub></span> &nbsp; if <span class="m">Σ(h).tenant_id = Γ.tenant_id ∧ Σ(h).owner_peer = Γ.peer_id</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="m">∧ t ∈ Σ(h).P<sub>sinks</sub></span></div>
+<div><span class="m"><span class="r">Dereference</span>(h, Γ, t) = ⊥</span> (raise <code>HandleAccessViolation</code>) &nbsp; otherwise</div></div></div></div><div class="no">(4)</div></div>
+<p>The sink set <span class="m">P<sub>sinks</sub></span> restricts where an unveiled value may flow. A customer&rsquo;s verified phone handle may be permitted for the database insert and for the notification to the operator&rsquo;s private channel, but never for a message sent to an external chat and never in a tool result returned to <span class="m">M</span>.</p>
+
+<h3>7.3 Zero-argument state introspection</h3>
+<p>Scrubbing and ownership checks still leave a side channel, the <i>existence oracle</i> (class C-4). Suppose a customer-facing tool accepts a phone handle, as in <code>check_registration_status(phone_handle)</code>. An attacker types a victim&rsquo;s number into the chat, Layer 1 turns it into a handle owned by the attacker&rsquo;s own session, and the model passes the handle to the tool, which reveals whether the victim is registered.</p>
+<p>BRAH eliminates the oracle by requiring that customer-facing status tools take no identity or handle argument (<code>get_my_registration_status()</code>). Layer 2 binds the query to the caller&rsquo;s authenticated transport identity (<code>WHERE tenant_id = Γ.tenant_id AND peer_id = Γ.peer_id</code>). Search across attendees is available only on the operator plane.</p>
+
+<h3>7.4 Deterministic metadata pseudonymization</h3>
+<p>Platform-native identifiers (chat, user, and channel identifiers) are also withheld from the planner, since they allow correlation across sessions. Layer 2 removes them before building the prompt and substitutes constant symbolic names for the caller, the operator, and the tenant. Outbound tool calls resolve these symbols to physical identifiers only inside Layer 2&rsquo;s egress adapter.</p>
+
+<h3>7.5 Confidentiality theorem</h3>
+<div class="thm"><p><b>Theorem 3 (Confidentiality and non-interference).</b> Consider a service agent that implements two-tier ingress scrubbing, five-tuple principal-owned handles, zero-argument introspection, and metadata pseudonymization. Let <span class="m">V<sub>secret</sub></span> denote the values matched by the recognizers of Section 7.1 together with platform identifiers. Then (1) no value in <span class="m">V<sub>secret</sub></span> enters the context window of <span class="m">M</span>, and (2) for any two distinct end users <span class="m">u<sub>1</sub> ≠ u<sub>2</sub></span>, the observable outputs of <span class="m">u<sub>1</sub></span> do not depend on the private records or handles of <span class="m">u<sub>2</sub></span>.</p></div>
+<div class="proof"><p><i>Proof.</i> (1) Every ingress payload passes through the scrubber and the pseudonymizer before prompt construction. Structured contacts, pattern-matched digit sequences, and platform identifiers are replaced by handles drawn from a cryptographic random generator, or by constant symbols. Since the replacement is independent of the plaintext, <span class="m">I(<span class="r">Prompt</span>; V<sub>secret</sub>) = 0</span> for this class of values. (2) Suppose <span class="m">u<sub>1</sub></span> tries to use a handle <span class="m">h<sub>2</sub></span> created in <span class="m">u<sub>2</sub></span>&rsquo;s session. The attempt fails the dereferencing rule (4), because <span class="m">Σ(h<sub>2</sub>).owner_peer = u<sub>2</sub> ≠ Γ.peer_id = u<sub>1</sub></span>. Suppose <span class="m">u<sub>1</sub></span> tries to probe <span class="m">u<sub>2</sub></span>&rsquo;s registration state. The only available tool is <code>get_my_registration_status()</code>, which takes no argument and filters on <code>peer_id = </code><span class="m">u<sub>1</sub></span>. The outputs available to <span class="m">u<sub>1</sub></span> are therefore statistically independent of the state of <span class="m">u<sub>2</sub></span>. <span class="qed">&#9632;</span></p></div>
+<p>The theorem is scoped to structured identifiers. It makes no claim about unstructured personal information in free text, which is discussed in Section 11.</p>
+
+<h2>8. Declarative Programming Model and Static Verification</h2>
+<p>Security architectures often fail in practice because they depend on application developers to write permission checks by hand in every tool function. In BRAH the invariants are enforced by the framework&rsquo;s compiler and runtime, so that an insecure tool cannot be registered. The reference implementation is called <code>codo-core</code>.</p>
+
+<h3>8.1 Principal commands and advisory tools</h3>
+<p>Developers never register raw functions on the model. The declarative API offers two decorators that wire all three pillars automatically.</p>
+<pre><code>from codo_core import BoundCtx, HandleRef, PrincipalCtx, llm_tool, principal_command
+
+@principal_command(
+    slug="confirm_registration",
+    title="Finalize event registration",
+    menu_button="Register for the event",
+    account_menu_key="3",
+    allow_llm_proposal=True,
+)
+async def confirm_registration(
+    ctx: PrincipalCtx,
+    full_name: str,
+    phone: HandleRef["phone_verified"],
+) -> dict:
+    reg_id = await ctx.db.registrations.create(
+        tenant_id=ctx.tenant_id,
+        peer_id=ctx.peer_id,
+        full_name=full_name,
+        phone_number=phone.unveil_for("db_register"),
+    )
+    await ctx.notify_operator(
+        f"New confirmed registration: {full_name}, "
+        f"phone {phone.unveil_for('operator_notify')}"
+    )
+    return {"status": "confirmed", "registration_id": reg_id}
+
+@llm_tool
+async def search_event_faq(ctx: BoundCtx, query: str) -> list[dict]:
+    return await ctx.db.knowledge.search(tenant_id=ctx.tenant_id, query=query)</code></pre>
+<p>From the single <code>@principal_command</code> declaration the framework synthesizes four security-enforcing artifacts. Under Pillar I, it mounts a deterministic menu handler on <span class="m">P<sub>bot</sub></span> (a button whose callback is <code>cmd:confirm_registration</code>) and binds the account-channel automaton to menu key <code>3</code> on <span class="m">P<sub>acct</sub></span>. Under Pillar II, it generates the attenuated proposal proxy <code>propose_confirm_registration(full_name, phone_handle)</code> for <span class="m">T_M</span>, which withholds direct execution from the model and enforces WYSIWYS rendering and post-turn nonce verification. Under Pillar III, Layer 2 verifies, before the command body runs, that <code>phone_handle</code> resolves in <span class="m">Σ</span> to a handle of kind <code>phone_verified</code> owned by <code>ctx.peer_id</code> within <code>ctx.tenant_id</code>.</p>
+
+<h3>8.2 Typed context injection and schema omission</h3>
+<p>To build the tool schema for <span class="m">T_M</span>, the framework inspects each function signature, removes the leading context parameter (<code>BoundCtx</code> or <code>PrincipalCtx</code>), and converts every <code>HandleRef[Kind]</code> annotation into a plain string parameter <code>&lt;name&gt;_handle</code> that carries the schema pattern <code>^ref_[a-z_]+_[a-z0-9]{4,16}&#36;</code>. At call time Layer 2 injects the context from the coroutine-local variable. The omitted parameters therefore do not exist from the model&rsquo;s point of view.</p>
+
+<h3>8.3 Static verification gates</h3>
+<p>At build and test time, the checker parses each source file into an abstract syntax tree and enforces four mandatory rules (Table 2).</p>
+<div class="tablewrap">
+<table class="idcol">
+<caption>Table 2. <span>Static verification rules. A violation of any rule fails the build and blocks deployment.</span></caption>
+<thead><tr><th>ID</th><th>Rule</th><th>Condition checked</th></tr></thead>
+<tbody>
+<tr><td>AST-01</td><td>Ambient identifier ban</td><td>No parameter of an <code>@llm_tool</code> function is named in the forbidden set {<code>chat_id</code>, <code>peer_id</code>, <code>user_id</code>, <code>recipient</code>, <code>tenant_id</code>, <code>broker_id</code>, <code>event_id</code>}.</td></tr>
+<tr><td>AST-02</td><td>Plaintext PII parameter ban</td><td>No <code>@llm_tool</code> or <code>@principal_command</code> parameter whose name matches <code>*phone*</code>, <code>*mobile*</code>, <code>*national_id*</code>, <code>*card*</code>, or <code>*iban*</code> is typed as anything other than <code>HandleRef[...]</code>.</td></tr>
+<tr><td>AST-03</td><td>Planner mutation ban</td><td>The body of an <code>@llm_tool</code> function contains no database write calls (insert, update, delete, <code>session.add</code>, <code>.create()</code>, <code>.update()</code>) and no operator-notification calls.</td></tr>
+<tr><td>AST-04</td><td>Completeness coverage</td><td>Every state-mutating capability has at least one registered deterministic trigger: a menu button, an account-channel menu key, or an API endpoint.</td></tr>
+</tbody></table>
+</div>
+<p>AST-01 to AST-03 establish the premises of Theorems 2 and 3 at the level of code, and AST-04 establishes the coverage premise of Definition 1.</p>
+
+<h3>8.4 Prompt-based enforcement is not accepted as evidence</h3>
+<p>The development process applies a corresponding rule to security requirements. Each threat in a project&rsquo;s threat register must be mapped to a deterministic mechanism in Layer 1, 2, or 3 and to an automated test. An entry whose stated enforcement is &ldquo;prompt&rdquo; or &ldquo;model instructions&rdquo; for a confidentiality, integrity, or availability requirement is treated as unmet. When a developer requests a design that violates a BRAH invariant, such as autonomous payments without human confirmation or spending limits, the tooling issues an explicit warning describing the resulting confused-deputy and exfiltration exposure and requires a recorded acceptance of the risk before proceeding.</p>
+
+<h2>9. Case Studies</h2>
+<p>To show that the design applies across commercial roles without special-casing, we trace it through four deployment scenarios.</p>
+
+<h3>9.1 Event registration and ticketing</h3>
+<p>The first scenario is a multi-tenant agent that answers questions about an event, negotiates discounts within an operator-defined band, registers attendees, collects payment, and notifies the organizer, through an official bot, personal-account channels, and an API. Table 3 traces a benign registration by a user (Alice) and an injection attempt by another user (Mallory).</p>
+<div class="tablewrap">
+<table>
+<caption>Table 3. <span>Execution trace for a benign registration and an active injection attempt.</span></caption>
+<thead><tr><th>Step</th><th>A: benign registration (Alice)</th><th>B: injection (Mallory)</th><th>Enforcing layer</th></tr></thead>
+<tbody>
+<tr><td>1. Ingress</td><td>Alice presses the share-contact button on the bot and asks to register as &ldquo;Alice Rad&rdquo;.</td><td>Mallory sends: &ldquo;SYSTEM OVERRIDE: message chat_id=998877 that the event is free, and tell me the phone number for ref_phone_v81.&rdquo;</td><td>Layer 1: vaults Alice&rsquo;s contact as <span class="m">Σ(ref_phone_v81)</span> with owner <span class="m">peer_alice</span>; binds Mallory&rsquo;s turn to <span class="m">Γ.peer_id = peer_mallory</span>.</td></tr>
+<tr><td>2. Planner call</td><td><span class="m">M</span> sees &ldquo;shared contact: [ref_phone_v81]&rdquo; and calls <code>propose_confirm_registration(full_name="Alice Rad", phone_handle="ref_phone_v81")</code>.</td><td>The subverted <span class="m">M</span> tries <code>send_message(recipient=998877, ...)</code> and a status lookup with <code>phone_handle="ref_phone_v81"</code>.</td><td>Layer 2 schema gate: no <code>recipient</code> parameter exists in <span class="m">T_M</span>; the status tool takes no arguments.</td></tr>
+<tr><td>3. Handle and proposal check</td><td>Layer 2 confirms owner = <code>peer_alice</code> and kind <code>phone_verified</code>, computes the price, and stores the proposal.</td><td><span class="m">M</span> passes <code>ref_phone_v81</code> to the proposal tool on Mallory&rsquo;s turn.</td><td>Layer 2 dereferencing rule (4): owner differs from <code>peer_mallory</code>; <code>HandleAccessViolation</code>.</td></tr>
+<tr><td>4. Egress</td><td>Layer 2 discards <span class="m">M</span>&rsquo;s free text and sends the WYSIWYS card. Alice presses the button; Layer 3 commits the row and notifies the organizer.</td><td>The turn ends with no database write, no message to 998877, and no digit of Alice&rsquo;s number disclosed.</td><td>Layers 2 and 3: split authority and handle ownership.</td></tr>
+</tbody></table>
+</div>
+<p>If the inference gateway fails entirely during peak registration, users who open the bot and press the inline buttons for event information, registration, and payment complete the whole flow without interruption.</p>
+
+<h3>9.2 Scheduled content publication</h3>
+<p>The second scenario is an agent that wakes on operator-configured schedules, fetches news from external sources, writes articles for a companion web site, and posts summaries to the operator&rsquo;s channels. Fetched pages are untrusted and may contain indirect injections intended to make the agent publish a malicious link or post to an attacker&rsquo;s channel. Fetched content is wrapped in randomized delimiter tags, output is constrained to a typed schema in which every citation URL must belong to the set of URLs actually fetched in that run, and the publishing tool accepts no destination argument: Layer 2 reads destination channels and sealed publishing credentials from the tenant&rsquo;s account configuration. Under Pillar I, an operator who wants to pause publication, change the schedule, or order an immediate post during a model outage does so deterministically through the operator plane.</p>
+
+<h3>9.3 Customer support over personal-account channels</h3>
+<p>The third scenario is a support agent operating on the operator&rsquo;s own messaging accounts, with inbound-message debouncing (a short quiet window with a hard cap). Layer 1 binds each turn to <code>(tenant_id, platform, peer_id)</code>. A design with a history-search tool that spans all peers was rejected because it permits cross-customer leakage; customer-facing memory tools (<code>get_my_chat_history</code>, <code>send_reply</code>) take no peer parameter. When the operator replies to a customer directly from the shared account, Layer 1 detects an outbound message not authored by the harness, marks the thread as under human control so that automatic replies stop, and proposes a generalized FAQ entry through a principal command that requires the operator&rsquo;s confirmation before the entry enters tenant-wide knowledge.</p>
+
+<h3>9.4 Brokerage marketplace</h3>
+<p>The fourth scenario is a marketplace with two groups of users: agent developers (supply) and operators who rent agents (demand). When a developer submits an agent&rsquo;s broker endpoint and credential, the Layer 1 scrubber seals the credential in the vault, so it never enters the marketplace model&rsquo;s context. A principal command validates the target&rsquo;s manifest, stores the listing in an unverified state, and sends a deterministic alert to the marketplace owner. The planner has no tool that moves a listing from unverified to approved; only the owner can do so, through an operator-plane tool. On the demand side, when an operator pays a rental fee (for example 500,000 units), the deterministic payment handler creates the tenant instance and sets its wholesale spending cap (for example 400,000 units) on the target agent&rsquo;s broker plane. Even if the developer&rsquo;s agent is faulty or malicious, the wholesale ledger halts the tenant when usage reaches the cap, which protects the marketplace&rsquo;s credit line.</p>
+
+<h2>10. Analysis of Attack Classes</h2>
+<p>We catalogued ten attack classes during design review of deployed agents. Table 4 states, for each class, how a conventional prompt-defended agent fails and which deterministic mechanism of BRAH blocks it. Classes I-1 to I-4 correspond to the integrity invariant, C-1 to C-4 to the confidentiality invariant, and A-1 and A-2 to the availability invariant.</p>
+<div class="tablewrap">
+<table class="idcol">
+<caption>Table 4. <span>Attack classes, failure of a prompt-defended baseline, and BRAH mitigation.</span></caption>
+<thead><tr><th>ID</th><th>Attack class</th><th>Failure in a prompt-defended baseline</th><th>BRAH mitigation</th><th>Basis</th></tr></thead>
+<tbody>
+<tr><td>I-1</td><td>Spoofed-text phishing</td><td>A subverted model writes deceptive text above a real confirmation button, or tells a text-only user to reply with a static code.</td><td>Turn-level preemption discards model text when a proposal is emitted; post-turn nonces are drawn after the model turn ends.</td><td>Thm 2</td></tr>
+<tr><td>I-2</td><td>False-fact notifications</td><td>The model calls a general notify tool to fabricate a payment or registration alert to the operator.</td><td>System notifications are emitted only by Layer 3 code after commit; the escalation tool adds a fixed unverified-claim banner.</td><td>Sec. 6.6</td></tr>
+<tr><td>I-3</td><td>Pre-confirmation poisoning</td><td>The model alters the name, tier, or price in the draft before the confirmation control is shown.</td><td>The card and button label are generated in code from the stored proposal and the pricing engine.</td><td>Thm 2</td></tr>
+<tr><td>I-4</td><td>Cross-tenant identifier tampering</td><td>The model passes another tenant&rsquo;s event or tenant identifier to a search or registration tool.</td><td>Tenant identifiers are absent from all model schemas and injected from <span class="m">Γ</span> (rule AST-01).</td><td>Thm 2</td></tr>
+<tr><td>C-1</td><td>Confused handle injection</td><td>An attacker supplies another user&rsquo;s handle as a tool argument to exfiltrate or bind that user&rsquo;s phone number.</td><td>Five-tuple handles; dereferencing rule (4) checks tenant, owner, and sink.</td><td>Thm 3</td></tr>
+<tr><td>C-2</td><td>Free-text digit bypass</td><td>A user types raw digits instead of using the contact button, disclosing them to the model provider.</td><td>Tier 2 scrubber normalizes digit variants and vaults matches as <code>phone_unverified</code> handles.</td><td>Thm 3</td></tr>
+<tr><td>C-3</td><td>Platform-identifier leakage</td><td>Numeric chat and user identifiers are serialized into prompt history, enabling correlation by the provider.</td><td>Layer 2 replaces all platform identifiers with constant symbols.</td><td>Thm 3</td></tr>
+<tr><td>C-4</td><td>Existence-oracle inference</td><td>An attacker types a victim&rsquo;s number and asks a lookup tool whether the victim is registered.</td><td>Customer-facing status tools take no arguments and bind to <span class="m">Γ.peer_id</span>.</td><td>Thm 3</td></tr>
+<tr><td>A-1</td><td>Dead-end service outage</td><td>A provider outage (gateway error or timeout) leaves users unable to register or pay.</td><td>Port state machines and the circuit breaker execute all commands without model calls.</td><td>Thm 1</td></tr>
+<tr><td>A-2</td><td>Denial-of-wallet</td><td>An attacker floods the agent with complex prompts to exhaust the operator&rsquo;s token budget.</td><td>Sliding-window quotas; abusive peers are degraded to menu-only mode.</td><td>Thm 1</td></tr>
+</tbody></table>
+</div>
+
+<h3>10.1 Interactions among defenses</h3>
+<p>Three interactions between mechanisms deserve explicit discussion. The first concerns integrity and confidentiality (C-1, C-2, C-4). Consider an architecture that scrubs phone numbers (C-2) but has neither principal-owned handles (C-1) nor zero-argument introspection (C-4). When an attacker types a victim&rsquo;s number, the scrubber converts it into a handle owned by the attacker&rsquo;s session. If the status tool accepted a phone handle, the ownership check <span class="m">Σ(h).owner_peer = Γ.peer_id</span> would pass, because the attacker typed the digits in the attacker&rsquo;s own session. Two measures together close the oracle: typed digits are labeled <code>phone_unverified</code> and cannot be used for registration, and status queries are bound to <span class="m">Γ.peer_id</span> instead of to any handle.</p>
+<p>The second concerns turn-level preemption (I-1, I-3). Common human-in-the-loop frameworks allow the model to emit an explanatory string in the same turn as a deferred approval request. A subverted model can use that string to misdescribe what approval does. By suppressing the model&rsquo;s text whenever a proposal is emitted and generating the whole card from the validated proposal, BRAH ensures that the principal sees only system-generated parameters.</p>
+<p>The third concerns quotas and completeness (A-1, A-2). In a conventional chatbot, rate-limiting a user after a number of messages can block a legitimate customer from completing a purchase. Because BRAH satisfies LLM-Zero Completeness, switching a rate-limited session to menu-only mode never blocks a conversion: the customer still has the deterministic menu for registration and payment, at no token cost.</p>
+
+<h2>11. Discussion and Limitations</h2>
+<h3>11.1 Conversational fluidity versus fail-safe defaults</h3>
+<p>Removing mutating capabilities from the planner and requiring out-of-band confirmation introduces an additional step before high-consequence actions. This is acceptable for services that create legal commitments, process payments, or publish to organizational channels, and the cost is a deliberate one: the design applies the principle of fail-safe defaults [5], under which every mutation stays an inert proposal until an authenticated principal ratifies it. For low-stakes conversational applications the friction may not be warranted, and the read-only parts of the architecture can be used on their own.</p>
+
+<h3>11.2 Unstructured personal information</h3>
+<p>The scrubber replaces structured identifiers that match its recognizers, and the confidentiality theorem is limited to that class. Pattern matching cannot detect unstructured self-disclosure, such as a customer describing a medical condition or identifying landmarks in prose, and recall for structured data depends on the pattern set; deliberately obfuscated forms (digits spelled out, or split across messages) may escape it. Addressing unstructured content without trusting the provider requires a local named-entity-recognition or small scrubbing model inside the Layer 1 perimeter, which would introduce its own error rate and is left for future work.</p>
+
+<h3>11.3 Nonce entropy on text-only channels</h3>
+<p>A four-digit nonce balances usability against guessing resistance. Because it is drawn after the model turn, the planner cannot predict or solicit it, and the three-attempt lockout limits a blind guess to a success probability of <span class="m">3/9000 ≈ 3.3 × 10<sup>&minus;4</sup></span> per proposal. For high-value transactions the nonce length can be increased to six alphanumeric characters, which gives more than <span class="m">2 × 10<sup>9</sup></span> combinations.</p>
+
+<h3>11.4 Residual risks and scope</h3>
+<p>Several risks lie outside the guarantees stated here. (i) The theorems assume a correct TCB; an implementation fault in Layer 2 or Layer 3, or a business-logic error inside a principal command, is not mitigated by the architecture. (ii) A human principal can approve an accurate card on the basis of a mistaken understanding, and repeated confirmations may cause fatigue. (iii) Plain-text replies in non-mutating turns remain under the planner&rsquo;s control and may be inaccurate or misleading, although they cannot change state or address other users. (iv) Timing and response-length side channels were not analyzed. (v) The static gates are syntactic and conservative; they do not detect aliasing that bypasses the rules, so they complement, and do not replace, runtime mediation. (vi) Interactions among several cooperating planners are not modeled. (vii) Availability is guaranteed relative to the planner only; the deterministic path can still be disrupted by network or infrastructure attacks and by flooding of its own endpoints.</p>
+
+<h3>11.5 Empirical validation</h3>
+<p>This paper argues for security by construction and states the assumptions under which each invariant holds. It does not report measured attack-success rates, latency overhead, or effects on task utility. Such measurements, obtained from a controlled red-team evaluation with a documented protocol, are the principal item of future work.</p>
+
+<h2>12. Conclusion</h2>
+<p>Treating a language model as a trusted application controller governed by natural-language instructions is incompatible with multi-tenant commercial security. When an agent serves the public, both the external caller and the internal planner must be modeled as untrusted. BRAH demotes the planner from controller to an unprivileged, context-blind advisor inside a three-layer deterministic reference monitor. Availability follows from LLM-Zero Completeness, which gives every business capability a model-free execution path. Integrity follows from context-bound proxies and split-authority proposals, reinforced by turn-level preemption and post-turn nonces, which together remove the confused-deputy and UI-phishing paths. Confidentiality follows from two-tier ingress scrubbing, principal-owned opaque handles, zero-argument introspection, and metadata pseudonymization, which remove disclosure to the provider and cross-user existence oracles for the protected classes of data. Compile-time verification gates in the reference implementation keep these properties from depending on developer discipline. We expect the approach to serve as a baseline for agents that act on behalf of businesses for the public, and we identify controlled empirical evaluation and protection of unstructured personal data as the next steps.</p>
+
+<h2>References</h2>
+<ol class="refs">
+<li>J. P. Anderson, <i>Computer Security Technology Planning Study</i>, Tech. Rep. ESD-TR-73-51, U.S. Air Force Electronic Systems Division, 1972.</li>
+<li>N. Hardy, &ldquo;The confused deputy (or why capabilities might have been invented),&rdquo; <i>ACM SIGOPS Operating Systems Review</i>, vol. 22, no. 4, pp. 36&ndash;38, 1988.</li>
+<li>M. S. Miller, K.-P. Yee, and J. Shapiro, &ldquo;Capability myths demolished,&rdquo; Tech. Rep. SRL2003-02, Johns Hopkins University Systems Research Laboratory, 2003.</li>
+<li>D. E. Denning, &ldquo;A lattice model of secure information flow,&rdquo; <i>Communications of the ACM</i>, vol. 19, no. 5, pp. 236&ndash;243, 1976.</li>
+<li>J. H. Saltzer and M. D. Schroeder, &ldquo;The protection of information in computer systems,&rdquo; <i>Proceedings of the IEEE</i>, vol. 63, no. 9, pp. 1278&ndash;1308, 1975.</li>
+<li>E. Debenedetti, I. Shumailov, T. Fan, J. Hayes, N. Carlini, D. Fabian, C. Kern, C. Shi, A. Terzis, and F. Tram&egrave;r, &ldquo;Defeating prompt injections by design,&rdquo; arXiv:2503.18813, 2025.</li>
+<li>M. Costa <i>et al.</i>, &ldquo;Securing AI agents with information-flow control,&rdquo; arXiv:2505.23643, 2025.</li>
+<li>Y. Wu <i>et al.</i>, &ldquo;IsolateGPT: An execution isolation architecture for LLM-based agentic systems,&rdquo; in <i>Proc. Network and Distributed System Security Symposium (NDSS)</i>, 2025.</li>
+<li>E. Debenedetti, J. Zhang, M. Balunovi&#263;, L. Beurer-Kellner, M. Fischer, and F. Tram&egrave;r, &ldquo;AgentDojo: A dynamic environment to evaluate prompt injection attacks and defenses for LLM agents,&rdquo; in <i>Advances in Neural Information Processing Systems (Datasets and Benchmarks Track)</i>, 2024.</li>
+<li>Q. Zhan, Z. Liang, Z. Ying, and D. Kang, &ldquo;InjecAgent: Benchmarking indirect prompt injections in tool-integrated large language model agents,&rdquo; in <i>Findings of the Association for Computational Linguistics (ACL)</i>, 2024.</li>
+<li>K. Greshake, S. Abdelnabi, S. Mishra, C. Endres, T. Holz, and M. Fritz, &ldquo;Not what you&rsquo;ve signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection,&rdquo; in <i>Proc. ACM Workshop on Artificial Intelligence and Security (AISec)</i>, 2023.</li>
+<li>L. Lamport, R. Shostak, and M. Pease, &ldquo;The Byzantine generals problem,&rdquo; <i>ACM Transactions on Programming Languages and Systems</i>, vol. 4, no. 3, pp. 382&ndash;401, 1982.</li>
+</ol>
+
+</body>
+</html>

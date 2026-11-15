@@ -1,0 +1,1759 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>آموزش تعاملی نجوم عمومی و عبادات اسلامی</title>
+  <style>
+    :root {
+      --bg: #f8f6f0;
+      --card-bg: #ffffff;
+      --text: #22252a;
+      --text-muted: #555e68;
+      --primary: #125b50;
+      --primary-light: #e8f3f1;
+      --accent: #d48b28;
+      --border: #dcd7cc;
+      --border-focus: #125b50;
+      --radius: 8px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Vazirmatn", Tahoma, sans-serif;
+      line-height: 1.9;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+    main {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    header {
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    .back-link {
+      display: inline-block;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .meta-tag {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.35;
+      color: var(--primary);
+      margin: 0.8rem 0 0.5rem;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin: 0;
+    }
+    h2 {
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-top: 3rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-size: 1.25rem;
+      color: #2b3942;
+      margin-top: 1.8rem;
+    }
+    p, li {
+      color: var(--text);
+    }
+    ul, ol {
+      padding-right: 1.5rem;
+    }
+    li { margin-bottom: 0.5rem; }
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    a:hover { color: var(--accent); }
+    .ltr, code, .math-display {
+      direction: ltr;
+      unicode-bidi: isolate;
+      font-family: Consolas, "Courier New", monospace;
+    }
+    code {
+      background: #eeeae0;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    details {
+      background: #faf8f3;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.8rem 1.2rem;
+      margin: 1.5rem 0;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: var(--primary);
+      user-select: none;
+    }
+    summary:hover { color: var(--accent); }
+    .math-box {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #ffffff;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      border-right: 3px solid var(--primary);
+    }
+    .widget-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+    }
+    .widget-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 0.8rem;
+    }
+    .widget-title {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin: 0;
+    }
+    .widget-controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .control-group label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    select, input[type="range"], input[type="date"] {
+      padding: 0.5rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: #fff;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+    select:focus, input:focus {
+      outline: 2px solid var(--border-focus);
+    }
+    .widget-canvas-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #faf8f5;
+      border: 1px solid #ebe6dc;
+      border-radius: 6px;
+      padding: 1rem;
+      min-height: 220px;
+    }
+    .readout-panel {
+      margin-top: 1.2rem;
+      padding: 1rem;
+      background: var(--primary-light);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.8rem;
+    }
+    .readout-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .readout-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .readout-val {
+      font-weight: bold;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+    .highlight-pill {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+    .jump-btn {
+      background: #f1ede4;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.35rem 0.7rem;
+      font-family: inherit;
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: var(--primary);
+      font-weight: 600;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .jump-btn:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+    }
+    figure {
+      margin: 2rem 0;
+      text-align: center;
+      background: #fff;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    figure figcaption {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    aside.draft-notice {
+      border-right: 4px solid var(--accent);
+      background: #fffbf3;
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin: 3rem 0;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 600px) {
+      body { font-size: 0.98rem; }
+      main { padding: 1.5rem 1rem 3rem; }
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.35rem; }
+    }
+    @media print {
+      body { background: #fff; color: #000; }
+      .widget-container, details { break-inside: avoid; }
+      .back-link, input, select { display: none; }
+    }
+  </style>
+</head>
+<body data-delivery="online">
+<main>
+
+  <header>
+    <a href="../" class="back-link" data-home-link>&larr; بازگشت به فهرست ژورنال</a>
+    <div><span class="meta-tag">آموزش تعاملی و کاربردی نجوم</span></div>
+    <h1>آموزش تعاملی نجوم عمومی و عبادات اسلامی</h1>
+    <p class="subtitle">روایتی مستند و تجربی بر پایهٔ هندسهٔ کروی، سایه‌ها و حرکات خورشید و ماه</p>
+  </header>
+
+  <!-- مقدمه -->
+  <section id="intro">
+    <h2>مقدمه‌ای از یک پادگان آموزشی: تولد یک دغدغه</h2>
+    <p>سال ۱۳۹۸ که به دورهٔ آموزشی خدمت سربازی رفتم، کلاسی برای آموزش مباحث نجومی مورد نیاز برپا شد. آموزه‌های آن کلاس عموماً پرت‌وپلا، نادقیق و آمیخته به اشتباهات فاحش بود. اما همان تجربهٔ ناقص، مرا عمیقاً به فکر فرو برد: مفاهیمی با این درجه از اهمیت که روزمره‌ترین ارکان زندگی و عبادات ما (از جهت قبله و اوقات نماز تا تقویم و فصول سال) بر آن‌ها استوار است، چرا در کتاب‌های درسی و مدارس ما غایب‌اند؟</p>
+    <p>بسیاری از ما دوازده سال در مدرسه درس می‌خوانیم، اما وقتی در بیابان یا شهری غریب قرار می‌گیریم، نمی‌دانیم خورشید در ظهر شرعی کجای آسمان می‌ایستد، چرا جهت سایه‌ها در تابستان و زمستان فرق می‌کند، یا چرا هلال ماه نو را فقط اندکی پس از غروب آفتاب می‌توان جست‌وجو کرد.</p>
+    <p>من این مباحث را نه از روی متون پیچیده و دانشگاهی اختر فیزیک، بلکه غالباً با تأمل شخصی و محاسبات ذهنی بر اساس هندسهٔ کروی تجربه کرده‌ام. با شناختی که از مخاطبان دارم، می‌دانم که شاید برخی از خوانندگان خود استاد این فن باشند؛ ازاین‌رو قصد من نه فضل‌فروشی، بلکه اشتراک‌گذاری یک مدل ذهنی ساده، کاربردی و ملموس است تا اگر نقصی در محاسبات بود اصلاح شود و مهم‌تر از آن، خواننده بتواند با ابزارهای تعاملی تعبیه‌شده در متن، شخصاً درستی این هندسه را بیازماید. برای شروع و سنجش‌های روزمره، نرم‌افزارهای دقیقی همچون «تقویم ابراهیمی» (قابل دریافت از <a href="http://cafebazaar.ir/app/?id=info.alqiblah.taqwim&ref=share" target="_blank" rel="noopener">کافه‌بازار</a> و <a href="https://play.google.com/store/apps/details?id=info.alqiblah.taqwim" target="_blank" rel="noopener">گوگل پلی</a>) نیز می‌توانند یاری‌رسان باشند.</p>
+    <p>مباحث را با خورشید آغاز می‌کنیم؛ چراکه سازوکار آن از ماه ساده‌تر، هندسه‌اش پایدارتر و مسیرش مستقیم‌تر است.</p>
+  </section>
+
+  <!-- بخش اول: سه منطقه و مدار رأس‌السرطان -->
+  <section id="section-zones">
+    <h2>بخش اول: سه منطقهٔ جغرافیایی زمین و مدار رأس‌السرطان</h2>
+    <p>سطح کرهٔ زمین را از حیث موقعیت خورشید در آسمان می‌توان به سه منطقهٔ بنیادین تقسیم کرد:</p>
+    <ol>
+      <li><strong>شمال مدار رأس‌السرطان:</strong> شامل تمام خاک ایران، عراق، ترکیه و کل اروپا.</li>
+      <li><strong>بین دو مدار رأس‌السرطان و رأس‌الجدی:</strong> شامل مکه مکرمه، یمن، جنوب عربستان، مرکز آفریقا و بخش عمدهٔ برزیل و هند.</li>
+      <li><strong>جنوب مدار رأس‌الجدی:</strong> شامل جنوب استرالیا، نیوزیلند، آفریقای جنوبی و جنوب آرژانتین و شیلی.</li>
+    </ol>
+
+    <!-- تصویر ۱: نقشه جهان با سه منطقه -->
+    <figure>
+      <svg viewBox="0 0 800 400" width="100%" height="auto" style="max-height:280px;background:#edf5f7;border-radius:4px;">
+        <!-- اقیانوس و خشکی‌های ساده -->
+        <rect x="0" y="0" width="800" height="400" fill="#e2eff2"/>
+        <!-- منطقه ۱ (شمال رأس‌السرطان) -->
+        <rect x="0" y="0" width="800" height="148" fill="#e8f0fe" opacity="0.8"/>
+        <!-- منطقه ۲ (بین مدارین) -->
+        <rect x="0" y="148" width="800" height="104" fill="#fef8e7" opacity="0.85"/>
+        <!-- منطقه ۳ (جنوب رأس‌الجدی) -->
+        <rect x="0" y="252" width="800" height="148" fill="#fbe9e7" opacity="0.8"/>
+        
+        <!-- خطوط مداری -->
+        <!-- خط رأس‌السرطان ۲۳.۴۴N -> y = 200 - (23.44/90)*200 = 147.9 -->
+        <line x1="0" y1="148" x2="800" y2="148" stroke="#d48b28" stroke-width="2" stroke-dasharray="6,4"/>
+        <text x="790" y="142" font-size="12" fill="#d48b28" text-anchor="end" font-weight="bold">مدار رأس‌السرطان (۲۳٫۴۴° شمالی)</text>
+
+        <!-- خط استوا 0 -> y = 200 -->
+        <line x1="0" y1="200" x2="800" y2="200" stroke="#125b50" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <text x="790" y="195" font-size="12" fill="#125b50" text-anchor="end">خط استوا (۰°)</text>
+
+        <!-- خط رأس‌الجدی ۲۳.۴۴S -> y = 200 + (23.44/90)*200 = 252.1 -->
+        <line x1="0" y1="252" x2="800" y2="252" stroke="#b04a32" stroke-width="2" stroke-dasharray="6,4"/>
+        <text x="790" y="268" font-size="12" fill="#b04a32" text-anchor="end" font-weight="bold">مدار رأس‌الجدی (۲۳٫۴۴° جنوبی)</text>
+
+        <!-- نقاط شاخص -->
+        <!-- ایران ۳۵N, ۵۱E -> x ~ 480, y ~ 122 -->
+        <circle cx="480" cy="122" r="5" fill="#125b50"/>
+        <text x="492" y="126" font-size="12" fill="#125b50" font-weight="bold">ایران (تهران ۳۵٫۷°N)</text>
+
+        <!-- مکه ۲۱.۴N, ۳۹.۸E -> x ~ 460, y ~ 152 -->
+        <circle cx="455" cy="152" r="5" fill="#d48b28"/>
+        <text x="455" y="170" font-size="12" fill="#d48b28" font-weight="bold" text-anchor="middle">مکه مکرمه (۲۱٫۴°N)</text>
+
+        <!-- استرالیا ۳۰S, ۱۳۵E -> x ~ 650, y ~ 266 -->
+        <circle cx="650" cy="266" r="5" fill="#b04a32"/>
+        <text x="640" y="285" font-size="12" fill="#b04a32" font-weight="bold">سیدنی / استرالیا</text>
+
+        <!-- برچسب‌های مناطق -->
+        <text x="30" y="50" font-size="14" fill="#1e3a8a" font-weight="bold">منطقهٔ ۱: شمال رأس‌السرطان (خورشید در ظهر همواره در جنوب)</text>
+        <text x="30" y="210" font-size="14" fill="#92400e" font-weight="bold">منطقهٔ ۲: بین مدارین (خورشید در ظهر گاهی در شمال و گاهی در جنوب)</text>
+        <text x="30" y="340" font-size="14" fill="#991b1b" font-weight="bold">منطقهٔ ۳: جنوب رأس‌الجدی (خورشید در ظهر همواره در شمال)</text>
+      </svg>
+      <figcaption>تصویر ۱: نقشهٔ مناطق سه‌گانهٔ جهان بر روی کرهٔ زمین بر مبنای موقعیت خورشید در لحظهٔ ظهر شرعی</figcaption>
+    </figure>
+
+    <h3>مدار رأس‌السرطان و رأس‌الجدی چیستند؟</h3>
+    <p>محور چرخش زمین نسبت به صفحهٔ مدار آن به دور خورشید، زاویه‌ای حدود ۲۳٫۴۴ درجه دارد. همین انحراف محوری ساده، پدیدآورندهٔ فصول و تعیین‌کنندهٔ مدارهای زمین است:</p>
+    <ul>
+      <li><strong>رأس‌السرطان (عرض جغرافیایی ۲۳٫۴۴ درجهٔ شمالی):</strong> شمالی‌ترین عرضی از کرهٔ زمین است که خورشید می‌تواند دقیقاً در بالای سر ناظر (سمت‌الرأس یا ۹۰ درجه) قرار گیرد. این اتفاق تنها یک بار در سال، در لحظهٔ ظهر شرعی روز اول تیرماه (انقلاب تابستانی / ماه سرطان) رخ می‌دهد و در آن لحظه طول سایهٔ شاخص صفر می‌شود.</li>
+      <li><strong>رأس‌الجدی (عرض جغرافیایی ۲۳٫۴۴ درجهٔ جنوبی):</strong> قرینهٔ رأس‌السرطان در نیمکرهٔ جنوبی است؛ جایی که خورشید در اول دی‌ماه (انقلاب زمستانی / ماه جدی) درست به بالای سر می‌رسد.</li>
+    </ul>
+
+    <h3>چرا در ایران خورشید هیچ‌گاه عمود نمی‌تابد؟</h3>
+    <p>تمام کشور ایران در شمال مدار رأس‌السرطان واقع شده است (جنوبی‌ترین نقطهٔ خاک ایران در چابهار حدود عرض ۲۵ درجهٔ شمالی است، یعنی بالاتر از ۲۳٫۴۴ درجه). در نتیجه:</p>
+    <ul>
+      <li>در ایران، خورشید در هیچ روزی از سال و در هیچ ساعتی دقیقاً بر سر ما عمود نمی‌تابد.</li>
+      <li>در لحظهٔ ظهر شرعی (که طول سایه به حداقل خود می‌رسد)، خورشید همواره در <strong>سمت جنوب</strong> آسمان قرار دارد.</li>
+      <li>پیرو آن، سایهٔ اشیاء در ایران در لحظهٔ ظهر شرعی همیشه رو به <strong>شمال</strong> است و هیچ‌گاه به صفر نمی‌رسد.</li>
+    </ul>
+
+    <h3>منطقهٔ میان دو مدار: مکه، یمن و خورشید متغیر</h3>
+    <p>در منطقهٔ میان دو مدار، رفتار خورشید دوگانه است: در روزهایی از سال ظهرها در جنوب آسمان است و در روزهایی در شمال! به عنوان نمونه، مکه مکرمه در عرض جغرافیایی حدود ۲۱٫۴۲ درجهٔ شمالی (پایین‌تر از رأس‌السرطان) قرار دارد. در این شهر:</p>
+    <ul>
+      <li>دو بار در سال، یعنی در <strong>۷ خرداد</strong> و <strong>۲۴ تیرماه</strong>، خورشید در لحظهٔ ظهر شرعی به افق مکه دقیقاً در سمت‌الرأس (بالای سر) قرار می‌گیرد و سایه ناپدید می‌شود.</li>
+      <li>در بازهٔ میان این دو تاریخ (از ۸ خرداد تا ۲۳ تیر)، خورشید در ظهر شرعی اندکی در <strong>شمال</strong> آسمان مکه می‌ایستد!</li>
+      <li>در باقی ایام سال (از ۲۵ تیر تا ۶ خرداد سال بعد)، خورشید در ظهر شرعی در <strong>جنوب</strong> آسمان است.</li>
+    </ul>
+
+    <!-- ابزار تعاملی ۱ -->
+    <div class="widget-container" id="widget-1">
+      <div class="widget-header">
+        <h4 class="widget-title">ابزار تعاملی ۱: نقشهٔ مناطق سه‌گانه و موقعیت خورشید و سایه در ظهر</h4>
+        <span class="highlight-pill">شبیه‌ساز ظهر شرعی</span>
+      </div>
+      <div class="widget-controls">
+        <div class="control-group">
+          <label for="w1-city">انتخاب شهر یا منطقه:</label>
+          <select id="w1-city">
+            <option value="35.7" selected>تهران (عرض ۳۵٫۷° شمالی - منطقه ۱)</option>
+            <option value="36.3">مشهد (عرض ۳۶٫۳° شمالی - منطقه ۱)</option>
+            <option value="31.3">اهواز (عرض ۳۱٫۳° شمالی - منطقه ۱)</option>
+            <option value="25.3">چابهار (عرض ۲۵٫۳° شمالی - مرز جنوبی ایران)</option>
+            <option value="23.44">مدار رأس‌السرطان (۲۳٫۴۴° شمالی)</option>
+            <option value="21.42">مکه مکرمه (عرض ۲۱٫۴° شمالی - منطقه ۲)</option>
+            <option value="0.0">استوا (عرض ۰° - منطقه ۲)</option>
+            <option value="-23.44">مدار رأس‌الجدی (۲۳٫۴۴° جنوبی)</option>
+            <option value="-33.8">سیدنی (عرض ۳۳٫۸° جنوبی - منطقه ۳)</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="w1-day">فصل / موقعیت تقویمی سال:</label>
+          <select id="w1-day">
+            <option value="172" selected>۱ تیر (انقلاب تابستانی - میل +۲۳٫۴۴°)</option>
+            <option value="68">۷ خرداد (عمود بر کعبه - میل +۲۱٫۴۲°)</option>
+            <option value="195">۲۴ تیر (عمود بر کعبه - میل +۲۱٫۴۲°)</option>
+            <option value="79">۱ فروردین (اعتدال بهاری - میل ۰°)</option>
+            <option value="266">۱ مهر (اعتدال پاییزی - میل ۰°)</option>
+            <option value="355">۱ دی (انقلاب زمستانی - میل -۲۳٫۴۴°)</option>
+          </select>
+        </div>
+      </div>
+      <div class="widget-canvas-area">
+        <svg id="w1-canvas" viewBox="0 0 500 240" width="100%" height="auto" style="max-height:220px;">
+          <!-- زمین -->
+          <line x1="40" y1="200" x2="460" y2="200" stroke="#555" stroke-width="2"/>
+          <text x="50" y="225" font-size="12" fill="#555">جنوب</text>
+          <text x="450" y="225" font-size="12" fill="#555" text-anchor="end">شمال</text>
+          <!-- شاخص -->
+          <line x1="250" y1="200" x2="250" y2="120" stroke="#125b50" stroke-width="4"/>
+          <circle cx="250" cy="120" r="4" fill="#125b50"/>
+          <text x="250" y="110" font-size="11" fill="#125b50" text-anchor="middle" font-weight="bold">شاخص (۱ متر)</text>
+          <!-- سایه داینامیک -->
+          <line id="w1-shadow" x1="250" y1="200" x2="310" y2="200" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+          <!-- پرتو خورشید داینامیک -->
+          <line id="w1-ray" x1="190" y1="50" x2="250" y2="120" stroke="#d48b28" stroke-width="2" stroke-dasharray="4,4"/>
+          <!-- خورشید داینامیک -->
+          <g id="w1-sun" transform="translate(190, 50)">
+            <circle cx="0" cy="0" r="14" fill="#f59e0b"/>
+            <circle cx="0" cy="0" r="18" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+          </g>
+        </svg>
+      </div>
+      <div class="readout-panel">
+        <div class="readout-item">
+          <span class="readout-label">زاویهٔ ارتفاع خورشید در ظهر:</span>
+          <span class="readout-val" id="w1-alt-val">۷۷٫۷°</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label">جهت قرارگیری خورشید در آسمان:</span>
+          <span class="readout-val" id="w1-dir-val">جنوب ناظر</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label">طول سایهٔ شاخص ۱ متری:</span>
+          <span class="readout-val" id="w1-shadow-val">۲۲ سانتی‌متر رو به شمال</span>
+        </div>
+      </div>
+    </div>
+
+    <details>
+      <summary>جزئیات محاسباتی و فرمول‌ها: زاویهٔ ارتفاع خورشید در ظهر</summary>
+      <div class="math-box">
+        زاویهٔ ارتفاع خورشید از افق در لحظهٔ ظهر شرعی (<span class="ltr">h_noon</span>) از رابطهٔ زیر به دست می‌آید:
+        <div class="math-display">h_noon = 90&deg; - |&phi; - &delta;|</div>
+        که در آن <span class="ltr">&phi;</span> عرض جغرافیایی ناظر و <span class="ltr">&delta;</span> میل خورشید (Declination) است.<br>
+        میل خورشید در طول سال بین <span class="ltr">+23.44&deg;</span> (اول تیر) تا <span class="ltr">-23.44&deg;</span> (اول دی) نوسان می‌کند.<br>
+        برای تهران با عرض جغرافیایی <span class="ltr">&phi; = 35.7&deg;</span>:
+        <ul>
+          <li>در اول تیر (<span class="ltr">&delta; = +23.44&deg;</span>): ارتفاع خورشید در ظهر برابر <span class="ltr">90 - |35.7 - 23.44| = 77.74&deg;</span> است.</li>
+          <li>در اول دی (<span class="ltr">&delta; = -23.44&deg;</span>): ارتفاع خورشید در ظهر برابر <span class="ltr">90 - |35.7 - (-23.44)| = 30.86&deg;</span> است.</li>
+        </ul>
+        چون <span class="ltr">&phi; &gt; &delta;</span> همواره برقرار است، خورشید همیشه در جنوب ناظر ایرانی است.
+      </div>
+    </details>
+  </section>
+
+  <!-- بخش دوم: مسیر روزانه و ظهر شرعی -->
+  <section id="section-sunpath">
+    <h2>بخش دوم: مسیر روزانهٔ خورشید و اوقات شرعی</h2>
+    <p>یکی از باورهای عامیانه و نادرست این است که «خورشید همیشه از شرق طلوع می‌کند و در غرب غروب می‌کند». اما واقعیت نجومی تفاوت چشمگیری با این پندار دارد. خورشید در تمام طول سال <strong>تنها در دو روز</strong> دقیقاً از شرق حقیقی (زاویهٔ سمت ۹۰ درجه) طلوع و در غرب حقیقی (زاویهٔ سمت ۲۷۰ درجه) غروب می‌کند: <strong>روز اول بهار (اعتدال بهاری)</strong> و <strong>روز اول پاییز (اعتدال پاییزی)</strong>.</p>
+    
+    <h3>نیمهٔ دوم سال (پاییز و زمستان)</h3>
+    <p>در این نیمه، خورشید از <strong>جنوب شرقی</strong> طلوع می‌کند، قوسی کوتاه در جنوب آسمان می‌پیماید، در ظهر شرعی به حداکثر ارتفاع خود (که کوتاه است) می‌رسد و سپس در <strong>جنوب غربی</strong> غروب می‌کند. چون قوسی که می‌پیماید کوتاه است، مدت‌زمان حضور آن در آسمان اندک بوده و روزها کوتاه‌ترند.</p>
+
+    <h3>نیمهٔ اول سال (بهار و تابستان)</h3>
+    <p>در این نیمه، خورشید از <strong>شمال شرقی</strong> طلوع می‌کند. سپس به سمت شرق، جنوب شرق و جنوب (در ظهر شرعی) حرکت کرده و پس از پیمودن جنوب غرب و غرب، در نهایت در <strong>شمال غربی</strong> غروب می‌کند. به دلیل پیمودن این کمان بسیار عریض و طولانی در آسمان، روزها به اوج بلندی خود می‌رسند.</p>
+
+    <h3>ظهر شرعی (زوال آفتاب)</h3>
+    <p>هنگامی که خورشید مسیر روزانهٔ خود را می‌پیماید، زاویهٔ ارتفاع آن نسبت به افق پیوسته بالا می‌رود تا به بالاترین نقطهٔ ممکن در آن روز برسد. این لحظه دقیقاً <strong>ظهر شرعی</strong> یا لحظهٔ <strong>زوال</strong> است. در این هنگام:</p>
+    <ul>
+      <li>سایهٔ شاخص به کوتاه‌ترین طول خود در آن روز می‌رسد.</li>
+      <li>خورشید دقیقاً از نصف‌النهار مکان ناظر عبور می‌کند.</li>
+      <li>از این لحظه به بعد، سایه مجدداً شروع به بلند شدن می‌کند که نشانهٔ ورود به وقت نماز ظهر و عصر است.</li>
+    </ul>
+
+    <!-- ابزار تعاملی ۲ -->
+    <div class="widget-container" id="widget-2">
+      <div class="widget-header">
+        <h4 class="widget-title">ابزار تعاملی ۲: قطب‌نمای افق و شبیه‌ساز مسیر روزانهٔ خورشید، سایهٔ شاخص و ساعت</h4>
+        <span class="highlight-pill">پیش‌فرض: تهران، ۱۱ خرداد</span>
+      </div>
+      <div class="widget-controls">
+        <div class="control-group">
+          <label for="w2-city">انتخاب شهر:</label>
+          <select id="w2-city">
+            <option value="tehran" selected>تهران (طول ۵۱٫۴° شرقی، عرض ۳۵٫۷°)</option>
+            <option value="mashhad">مشهد (طول ۵۹٫۶° شرقی، عرض ۳۶٫۳°)</option>
+            <option value="isfahan">اصفهان (طول ۵۱٫۷° شرقی، عرض ۳۲٫۶°)</option>
+            <option value="tabriz">تبریز (طول ۴۶٫۳° شرقی، عرض ۳۸٫۱°)</option>
+            <option value="mecca">مکه مکرمه (طول ۳۹٫۸° شرقی، عرض ۲۱٫۴°)</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="w2-date">تاریخ مورد نظر:</label>
+          <input type="date" id="w2-date" value="">
+          <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.4rem;">
+            <button type="button" id="w2-date-today" class="jump-btn">📅 امروز</button>
+            <button type="button" id="w2-date-khordad" class="jump-btn">☀️ ۱۱ خرداد (انقلاب تابستانی)</button>
+            <button type="button" id="w2-date-dey" class="jump-btn">❄️ ۱ دی (انقلاب زمستانی)</button>
+            <button type="button" id="w2-date-farvardin" class="jump-btn">🌱 ۱ فروردین (اعتدال بهاری)</button>
+          </div>
+        </div>
+        <div class="control-group" style="grid-column: 1 / -1;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <label for="w2-time">ساعت روز (لغزندهٔ زمان از ۳:۰۰ صبح تا ۲۲:۰۰ شب):</label>
+            <span id="w2-time-display" class="ltr" style="font-weight:bold;color:var(--primary);font-size:1.15rem;">--:--</span>
+          </div>
+          <input type="range" id="w2-time" min="180" max="1320" step="2" value="721">
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem;">
+            <button type="button" id="w2-btn-sunrise" class="jump-btn">🌅 پرش به طلوع آفتاب (<span id="w2-btn-rise-lbl">۰۴:۵۰</span>)</button>
+            <button type="button" id="w2-btn-noon" class="jump-btn">☀️ پرش به ظهر شرعی (<span id="w2-btn-noon-lbl">۱۲:۰۱</span>)</button>
+            <button type="button" id="w2-btn-sunset" class="jump-btn">🌇 پرش به غروب آفتاب (<span id="w2-btn-set-lbl">۱۹:۱۳</span>)</button>
+          </div>
+        </div>
+      </div>
+      <div class="widget-canvas-area" style="display:grid;grid-template-columns:1fr 150px;gap:1.2rem;align-items:center;">
+        <!-- افق ناظر و قطب‌نمای مسیر خورشید -->
+        <svg id="w2-canvas" viewBox="0 0 380 380" width="100%" height="auto" style="max-height:360px;">
+          <!-- دایره افق -->
+          <circle cx="190" cy="190" r="140" fill="#faf8f5" stroke="#cbd5e1" stroke-width="2"/>
+          <circle cx="190" cy="190" r="93" fill="none" stroke="#e2e8f0" stroke-dasharray="2,2"/>
+          <circle cx="190" cy="190" r="47" fill="none" stroke="#e2e8f0" stroke-dasharray="2,2"/>
+          <text x="195" y="100" font-size="8" fill="#94a3b8">ارتفاع ۶۰°</text>
+          <text x="195" y="145" font-size="8" fill="#94a3b8">ارتفاع ۳۰°</text>
+
+          <!-- خطوط جهات اصلی -->
+          <line x1="190" y1="46" x2="190" y2="334" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
+          <line x1="46" y1="190" x2="334" y2="190" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+          <!-- نام جهات بر روی قطب‌نما -->
+          <text x="190" y="34" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="bold">شمال (۰°)</text>
+          <text x="300" y="76" font-size="11" fill="#0284c7" font-weight="bold">شمال شرق</text>
+          <text x="350" y="194" font-size="12" fill="#1e293b" text-anchor="start" font-weight="bold">مشرق (۹۰°)</text>
+          <text x="295" y="306" font-size="11" fill="#d97706" font-weight="bold">جنوب شرق</text>
+          <text x="190" y="356" font-size="12" fill="#1e293b" text-anchor="middle" font-weight="bold">جنوب (۱۸۰° - ظهر شرعی)</text>
+          <text x="85" y="306" font-size="11" fill="#d97706" font-weight="bold">جنوب غرب</text>
+          <text x="30" y="194" font-size="12" fill="#1e293b" text-anchor="end" font-weight="bold">مغرب (۲۷۰°)</text>
+          <text x="80" y="76" font-size="11" fill="#0284c7" font-weight="bold">شمال غرب</text>
+
+          <!-- مسیر خورشید روی افق -->
+          <path id="w2-path-ground" d="" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+
+          <!-- شاخص و سایه زمینی در مرکز -->
+          <circle cx="190" cy="190" r="5" fill="#125b50"/>
+          <text x="190" y="180" font-size="9" fill="#125b50" text-anchor="middle" font-weight="bold">شاخص</text>
+          <line id="w2-shadow" x1="190" y1="190" x2="190" y2="140" stroke="#1f2937" stroke-width="6" stroke-linecap="round"/>
+
+          <!-- نشانگر طلوع -->
+          <g id="w2-rise-marker">
+            <circle cx="0" cy="0" r="7" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
+          </g>
+          <text id="w2-rise-text" x="0" y="0" font-size="10" fill="#b45309" font-weight="bold"></text>
+
+          <!-- نشانگر غروب -->
+          <g id="w2-set-marker">
+            <circle cx="0" cy="0" r="7" fill="#ef4444" stroke="#991b1b" stroke-width="1.5"/>
+          </g>
+          <text id="w2-set-text" x="0" y="0" font-size="10" fill="#991b1b" font-weight="bold"></text>
+
+          <!-- نشانگر ظهر شرعی -->
+          <circle id="w2-noon-marker" cx="190" cy="300" r="5" fill="#125b50"/>
+          <text id="w2-noon-marker-text" x="190" y="318" font-size="10" fill="#125b50" text-anchor="middle" font-weight="bold">ظهر شرعی</text>
+
+          <!-- موقعیت لحظه‌ای خورشید -->
+          <g id="w2-sun">
+            <circle cx="0" cy="0" r="14" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+            <circle cx="0" cy="0" r="18" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.8"/>
+            <text id="w2-sun-alt-label" x="0" y="4" font-size="9" fill="#78350f" text-anchor="middle" font-weight="bold">76°</text>
+          </g>
+        </svg>
+
+        <!-- ساعت عقربه‌ای -->
+        <div style="text-align:center;">
+          <svg id="w2-clock" viewBox="0 0 120 120" width="130" height="130">
+            <circle cx="60" cy="60" r="54" fill="#fff" stroke="#125b50" stroke-width="3"/>
+            <!-- نشانه‌های ساعت -->
+            <line x1="60" y1="12" x2="60" y2="18" stroke="#333" stroke-width="2"/>
+            <line x1="108" y1="60" x2="102" y2="60" stroke="#333" stroke-width="2"/>
+            <line x1="60" y1="108" x2="60" y2="102" stroke="#333" stroke-width="2"/>
+            <line x1="12" y1="60" x2="18" y2="60" stroke="#333" stroke-width="2"/>
+            <!-- عقربه‌ها -->
+            <line id="w2-hour-hand" x1="60" y1="60" x2="60" y2="35" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+            <line id="w2-min-hand" x1="60" y1="60" x2="60" y2="22" stroke="#d48b28" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="60" cy="60" r="4" fill="#125b50"/>
+          </svg>
+          <div style="font-size:0.85rem;color:var(--text-muted);margin-top:0.3rem;">زمان محلی ساعت</div>
+        </div>
+      </div>
+      <div class="readout-panel">
+        <div class="readout-item">
+          <span class="readout-label">طلوع آفتاب:</span>
+          <span class="readout-val" id="w2-sunrise-val">04:50 (۶۲٫۰° شمال شرقی)</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label" style="color:#b45309;font-weight:bold;">ظهر شرعی (زوال آفتاب):</span>
+          <span class="readout-val" id="w2-noon-val" style="color:#b45309;">12:01 (۱۸۰٫۰° جنوب)</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label">غروب آفتاب:</span>
+          <span class="readout-val" id="w2-sunset-val">19:13 (۲۹۸٫۰° شمال غربی)</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label">موقعیت لحظه‌ای خورشید:</span>
+          <span class="readout-val" id="w2-cur-alt">ارتفاع: ۷۶٫۲° | سمت: ۱۸۰٫۰°</span>
+        </div>
+      </div>
+    </div>
+
+    <details>
+      <summary>جزئیات محاسباتی و فرمول‌ها: محاسبهٔ زوال و زاویهٔ ساعتی</summary>
+      <div class="math-box">
+        زمان ظهر شرعی محلی به وقت محلی (<span class="ltr">T_noon</span>) از رابطهٔ زیر محاسبه می‌شود:
+        <div class="math-display">T_noon = 12:00:00 - (&lambda; - &lambda;_zone) / 15&deg; - EoT</div>
+        که در آن <span class="ltr">&lambda;</span> طول جغرافیایی مکان، <span class="ltr">&lambda;_zone</span> طول جغرافیایی نصف‌النهار مبنا (برای ایران ۵۲٫۵ درجه شرقی)، و <span class="ltr">EoT</span> معادلهٔ زمان (Equation of Time) است.
+      </div>
+    </details>
+  </section>
+
+  <!-- بخش سوم: نوسان طول روز -->
+  <section id="section-daylength">
+    <h2>بخش سوم: نوسان طول روز از استوا تا قطب</h2>
+    <p>طول روز (فاصلهٔ زمانی میان طلوع تا غروب خورشید) در طول سال تغییر می‌کند. اما نکتهٔ بنیادین این است: <strong>میزان نوسان طول روز کاملاً وابسته به عرض جغرافیایی ناظر است.</strong> هرچه به سمت قطب شمال یا قطب جنوب پیش برویم، دامنهٔ این نوسان بزرگ‌تر و چشمگیرتر می‌شود.</p>
+
+    <ul>
+      <li><strong>عرض‌های میانه و معتدل (مانند تهران ۳۵٫۷° شمالی):</strong> کوتاه‌ترین روز سال (اول دی‌ماه) حدود ۱۰ ساعت و بلندترین روز (اول تیرماه) بیش از ۱۴ ساعت است (دامنهٔ نوسان حدود ۴ ساعت).</li>
+      <li><strong>عرض‌های بالای شمالی (مانند هلسینکی و سن‌پترزبورگ ۶۰° شمالی):</strong> طول روز در اول دی‌ماه تنها حدود ۶ ساعت و در اول تیرماه ۱۸ ساعت است (دامنهٔ نوسان ۱۲ ساعت!).</li>
+      <li><strong>نواحی قطبی (فراتر از ۶۶٫۵°):</strong> نوسان به اوج می‌رسد؛ روزهای ۲۴ ساعته در تابستان و شب‌های ۲۴ ساعته قطبی در زمستان، تا ۶ ماه شب و روز پیوسته در قطب.</li>
+    </ul>
+
+    <!-- ابزار تعاملی ۳ -->
+    <div class="widget-container" id="widget-3">
+      <div class="widget-header">
+        <h4 class="widget-title">ابزار تعاملی ۳: نمودار نوسان سالانهٔ طول روز بر حسب عرض جغرافیایی</h4>
+        <span class="highlight-pill">دامنهٔ نوسان فصلی</span>
+      </div>
+      <div class="widget-controls">
+        <div class="control-group" style="grid-column:1 / -1;">
+          <label for="w3-lat">عرض جغرافیایی ناظر: <span id="w3-lat-val" class="ltr" style="font-weight:bold;color:var(--primary);">35.7° N (تهران)</span></label>
+          <input type="range" id="w3-lat" min="0" max="68" step="1" value="36">
+        </div>
+      </div>
+      <div class="widget-canvas-area">
+        <svg id="w3-canvas" viewBox="0 0 500 220" width="100%" height="auto">
+          <!-- محورها -->
+          <line x1="40" y1="20" x2="40" y2="180" stroke="#bbb" stroke-width="1.5"/>
+          <line x1="40" y1="180" x2="480" y2="180" stroke="#bbb" stroke-width="1.5"/>
+          <!-- مقیاس‌ها -->
+          <text x="30" y="25" font-size="10" fill="#777" text-anchor="end">24h</text>
+          <text x="30" y="100" font-size="10" fill="#777" text-anchor="end">12h</text>
+          <text x="30" y="180" font-size="10" fill="#777" text-anchor="end">0h</text>
+          <line x1="38" y1="100" x2="480" y2="100" stroke="#eee" stroke-dasharray="2,2"/>
+          <!-- ماه‌ها -->
+          <text x="50" y="198" font-size="10" fill="#666">فروردین</text>
+          <text x="160" y="198" font-size="10" fill="#666">تیر (بلندترین)</text>
+          <text x="270" y="198" font-size="10" fill="#666">مهر</text>
+          <text x="380" y="198" font-size="10" fill="#666">دی (کوتاه‌ترین)</text>
+          <text x="460" y="198" font-size="10" fill="#666">اسفند</text>
+          <!-- منحنی سینوسی داینامیک -->
+          <path id="w3-curve" d="" fill="none" stroke="#125b50" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="readout-panel">
+        <div class="readout-item">
+          <span class="readout-label">بلندترین روز (اول تیر):</span>
+          <span class="readout-val" id="w3-max-val">۱۴ ساعت و ۲۵ دقیقه</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label">کوتاه‌ترین روز (اول دی):</span>
+          <span class="readout-val" id="w3-min-val">۹ ساعت و ۳۵ دقیقه</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label">دامنهٔ نوسان سالانه:</span>
+          <span class="readout-val" id="w3-range-val">۴ ساعت و ۵۰ دقیقه</span>
+        </div>
+      </div>
+    </div>
+
+    <details>
+      <summary>جزئیات محاسباتی و فرمول‌ها: محاسبهٔ زاویهٔ ساعتی طلوع و طول روز</summary>
+      <div class="math-box">
+        زاویهٔ ساعتی غروب خورشید (<span class="ltr">H_0</span>) از رابطهٔ زیر به دست می‌آید:
+        <div class="math-display">cos(H_0) = (sin(-0.833&deg;) - sin(&phi;) &middot; sin(&delta;)) / (cos(&phi;) &middot; cos(&delta;))</div>
+        طول روز بر حسب ساعت برابر است با:
+        <div class="math-display">D = 2 &times; H_0 / 15&deg;</div>
+      </div>
+    </details>
+  </section>
+
+  <!-- بخش چهارم: جهت‌یابی با خورشید و ساعت قبله -->
+  <section id="section-qibla">
+    <h2>بخش چهارم: جهت‌یابی با خورشید و راز ساعت قبله</h2>
+    <p>یکی از کهن‌ترین و درخشان‌ترین کاربردهای نجوم در تمدن اسلامی، یافتن دقیق جهت کعبه مشرفه است. در دوره‌هایی که خبری از قطب‌نماهای مغناطیسی دقیق یا جی‌پی‌اس نبود، معماران و منجمان مسلمان مساجد خود را با دقتی شگفت‌انگیز بر اساس تابش مستقیم خورشید تنظیم می‌کردند.</p>
+
+    <h3>راز دو روز طلایی در سال: ۷ خرداد و ۲۴ تیر</h3>
+    <p>خورشید در دو روز از سال (<strong>۷ خرداد</strong> حدود ساعت ۱۲:۴۸ به وقت رسمی ایران، و <strong>۲۴ تیر</strong> حدود ساعت ۱۲:۵۷ به وقت ایران) در لحظهٔ ظهر شرعی به افق مکه، دقیقاً در بالای کعبه می‌ایستد؛ یعنی در نقطهٔ سمت‌الرأس با زاویهٔ ۹۰ درجه.</p>
+    <p>این حقیقت یک نتیجهٔ هندسی خیره‌کننده دارد: در آن لحظه، هر انسانی در هر نقطه از نیم‌کرهٔ روز که خورشید را در آسمان ببیند، اگر رو به خورشید بایستد، <strong>دقیقاً و بدون کمترین خطا رو به قبله ایستاده است!</strong></p>
+
+    <h3>تعمیم به تمام ایام سال: «ساعت قبله» چیست؟</h3>
+    <p>در هر روز از سال و در هر نقطه از جهان، لحظه‌ای وجود دارد که زاویهٔ سمت خورشید در آسمان دقیقاً با جهت زاویهٔ قبله در آن شهر برابر می‌شود. به این لحظه <strong>ساعت قبله</strong> می‌گویند. اگر در آن دقیقهٔ بخصوص رو به خورشید بایستید، مستقیماً رو به قبله ایستاده‌اید.</p>
+
+    <!-- ابزار تعاملی ۴ -->
+    <div class="widget-container" id="widget-4">
+      <div class="widget-header">
+        <h4 class="widget-title">ابزار تعاملی ۴: محاسبه‌گر دقیق ساعت قبله به افق هر نقطه</h4>
+        <span class="highlight-pill">جهت‌یابی با خورشید</span>
+      </div>
+      <div class="widget-controls">
+        <div class="control-group">
+          <label for="w4-city">انتخاب شهر:</label>
+          <select id="w4-city">
+            <option value="tehran" selected>تهران</option>
+            <option value="mashhad">مشهد</option>
+            <option value="isfahan">اصفهان</option>
+            <option value="tabriz">تبریز</option>
+            <option value="shiraz">شیراز</option>
+            <option value="ahvaz">اهواز</option>
+            <option value="qom">قم</option>
+            <option value="london">لندن</option>
+            <option value="istanbul">استانبول</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="w4-date">تاریخ انتخابی:</label>
+          <input type="date" id="w4-date" value="">
+          <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.4rem;">
+            <button type="button" id="w4-date-today" class="jump-btn">📅 امروز</button>
+            <button type="button" id="w4-date-khordad" class="jump-btn">🕋 ۷ خرداد (تعامد مکه)</button>
+            <button type="button" id="w4-date-tir" class="jump-btn">🕋 ۲۵ تیر (تعامد مکه)</button>
+          </div>
+        </div>
+      </div>
+      <div class="widget-canvas-area">
+        <svg id="w4-compass" viewBox="0 0 200 200" width="180" height="180">
+          <!-- دایره قطب‌نما -->
+          <circle cx="100" cy="100" r="90" fill="#fff" stroke="#125b50" stroke-width="2"/>
+          <text x="100" y="24" font-size="12" fill="#777" text-anchor="middle" font-weight="bold">شمال (۰°)</text>
+          <text x="180" y="104" font-size="12" fill="#777" text-anchor="middle">شرق (۹۰°)</text>
+          <text x="100" y="184" font-size="12" fill="#777" text-anchor="middle">جنوب (۱۸۰°)</text>
+          <text x="24" y="104" font-size="12" fill="#777" text-anchor="middle">غرب (۲۷۰°)</text>
+          
+          <!-- بردار قبله -->
+          <line id="w4-qibla-needle" x1="100" y1="100" x2="60" y2="150" stroke="#125b50" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="60" cy="150" r="4" fill="#125b50"/>
+          
+          <!-- جهت خورشید در ساعت قبله -->
+          <g id="w4-sun-marker" transform="translate(60, 150)">
+            <circle cx="0" cy="0" r="7" fill="#f59e0b"/>
+          </g>
+          <circle cx="100" cy="100" r="4" fill="#333"/>
+        </svg>
+      </div>
+      <div class="readout-panel">
+        <div class="readout-item">
+          <span class="readout-label">زاویهٔ سمت قبله از شمال:</span>
+          <span class="readout-val" id="w4-qibla-deg">۲۱۶٫۵° (جنوب غربی)</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label" style="color:#b45309;font-weight:bold;">ساعت قبله در تاریخ انتخابی:</span>
+          <span class="readout-val" id="w4-qibla-time" style="color:#b45309;">12:48:00</span>
+        </div>
+        <div class="readout-item" style="grid-column: 1 / -1;">
+          <span class="readout-label">راهنمای عملی:</span>
+          <span style="font-size:0.9rem;color:#125b50;">در این ساعت کافی است رو به خورشید بایستید؛ راستای نگاه شما دقیقاً راستای قبله است.</span>
+        </div>
+      </div>
+    </div>
+
+    <details>
+      <summary>جزئیات محاسباتی و فرمول‌ها: زاویهٔ سمت قبله و زمان تطابق سمت خورشید</summary>
+      <div class="math-box">
+        زاویهٔ سمت قبله (<span class="ltr">q</span>) نسبت به شمال از رابطهٔ زیر حاصل می‌شود:
+        <div class="math-display">tan(q) = sin(&lambda;_M - &lambda;) / [cos(&phi;)tan(&phi;_M) - sin(&phi;)cos(&lambda;_M - &lambda;)]</div>
+        که در آن مختصات کعبه معظمه <span class="ltr">&phi;_M = 21.4225&deg;, &lambda;_M = 39.8262&deg;</span> است.<br>
+        ساعت قبله لحظه‌ای است که زاویهٔ سمت خورشید با <span class="ltr">q</span> برابر شود.
+      </div>
+    </details>
+  </section>
+
+  <!-- بخش پنجم: ماه و تقویم قمری -->
+  <section id="section-moon">
+    <h2>بخش پنجم: ماه، زاویهٔ فاصله و تقویم قمری</h2>
+    <p>مباحث مربوط به ماه، اگرچه جذاب‌تر است، اما نسبت به خورشید پیچیدگی بیشتری دارد؛ زیرا ماه هم‌زمان که همراه زمین به گرد خورشید می‌گردد، گرد کرهٔ زمین نیز در چرخش است.</p>
+
+    <h3>مفهوم بنیادین «فاصله» (زاویهٔ جدایی &theta;)</h3>
+    <p>مهم‌ترین مفهوم در شناخت احوال ماه، <strong>فاصله</strong> است؛ یعنی زاویه‌ای که ماه و خورشید از دید ناظر زمینی با یکدیگر می‌سازند (زاویهٔ &theta;):</p>
+    <ul>
+      <li><strong>مقارنه (اجتماع):</strong> زمانی است که زاویهٔ &theta; به صفر نزدیک می‌شود؛ یعنی ماه و خورشید هم‌راستا شده، با هم طلوع و غروب می‌کنند و ماه تاریک است (ماه نو / خورشیدگرفتگی در صورت عبور از جلوی خورشید).</li>
+      <li><strong>مقابله (استقبال):</strong> زمانی است که زاویهٔ &theta; به ۱۸۰ درجه می‌رسد؛ ماه روبه‌روی خورشید قرار گرفته و به شکل <strong>بدر کامل (ماه شب چهارده)</strong> در تمام طول شب می‌درخشد.</li>
+    </ul>
+
+    <!-- تصویر ۲: هندسهٔ زاویهٔ جدایی (فاصله) میان زمین، خورشید و ماه -->
+    <figure id="fig-lunar-elongation">
+      <svg viewBox="0 0 780 340" width="100%" height="auto" style="max-height:360px;background:#0f172a;border-radius:6px;overflow:hidden;">
+        <defs>
+          <radialGradient id="sun-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#fef08a" stop-opacity="1"/>
+            <stop offset="40%" stop-color="#f59e0b" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+          </radialGradient>
+          <marker id="arrow-vec" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+          </marker>
+          <marker id="arrow-moon" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b"/>
+          </marker>
+        </defs>
+
+        <!-- پرتوهای نور خورشید از راست -->
+        <line x1="720" y1="50" x2="480" y2="50" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.6"/>
+        <line x1="720" y1="110" x2="480" y2="110" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.6"/>
+        <line x1="720" y1="170" x2="480" y2="170" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.6"/>
+        <line x1="720" y1="230" x2="480" y2="230" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.6"/>
+        <line x1="720" y1="290" x2="480" y2="290" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.6"/>
+
+        <!-- خورشید در منتهی‌الیه راست -->
+        <circle cx="740" cy="170" r="80" fill="url(#sun-glow)"/>
+        <circle cx="740" cy="170" r="38" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+        <text x="740" y="175" font-size="13" fill="#78350f" font-weight="bold" text-anchor="middle">خورشید</text>
+        <text x="630" y="35" font-size="11" fill="#fcd34d" font-weight="bold">پرتوهای موازی نور خورشید &larr;</text>
+
+        <!-- مدار گردش ماه دور زمین -->
+        <ellipse cx="280" cy="170" rx="150" ry="110" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,4"/>
+        <text x="280" y="45" font-size="10" fill="#94a3b8" text-anchor="middle">مدار گردش ماه به دور زمین (خلاف عقربه‌های ساعت ↺)</text>
+
+        <!-- کره زمین در مرکز مدار -->
+        <!-- نیمه شب (چپ) -->
+        <path d="M 280 142 A 28 28 0 0 0 280 198 Z" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <!-- نیمه روز (راست - روبه خورشید) -->
+        <path d="M 280 142 A 28 28 0 0 1 280 198 Z" fill="#2563eb" stroke="#38bdf8" stroke-width="1"/>
+        <circle cx="280" cy="170" r="28" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+        <text x="280" y="174" font-size="10" fill="#ffffff" font-weight="bold" text-anchor="middle">کرهٔ زمین</text>
+        <text x="280" y="215" font-size="10" fill="#94a3b8" text-anchor="middle">ناظر زمینی در خط غروب</text>
+
+        <!-- خط مبنا: راستای دید از زمین به خورشید (زاویه ۰ درجه) -->
+        <line x1="280" y1="170" x2="680" y2="170" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow-vec)"/>
+        <text x="520" y="190" font-size="11" fill="#38bdf8" font-weight="bold">راستای دید به خورشید (زاویهٔ ۰°)</text>
+
+        <!-- ماه در موقعیت زاویه جدایی (تتا = ۴۵ درجه، هلال فزاینده) -->
+        <!-- خط راستای دید به ماه -->
+        <line x1="280" y1="170" x2="386" y2="92" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow-moon)"/>
+        <text x="315" y="115" font-size="11" fill="#f59e0b" font-weight="bold">راستای ماه</text>
+
+        <!-- کمان و قطاع زاویه جدایی (تتا) در مرکز زمین -->
+        <path d="M 280 170 L 335 170 A 55 55 0 0 0 319 131 Z" fill="rgba(245, 158, 11, 0.25)" stroke="#f59e0b" stroke-width="1.8"/>
+        <text x="350" y="152" font-size="13" fill="#fcd34d" font-weight="bold">زاویهٔ جدایی (&theta;)</text>
+
+        <!-- ماه در مدار -->
+        <g transform="translate(386, 92)">
+          <!-- نیمه تاریک ماه (رو به چپ/پشت به خورشید) -->
+          <path d="M 0 -14 A 14 14 0 0 0 0 14 Z" fill="#334155"/>
+          <!-- نیمه روشن ماه (رو به راست/خورشید) -->
+          <path d="M 0 -14 A 14 14 0 0 1 0 14 Z" fill="#fef08a"/>
+          <circle cx="0" cy="0" r="14" fill="none" stroke="#fef08a" stroke-width="1.2"/>
+          <text x="0" y="-20" font-size="11" fill="#fef08a" font-weight="bold" text-anchor="middle">کرهٔ ماه</text>
+        </g>
+
+        <!-- کادر نمای دید ناظر از زمین (سمت چپ تصویر) -->
+        <g transform="translate(85, 170)">
+          <rect x="-70" y="-75" width="140" height="150" fill="#1e293b" stroke="#475569" stroke-width="1.5" rx="8"/>
+          <text x="0" y="-55" font-size="11" fill="#93c5fd" font-weight="bold" text-anchor="middle">نمای ماه از دید زمین</text>
+          <!-- قرص ماه در آسمان ناظر -->
+          <circle cx="0" cy="-5" r="28" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+          <!-- هلال فزاینده باریک -->
+          <path d="M 0 -33 A 28 28 0 0 1 0 23 A 16 28 0 0 0 0 -33 Z" transform="translate(0, -5)" fill="#fef08a"/>
+          <text x="0" y="38" font-size="11" fill="#fef08a" font-weight="bold" text-anchor="middle">هلال اول ماه (قاعده p)</text>
+          <text x="0" y="58" font-size="9" fill="#94a3b8" text-anchor="middle">روشنایی وابسته به زاویهٔ &theta;</text>
+        </g>
+      </svg>
+      <figcaption>تصویر ۲: هندسهٔ زاویهٔ جدایی (فاصلهٔ زاویه‌ای &theta;) میان خورشید، زمین و ماه — زاویهٔ &theta; تعیین‌کنندهٔ درصد روشنایی هلال و فازهای ماه از دید ناظر زمینی است.</figcaption>
+    </figure>
+
+    <h3>اول ماه نجومی در برابر اول ماه شرعی: راز استهلال</h3>
+    <p>اول ماه نجومی از لحظهٔ مقارنه آغاز می‌شود (محاسبهٔ ریاضی)، اما اول ماه شرعی از لحظهٔ <strong>رؤیت هلال با چشم</strong> است. هلال ماه نو تنها اندکی پس از غروب آفتاب دیده می‌شود؛ زیرا در طول روز در نور خورشید محو است و اندکی پس از غروب آفتاب نیز ماه غروب می‌کند.</p>
+
+    <h3>تأخیر روزانهٔ طلوع و غروب ماه</h3>
+    <p>ماه در مدار خود هر روز حدود ۱۳ درجه به سمت شرق جابه‌جا می‌شود؛ در نتیجه <strong>طلوع و غروب ماه هر شب حدود ۵۰ دقیقه نسبت به شب قبل دیرتر رخ می‌دهد.</strong></p>
+    <ul>
+      <li><strong>سحرگاه روز ۱۲ ماه قمری:</strong> هم‌زمان با اذان صبح، قرص تقریباً کامل ماه در مغرب در حال غروب است.</li>
+      <li><strong>شامگاه روز ۱۶ ماه قمری:</strong> پس از نماز مغرب و عشا، قرص ماه را در حال طلوع در مشرق می‌بینید.</li>
+      <li><strong>سحرگاه روز ۲۶ ماه قمری:</strong> هنگام سحر، هلال باریک ماه در مشرق تازه طلوع کرده است.</li>
+    </ul>
+
+    <!-- ابزار تعاملی ۵: کاوشگر روزانه ماه قمری -->
+    <div class="widget-container" id="widget-5">
+      <div class="widget-header">
+        <h4 class="widget-title">ابزار تعاملی ۵: کاوشگر روزانهٔ ماه قمری: فاصلهٔ زاویه‌ای، زمان‌های طلوع/غروب و شکل ماه</h4>
+        <span class="highlight-pill">تقویم روزبه‌روز ماه</span>
+      </div>
+      <div class="widget-controls">
+        <div class="control-group" style="grid-column: 1 / -1;">
+          <label for="w5-day">روز ماه قمری (از ۱ تا ۳۰): <span id="w5-day-label" style="font-weight:bold;color:var(--primary);">روز ۱ (مقارنه و هلال نو)</span></label>
+          <input type="range" id="w5-day" min="1" max="30" step="1" value="2">
+        </div>
+      </div>
+      <div class="widget-canvas-area" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center;">
+        <!-- شکل ماه -->
+        <div style="text-align:center;">
+          <svg id="w5-moon-shape" viewBox="-40 -40 80 80" width="90" height="90">
+            <circle cx="0" cy="0" r="32" fill="#1f2937"/>
+            <path id="w5-moon-lit" d="" fill="#fef08a"/>
+          </svg>
+          <div id="w5-phase-name" style="font-weight:bold;font-size:0.95rem;margin-top:0.4rem;color:var(--primary);">هلال شامگاهی</div>
+        </div>
+        <!-- نمودار بازه طلوع و غروب -->
+        <div style="font-size:0.85rem;line-height:1.8;">
+          <div>☀️ <strong>خورشید:</strong> طلوع ۰۵:۳۰ | غروب ۱۹:۳۰</div>
+          <div>🌙 <strong>ماه:</strong> <span id="w5-moon-times" style="font-weight:bold;color:#b45309;">طلوع ۰۶:۲۰ | غروب ۲۰:۲۰</span></div>
+          <div>⏳ <strong>فاصلهٔ غروب ماه پس از خورشید:</strong> <span id="w5-lag-time" class="ltr">50 min</span></div>
+        </div>
+      </div>
+      <div class="readout-panel">
+        <div class="readout-item">
+          <span class="readout-label">فاصلهٔ زاویه‌ای (&theta;):</span>
+          <span class="readout-val" id="w5-theta-val">۱۲٫۲°</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label">درصد روشنایی قرص ماه:</span>
+          <span class="readout-val" id="w5-illum-val">۱٫۱٪</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label">وضعیت رؤیت‌پذیری:</span>
+          <span class="readout-val" id="w5-visibility-val" style="font-size:0.95rem;">هلال بحرانی اول ماه</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>قاعدهٔ طلایی شکل هلال در نیمکرهٔ شمالی: هلال p و هلال q</h3>
+    <p>در شمال مدار رأس‌السرطان (مانند ایران)، اجرام آسمانی در نیمهٔ جنوبی آسمان همواره از چپ به راست حرکت می‌کنند. این موضوع قاعدهٔ بصری شگفت‌انگیزی می‌سازد:</p>
+    <ul>
+      <li><strong>در ابتدای ماه قمری (هلال افزاینده):</strong> خورشید زودتر غروب کرده و ماه در سمت چپ خورشید است؛ پس سمت راست ماه روشن است. قوس هلال به شکل شکم حرف لاتین <strong>p</strong> دیده می‌شود (اول شب).</li>
+      <li><strong>در انتهای ماه قمری (هلال کاهنده):</strong> ماه زودتر طلوع کرده و سمت چپ آن روشن است؛ قوس هلال به شکل شکم حرف لاتین <strong>q</strong> دیده می‌شود (سحرگاه).</li>
+    </ul>
+
+    <!-- ابزار تعاملی ۶: شبیه ساز مداری و قاعده p و q -->
+    <div class="widget-container" id="widget-6">
+      <div class="widget-header">
+        <h4 class="widget-title">ابزار تعاملی ۶: شبیه‌ساز فازهای ماه، زاویهٔ فاصله و قاعدهٔ p و q</h4>
+        <span class="highlight-pill">هندسهٔ سه‌بعدی مدار</span>
+      </div>
+      <div class="widget-controls">
+        <div class="control-group" style="grid-column: 1 / -1;">
+          <label for="w6-theta">زاویهٔ جدایی ماه از خورشید (&theta;): <span id="w6-theta-display" class="ltr" style="font-weight:bold;color:var(--primary);">45&deg;</span></label>
+          <input type="range" id="w6-theta" min="0" max="360" step="5" value="45">
+        </div>
+      </div>
+      <div class="widget-canvas-area">
+        <svg id="w6-orbit" viewBox="0 0 400 200" width="100%" height="auto">
+          <!-- نور خورشید از راست -->
+          <line x1="390" y1="40" x2="350" y2="40" stroke="#f59e0b" stroke-width="2"/>
+          <line x1="390" y1="100" x2="350" y2="100" stroke="#f59e0b" stroke-width="2"/>
+          <line x1="390" y1="160" x2="350" y2="160" stroke="#f59e0b" stroke-width="2"/>
+          <text x="390" y="25" font-size="11" fill="#f59e0b" text-anchor="end" font-weight="bold">پرتوهای خورشید &larr;</text>
+
+          <!-- زمین در مرکز -->
+          <circle cx="200" cy="100" r="22" fill="#2563eb"/>
+          <text x="200" y="105" font-size="10" fill="#fff" text-anchor="middle">زمین</text>
+
+          <!-- مدار ماه -->
+          <ellipse cx="200" cy="100" rx="120" ry="60" fill="none" stroke="#ccc" stroke-dasharray="3,3"/>
+
+          <!-- راستای خورشید از زمین (مبنای زاویه ۰) -->
+          <line id="w6-sun-line" x1="200" y1="100" x2="330" y2="100" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <!-- راستای ماه از زمین -->
+          <line id="w6-moon-line" x1="200" y1="100" x2="285" y2="142" stroke="#0284c7" stroke-width="1.5"/>
+          <!-- کمان و برچسب زاویه جدایی (تتا) -->
+          <path id="w6-angle-arc" d="" fill="rgba(245, 158, 11, 0.25)" stroke="#f59e0b" stroke-width="1.5"/>
+          <text id="w6-angle-text" x="245" y="94" font-size="10" fill="#b45309" font-weight="bold">θ = 45°</text>
+
+          <!-- موقعیت ماه در مدار -->
+          <g id="w6-moon-pos" transform="translate(285, 142)">
+            <circle cx="0" cy="0" r="10" fill="#1f2937"/>
+            <path id="w6-moon-orbit-half" d="M 0 -10 A 10 10 0 0 1 0 10 Z" fill="#fef08a"/>
+          </g>
+
+          <!-- ظاهر دیده شده از زمین (هم‌تراز با مرکز محور Y) -->
+          <g transform="translate(60, 100)">
+            <rect x="-35" y="-45" width="70" height="90" fill="#fff" stroke="#ddd" rx="6"/>
+            <text x="0" y="-30" font-size="9" fill="#777" text-anchor="middle">نمای دید زمین</text>
+            <circle cx="0" cy="0" r="22" fill="#1f2937"/>
+            <path id="w6-earth-view" d="" fill="#fef08a"/>
+            <text id="w6-pq-badge" x="0" y="36" font-size="12" fill="#125b50" font-weight="bold" text-anchor="middle">حالت p (اول شب)</text>
+          </g>
+        </svg>
+      </div>
+      <div class="readout-panel">
+        <div class="readout-item">
+          <span class="readout-label">نام فاز ماه:</span>
+          <span class="readout-val" id="w6-phase-title">هلال فزاینده (شکل p)</span>
+        </div>
+        <div class="readout-item">
+          <span class="readout-label">زمان مشاهده در آسمان:</span>
+          <span class="readout-val" id="w6-obs-time" style="font-size:0.95rem;">اول شب در افق غرب</span>
+        </div>
+      </div>
+    </div>
+
+    <details>
+      <summary>جزئیات محاسباتی و فرمول‌ها: زاویهٔ فاز و درصد روشنایی ماه</summary>
+      <div class="math-box">
+        درصد روشنایی قرص ماه (<span class="ltr">k</span>) بر حسب زاویهٔ جدایی ماه از خورشید (<span class="ltr">&theta;</span>) برابر است با:
+        <div class="math-display">k = (1 - cos(&theta;)) / 2</div>
+        در <span class="ltr">&theta; = 0&deg;</span> (مقارنه) تاریکی کامل و در <span class="ltr">&theta; = 180&deg;</span> (مقابله) روشنایی ۱۰۰٪ است.
+      </div>
+    </details>
+  </section>
+
+  <!-- جمع بندی -->
+  <section id="conclusion">
+    <h2>بخش ششم: جمع‌بندی: هندسهٔ زیبای آسمان در دستان شما</h2>
+    <p>همان‌طور که دیدیم، شگفتی‌های آسمان شب و روز نه معماهایی حل‌نشدنی هستند و نه فرمول‌هایی دور از دسترس؛ بلکه برآمده از هندسه‌ای چشم‌نواز، دقیق و قانونمندند. با یادگیری چند اصل ساده: شناخت سه منطقهٔ زمین بر مدار ۲۳٫۴۴ درجه، جابه‌جایی نقاط طلوع و غروب در فصول، درک چگونگی افزایش نوسان طول روز با عرض جغرافیایی، پیوند هندسی جهت قبله با تابش خورشید، و ردیابی زاویهٔ فاصلهٔ ماه و چرخهٔ ۵۰ دقیقه‌ای هلال‌های p و q، اکنون شما می‌توانید با نگاهی نو و آگاهانه به آسمان بنگرید.</p>
+    <p>مباحث تکمیلی دیگری همچون نقشهٔ آسمان شب، کرهٔ سماوی و دایرةالبروج، معنای نجومی پدیدهٔ قمر در عقرب، حرکت تقدیمی محور زمین و مکان‌یابی با ستارگان قطبی نیز در دست بررسی است که در آینده به عنوان گام‌های بعدی همین مسیر آموزشی تقدیم خواهد شد.</p>
+  </section>
+
+
+
+</main>
+
+<script>
+  // ==========================================
+  // محاسبات نجومی مشترک و ابزارها (Offline Math)
+  // ==========================================
+  const RAD = Math.PI / 180;
+  const DEG = 180 / Math.PI;
+
+  function dayOfYear(date) {
+    const start = new Date(date.getFullYear(), 0, 0);
+    const diff = date - start;
+    return Math.floor(diff / (1000 * 60 * 60 * 24));
+  }
+
+  // میل خورشید (درجه)
+  function solarDeclination(doy) {
+    return 23.44 * Math.sin((360 / 365) * (doy - 81) * RAD);
+  }
+
+  // معادله زمان (دقیقه)
+  function equationOfTime(doy) {
+    const B = (360 / 365) * (doy - 81) * RAD;
+    return 9.87 * Math.sin(2 * B) - 7.53 * Math.cos(B) - 1.5 * Math.sin(B);
+  }
+
+  // ساعت ظهر شرعی (اعشار ساعت)
+  function calcSolarNoon(lon, doy, zoneLon = 52.5) {
+    const eot = equationOfTime(doy);
+    return 12.0 - (lon - zoneLon) / 15.0 - eot / 60.0;
+  }
+
+  // طول روز (ساعت)
+  function calcDayLength(lat, dec) {
+    const cosH0 = (Math.sin(-0.833 * RAD) - Math.sin(lat * RAD) * Math.sin(dec * RAD)) /
+                  (Math.cos(lat * RAD) * Math.cos(dec * RAD));
+    if (cosH0 >= 1) return 0;
+    if (cosH0 <= -1) return 24;
+    return (2 * Math.acos(cosH0) * DEG) / 15.0;
+  }
+
+  function formatTime(decimalHours) {
+    let h = Math.floor(decimalHours);
+    let m = Math.floor((decimalHours - h) * 60);
+    let s = Math.floor(((decimalHours - h) * 60 - m) * 60);
+    h = (h + 24) % 24;
+    return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  }
+
+  function formatHM(decimalHours) {
+    let h = Math.floor(decimalHours);
+    let m = Math.round((decimalHours - h) * 60);
+    if (m === 60) { h++; m = 0; }
+    h = (h + 24) % 24;
+    return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
+  }
+
+  // ==========================================
+  // ابزار ۱: مناطق سه‌گانه و جهت سایه در ظهر
+  // ==========================================
+  const w1City = document.getElementById('w1-city');
+  const w1Day = document.getElementById('w1-day');
+  const w1Sun = document.getElementById('w1-sun');
+  const w1Ray = document.getElementById('w1-ray');
+  const w1Shadow = document.getElementById('w1-shadow');
+  const w1AltVal = document.getElementById('w1-alt-val');
+  const w1DirVal = document.getElementById('w1-dir-val');
+  const w1ShadowVal = document.getElementById('w1-shadow-val');
+
+  function updateWidget1() {
+    const lat = parseFloat(w1City.value);
+    const doy = parseInt(w1Day.value);
+    const dec = solarDeclination(doy);
+
+    // زاویه ظهر
+    let alt = 90 - Math.abs(lat - dec);
+    if (alt > 90) alt = 180 - alt;
+
+    const sunIsSouth = (lat >= dec);
+    const gnomonX = 250, gnomonY = 200, gnomonH = 80;
+
+    let shadowLength = 0;
+    if (Math.abs(lat - dec) > 0.05) {
+      shadowLength = gnomonH / Math.tan(alt * RAD);
+    }
+    shadowLength = Math.min(shadowLength, 150);
+
+    const shadowDir = sunIsSouth ? 1 : -1; // 1 = سمت شمال (راست SVG), -1 = سمت جنوب (چپ)
+    const shadowEndX = gnomonX + shadowDir * shadowLength;
+
+    w1Shadow.setAttribute('x1', gnomonX);
+    w1Shadow.setAttribute('y1', gnomonY);
+    w1Shadow.setAttribute('x2', shadowEndX);
+    w1Shadow.setAttribute('y2', gnomonY);
+
+    const sunDist = 140;
+    const sunAngleRad = alt * RAD;
+    const sunX = gnomonX - (sunIsSouth ? 1 : -1) * Math.cos(sunAngleRad) * sunDist;
+    const sunY = (gnomonY - gnomonH) - Math.sin(sunAngleRad) * sunDist + 40;
+
+    w1Sun.setAttribute('transform', `translate(${sunX}, ${sunY})`);
+    w1Ray.setAttribute('x1', sunX);
+    w1Ray.setAttribute('y1', sunY);
+    w1Ray.setAttribute('x2', gnomonX);
+    w1Ray.setAttribute('y2', gnomonY - gnomonH);
+
+    w1AltVal.textContent = `${alt.toFixed(1)}°`;
+    if (Math.abs(lat - dec) < 0.2) {
+      w1DirVal.textContent = "دقیقاً بالای سر (سمت‌الرأس)";
+      w1ShadowVal.textContent = "صفر (بدون سایه)";
+    } else {
+      w1DirVal.textContent = sunIsSouth ? "جنوب ناظر" : "شمال ناظر";
+      const cm = Math.round((1.0 / Math.tan(alt * RAD)) * 100);
+      w1ShadowVal.textContent = `${cm} سانتی‌متر رو به ${sunIsSouth ? 'شمال' : 'جنوب'}`;
+    }
+  }
+
+  w1City.addEventListener('change', updateWidget1);
+  w1Day.addEventListener('change', updateWidget1);
+  updateWidget1();
+
+  // ==========================================
+  // ابزار ۲: مسیر خورشید، سایه شاخص و ساعت
+  // ==========================================
+  const w2Cities = {
+    tehran: { lat: 35.6892, lon: 51.3890, zone: 52.5 },
+    mashhad: { lat: 36.2972, lon: 59.6067, zone: 52.5 },
+    isfahan: { lat: 32.6546, lon: 51.6680, zone: 52.5 },
+    tabriz: { lat: 38.0800, lon: 46.2919, zone: 52.5 },
+    mecca: { lat: 21.4225, lon: 39.8262, zone: 45.0 }
+  };
+
+  const w2City = document.getElementById('w2-city');
+  const w2Date = document.getElementById('w2-date');
+  const w2Time = document.getElementById('w2-time');
+  const w2TimeDisplay = document.getElementById('w2-time-display');
+  const w2Sun = document.getElementById('w2-sun');
+  const w2SunAltLabel = document.getElementById('w2-sun-alt-label');
+  const w2Shadow = document.getElementById('w2-shadow');
+  const w2PathGround = document.getElementById('w2-path-ground');
+  const w2RiseMarker = document.getElementById('w2-rise-marker');
+  const w2RiseText = document.getElementById('w2-rise-text');
+  const w2SetMarker = document.getElementById('w2-set-marker');
+  const w2SetText = document.getElementById('w2-set-text');
+  const w2HourHand = document.getElementById('w2-hour-hand');
+  const w2MinHand = document.getElementById('w2-min-hand');
+  const w2SunriseVal = document.getElementById('w2-sunrise-val');
+  const w2NoonVal = document.getElementById('w2-noon-val');
+  const w2SunsetVal = document.getElementById('w2-sunset-val');
+  const w2CurAlt = document.getElementById('w2-cur-alt');
+
+  const w2BtnRise = document.getElementById('w2-btn-sunrise');
+  const w2BtnRiseLbl = document.getElementById('w2-btn-rise-lbl');
+  const w2BtnNoon = document.getElementById('w2-btn-noon');
+  const w2BtnNoonLbl = document.getElementById('w2-btn-noon-lbl');
+  const w2BtnSunset = document.getElementById('w2-btn-sunset');
+  const w2BtnSetLbl = document.getElementById('w2-btn-set-lbl');
+
+  const w2DateToday = document.getElementById('w2-date-today');
+  const w2DateKhordad = document.getElementById('w2-date-khordad');
+  const w2DateDey = document.getElementById('w2-date-dey');
+  const w2DateFarvardin = document.getElementById('w2-date-farvardin');
+
+  function getCompassSector(az) {
+    if (az >= 337.5 || az < 22.5) return 'شمال';
+    if (az >= 22.5 && az < 67.5) return 'شمال شرقی';
+    if (az >= 67.5 && az < 112.5) return 'مشرق';
+    if (az >= 112.5 && az < 157.5) return 'جنوب شرقی';
+    if (az >= 157.5 && az < 202.5) return 'جنوب';
+    if (az >= 202.5 && az < 247.5) return 'جنوب غربی';
+    if (az >= 247.5 && az < 292.5) return 'مغرب';
+    if (az >= 292.5 && az < 337.5) return 'شمال غربی';
+    return '';
+  }
+
+  function calcSolarAltAz(lat_deg, dec_deg, H_deg) {
+    const phi = lat_deg * RAD;
+    const delta = dec_deg * RAD;
+    const H = H_deg * RAD;
+
+    const sinAlt = Math.sin(phi) * Math.sin(delta) + Math.cos(phi) * Math.cos(delta) * Math.cos(H);
+    const alt = Math.asin(Math.max(-1, Math.min(1, sinAlt))) * DEG;
+
+    const cosAlt = Math.cos(alt * RAD);
+    let az = 180;
+    if (cosAlt > 1e-4) {
+      let cosAz = (Math.sin(delta) - Math.sin(alt * RAD) * Math.sin(phi)) / (cosAlt * Math.cos(phi));
+      cosAz = Math.max(-1, Math.min(1, cosAz));
+      az = Math.acos(cosAz) * DEG;
+      if (H > 0) {
+        az = 360 - az;
+      }
+    }
+    return { alt, az };
+  }
+
+  function compassCoord(az, alt) {
+    const r = 140 * Math.max(0, 1 - alt / 90);
+    const rad = az * RAD;
+    const x = 190 + r * Math.sin(rad);
+    const y = 190 - r * Math.cos(rad);
+    return { x, y };
+  }
+
+  function updateWidget2() {
+    const city = w2Cities[w2City.value];
+    let dVal = w2Date.value;
+    if (!dVal) {
+      const now = new Date();
+      dVal = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+      w2Date.value = dVal;
+    }
+    const date = new Date(dVal);
+    const doy = dayOfYear(date);
+    const dec = solarDeclination(doy);
+
+    const noon = calcSolarNoon(city.lon, doy, city.zone);
+    const dayLen = calcDayLength(city.lat, dec);
+    const sunrise = noon - dayLen / 2;
+    const sunset = noon + dayLen / 2;
+
+    // زاویه سمت طلوع و غروب خورشید
+    const halfH_deg = (dayLen / 2) * 15;
+    const risePos = calcSolarAltAz(city.lat, dec, -halfH_deg);
+    const setPos = calcSolarAltAz(city.lat, dec, halfH_deg);
+    const azRise = risePos.az;
+    const azSet = setPos.az;
+    const secRise = getCompassSector(azRise);
+    const secSet = getCompassSector(azSet);
+
+    w2SunriseVal.textContent = `${formatHM(sunrise)} (${azRise.toFixed(1)}° ${secRise})`;
+    w2NoonVal.textContent = `${formatHM(noon)} (۱۸۰٫۰° جنوب)`;
+    w2SunsetVal.textContent = `${formatHM(sunset)} (${azSet.toFixed(1)}° ${secSet})`;
+
+    // دکمه‌های پرش سریع
+    if (w2BtnRiseLbl) w2BtnRiseLbl.textContent = formatHM(sunrise);
+    if (w2BtnNoonLbl) w2BtnNoonLbl.textContent = formatHM(noon);
+    if (w2BtnSetLbl) w2BtnSetLbl.textContent = formatHM(sunset);
+
+    // نشانگر طلوع
+    const rCoord = compassCoord(azRise, 0);
+    if (w2RiseMarker) w2RiseMarker.setAttribute('transform', `translate(${rCoord.x.toFixed(1)}, ${rCoord.y.toFixed(1)})`);
+    if (w2RiseText) {
+      w2RiseText.setAttribute('x', (rCoord.x + (rCoord.x >= 190 ? 10 : -10)).toFixed(1));
+      w2RiseText.setAttribute('y', (rCoord.y - 6).toFixed(1));
+      w2RiseText.setAttribute('text-anchor', rCoord.x >= 190 ? 'start' : 'end');
+      w2RiseText.textContent = `طلوع (${Math.round(azRise)}° ${secRise})`;
+    }
+
+    // نشانگر غروب
+    const sCoord = compassCoord(azSet, 0);
+    if (w2SetMarker) w2SetMarker.setAttribute('transform', `translate(${sCoord.x.toFixed(1)}, ${sCoord.y.toFixed(1)})`);
+    if (w2SetText) {
+      w2SetText.setAttribute('x', (sCoord.x + (sCoord.x >= 190 ? 10 : -10)).toFixed(1));
+      w2SetText.setAttribute('y', (sCoord.y - 6).toFixed(1));
+      w2SetText.setAttribute('text-anchor', sCoord.x >= 190 ? 'start' : 'end');
+      w2SetText.textContent = `غروب (${Math.round(azSet)}° ${secSet})`;
+    }
+
+    // رسم مسیر روزانه خورشید بر روی افق ناظر
+    if (w2PathGround) {
+      const steps = 30;
+      let pathPts = [];
+      for (let i = 0; i <= steps; i++) {
+        const t = sunrise + (i / steps) * (sunset - sunrise);
+        const H_deg = (t - noon) * 15;
+        const pos = calcSolarAltAz(city.lat, dec, H_deg);
+        const pt = compassCoord(pos.az, Math.max(0, pos.alt));
+        pathPts.push(`${pt.x.toFixed(1)},${pt.y.toFixed(1)}`);
+      }
+      w2PathGround.setAttribute('d', 'M ' + pathPts.join(' L '));
+    }
+
+    // زمان انتخابی کاربر
+    const timeMin = parseInt(w2Time.value);
+    const curHour = timeMin / 60.0;
+    w2TimeDisplay.textContent = formatHM(curHour);
+
+    // به‌روزرسانی ساعت عقربه‌ای
+    const hDeg = (curHour % 12) * 30 + (curHour - Math.floor(curHour)) * 30;
+    const mDeg = (curHour - Math.floor(curHour)) * 360;
+    w2HourHand.setAttribute('transform', `rotate(${hDeg} 60 60)`);
+    w2MinHand.setAttribute('transform', `rotate(${mDeg} 60 60)`);
+
+    // موقعیت لحظه‌ای خورشید بر روی افق
+    const curH_deg = (curHour - noon) * 15;
+    const curPos = calcSolarAltAz(city.lat, dec, curH_deg);
+    const curAlt = curPos.alt;
+    const curAz = curPos.az;
+
+    if (curAlt >= -0.5) {
+      // بالای افق
+      const sunCoord = compassCoord(curAz, Math.max(0, curAlt));
+      w2Sun.style.display = 'block';
+      w2Sun.setAttribute('transform', `translate(${sunCoord.x.toFixed(1)}, ${sunCoord.y.toFixed(1)})`);
+      if (w2SunAltLabel) w2SunAltLabel.textContent = `${Math.round(curAlt)}°`;
+      w2CurAlt.textContent = `ارتفاع: ${curAlt.toFixed(1)}° | سمت: ${curAz.toFixed(1)}° (${getCompassSector(curAz)})`;
+
+      // سایه شاخص (در خلاف جهت سمت خورشید)
+      const shadAz = (curAz + 180) % 360;
+      const shadLen = Math.min(130, 25 / Math.tan(Math.max(4, curAlt) * RAD));
+      const shadRad = shadAz * RAD;
+      const shadX = 190 + shadLen * Math.sin(shadRad);
+      const shadY = 190 - shadLen * Math.cos(shadRad);
+      w2Shadow.setAttribute('x1', 190);
+      w2Shadow.setAttribute('y1', 190);
+      w2Shadow.setAttribute('x2', shadX.toFixed(1));
+      w2Shadow.setAttribute('y2', shadY.toFixed(1));
+      w2Shadow.style.display = 'block';
+    } else {
+      // زیر افق (شب)
+      w2Sun.style.display = 'none';
+      w2CurAlt.textContent = `زیر افق (${curAlt.toFixed(1)}° - شب)`;
+      w2Shadow.style.display = 'none';
+    }
+  }
+
+  w2City.addEventListener('change', updateWidget2);
+  w2Date.addEventListener('change', updateWidget2);
+  w2Time.addEventListener('input', updateWidget2);
+
+  if (w2BtnRise) {
+    w2BtnRise.addEventListener('click', () => {
+      const city = w2Cities[w2City.value];
+      const date = new Date(w2Date.value);
+      const doy = dayOfYear(date);
+      const dec = solarDeclination(doy);
+      const noon = calcSolarNoon(city.lon, doy, city.zone);
+      const dayLen = calcDayLength(city.lat, dec);
+      const sunrise = noon - dayLen / 2;
+      w2Time.value = Math.round(sunrise * 60);
+      updateWidget2();
+    });
+  }
+
+  if (w2BtnNoon) {
+    w2BtnNoon.addEventListener('click', () => {
+      const city = w2Cities[w2City.value];
+      const date = new Date(w2Date.value);
+      const doy = dayOfYear(date);
+      const noon = calcSolarNoon(city.lon, doy, city.zone);
+      w2Time.value = Math.round(noon * 60);
+      updateWidget2();
+    });
+  }
+
+  if (w2BtnSunset) {
+    w2BtnSunset.addEventListener('click', () => {
+      const city = w2Cities[w2City.value];
+      const date = new Date(w2Date.value);
+      const doy = dayOfYear(date);
+      const dec = solarDeclination(doy);
+      const noon = calcSolarNoon(city.lon, doy, city.zone);
+      const dayLen = calcDayLength(city.lat, dec);
+      const sunset = noon + dayLen / 2;
+      w2Time.value = Math.round(sunset * 60);
+      updateWidget2();
+    });
+  }
+
+  if (w2DateToday) {
+    w2DateToday.addEventListener('click', () => {
+      const now = new Date();
+      w2Date.value = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+      w2Time.value = now.getHours() * 60 + now.getMinutes();
+      updateWidget2();
+    });
+  }
+
+  if (w2DateKhordad) {
+    w2DateKhordad.addEventListener('click', () => {
+      w2Date.value = '2026-05-31';
+      updateWidget2();
+    });
+  }
+
+  if (w2DateDey) {
+    w2DateDey.addEventListener('click', () => {
+      w2Date.value = '2026-12-22';
+      updateWidget2();
+    });
+  }
+
+  if (w2DateFarvardin) {
+    w2DateFarvardin.addEventListener('click', () => {
+      w2Date.value = '2026-03-21';
+      updateWidget2();
+    });
+  }
+
+  // ==========================================
+  // ابزار ۳: نوسان سالانه طول روز
+  // ==========================================
+  const w3Lat = document.getElementById('w3-lat');
+  const w3LatVal = document.getElementById('w3-lat-val');
+  const w3Curve = document.getElementById('w3-curve');
+  const w3MaxVal = document.getElementById('w3-max-val');
+  const w3MinVal = document.getElementById('w3-min-val');
+  const w3RangeVal = document.getElementById('w3-range-val');
+
+  function updateWidget3() {
+    const lat = parseFloat(w3Lat.value);
+    w3LatVal.textContent = `${lat}° N ${lat === 36 ? '(تهران)' : lat === 60 ? '(هلسینکی)' : lat === 0 ? '(استوا)' : ''}`;
+
+    let points = [];
+    let minD = 24, maxD = 0;
+
+    for (let day = 1; day <= 365; day += 5) {
+      const dec = solarDeclination(day);
+      const d = calcDayLength(lat, dec);
+      if (d < minD) minD = d;
+      if (d > maxD) maxD = d;
+
+      const x = 40 + (day / 365) * 440;
+      const y = 180 - (d / 24) * 160;
+      points.push(`${x.toFixed(1)},${y.toFixed(1)}`);
+    }
+
+    w3Curve.setAttribute('d', 'M ' + points.join(' L '));
+
+    const maxH = Math.floor(maxD), maxM = Math.round((maxD - maxH) * 60);
+    const minH = Math.floor(minD), minM = Math.round((minD - minH) * 60);
+    const diff = maxD - minD;
+    const diffH = Math.floor(diff), diffM = Math.round((diff - diffH) * 60);
+
+    w3MaxVal.textContent = `${maxH} ساعت و ${maxM} دقیقه`;
+    w3MinVal.textContent = `${minH} ساعت و ${minM} دقیقه`;
+    w3RangeVal.textContent = `${diffH} ساعت و ${diffM} دقیقه`;
+  }
+
+  w3Lat.addEventListener('input', updateWidget3);
+  updateWidget3();
+
+  // ==========================================
+  // ابزار ۴: محاسبه‌گر دقیق ساعت قبله
+  // ==========================================
+  const w4Cities = {
+    tehran: { lat: 35.6892, lon: 51.3890, zone: 52.5 },
+    mashhad: { lat: 36.2972, lon: 59.6067, zone: 52.5 },
+    isfahan: { lat: 32.6546, lon: 51.6680, zone: 52.5 },
+    tabriz: { lat: 38.0800, lon: 46.2919, zone: 52.5 },
+    shiraz: { lat: 29.5918, lon: 52.5837, zone: 52.5 },
+    ahvaz: { lat: 31.3183, lon: 48.6706, zone: 52.5 },
+    qom: { lat: 34.6401, lon: 50.8764, zone: 52.5 },
+    london: { lat: 51.5074, lon: -0.1278, zone: 0.0 },
+    istanbul: { lat: 41.0082, lon: 28.9784, zone: 45.0 }
+  };
+
+  const w4City = document.getElementById('w4-city');
+  const w4Date = document.getElementById('w4-date');
+  const w4Needle = document.getElementById('w4-qibla-needle');
+  const w4SunMarker = document.getElementById('w4-sun-marker');
+  const w4QiblaDeg = document.getElementById('w4-qibla-deg');
+  const w4QiblaTime = document.getElementById('w4-qibla-time');
+
+  function qiblaAzimuth(lat, lon) {
+    const latM = 21.4225 * RAD;
+    const lonM = 39.8262 * RAD;
+    const phi = lat * RAD;
+    const dLon = lonM - (lon * RAD);
+    const y = Math.sin(dLon);
+    const x = Math.cos(phi) * Math.tan(latM) - Math.sin(phi) * Math.cos(dLon);
+    let q = Math.atan2(y, x) * DEG;
+    return (q + 360) % 360;
+  }
+
+  function solarAzimuth(lat, dec, H_deg) {
+    const phi = lat * RAD;
+    const delta = dec * RAD;
+    const H = H_deg * RAD;
+    const y = Math.sin(H);
+    const x = Math.sin(phi) * Math.cos(H) - Math.cos(phi) * Math.tan(delta);
+    let az = (Math.atan2(y, x) * DEG + 180) % 360;
+    return az;
+  }
+
+  function updateWidget4() {
+    const city = w4Cities[w4City.value];
+    const date = new Date(w4Date.value);
+    const doy = dayOfYear(date);
+    const dec = solarDeclination(doy);
+    const qibla = qiblaAzimuth(city.lat, city.lon);
+
+    // زاویه عقربه در SVG قطب‌نما
+    const needleRad = (qibla - 90) * RAD;
+    const nx = 100 + Math.cos(needleRad) * 70;
+    const ny = 100 + Math.sin(needleRad) * 70;
+    w4Needle.setAttribute('x2', nx);
+    w4Needle.setAttribute('y2', ny);
+    w4SunMarker.setAttribute('transform', `translate(${nx}, ${ny})`);
+
+    w4QiblaDeg.textContent = `${qibla.toFixed(1)}° (${qibla > 180 && qibla < 270 ? 'جنوب غربی' : 'جنوب شرقی'})`;
+
+    // یافتن ساعت قبله با جست‌وجوی تطابق سمت خورشید با سمت قبله
+    const noon = calcSolarNoon(city.lon, doy, city.zone);
+    const dayLen = calcDayLength(city.lat, dec);
+    const sunrise = noon - dayLen / 2;
+    const sunset = noon + dayLen / 2;
+
+    let bestDiff = 999;
+    let bestTime = noon;
+
+    for (let t = sunrise; t <= sunset; t += 1/60) {
+      const H_deg = (t - noon) * 15;
+      const az = solarAzimuth(city.lat, dec, H_deg);
+      const diff = Math.abs(az - qibla);
+      if (diff < bestDiff) {
+        bestDiff = diff;
+        bestTime = t;
+      }
+    }
+
+    w4QiblaTime.textContent = formatTime(bestTime);
+  }
+
+  w4City.addEventListener('change', updateWidget4);
+  w4Date.addEventListener('change', updateWidget4);
+
+  const w4DateToday = document.getElementById('w4-date-today');
+  const w4DateKhordad = document.getElementById('w4-date-khordad');
+  const w4DateTir = document.getElementById('w4-date-tir');
+
+  if (w4DateToday) {
+    w4DateToday.addEventListener('click', () => {
+      const now = new Date();
+      w4Date.value = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`;
+      updateWidget4();
+    });
+  }
+  if (w4DateKhordad) {
+    w4DateKhordad.addEventListener('click', () => {
+      w4Date.value = '2026-05-28';
+      updateWidget4();
+    });
+  }
+  if (w4DateTir) {
+    w4DateTir.addEventListener('click', () => {
+      w4Date.value = '2026-07-16';
+      updateWidget4();
+    });
+  }
+
+  // ==========================================
+  // ابزار ۵: کاوشگر روزانه ماه قمری (جدید)
+  // ==========================================
+  const w5Day = document.getElementById('w5-day');
+  const w5DayLabel = document.getElementById('w5-day-label');
+  const w5MoonLit = document.getElementById('w5-moon-lit');
+  const w5PhaseName = document.getElementById('w5-phase-name');
+  const w5MoonTimes = document.getElementById('w5-moon-times');
+  const w5LagTime = document.getElementById('w5-lag-time');
+  const w5ThetaVal = document.getElementById('w5-theta-val');
+  const w5IllumVal = document.getElementById('w5-illum-val');
+  const w5VisibilityVal = document.getElementById('w5-visibility-val');
+
+  function updateWidget5() {
+    const day = parseInt(w5Day.value);
+    const theta = ((day - 1) / 29.53) * 360;
+    const illum = ((1 - Math.cos(theta * RAD)) / 2) * 100;
+
+    // نام فاز و توضیحات
+    let phase = '';
+    let vis = '';
+    if (day === 1) { phase = 'مقارنه (ماه نو)'; vis = 'غیرقابل رؤیت (در نور خورشید)'; }
+    else if (day >= 2 && day <= 6) { phase = 'هلال فزاینده شامگاهی (شکل p)'; vis = 'رؤیت در دقایق کوتاه پس از غروب'; }
+    else if (day === 7 || day === 8) { phase = 'تربیع اول (نیم‌ماه)'; vis = 'از ظهر تا نیمه‌شب در آسمان'; }
+    else if (day >= 9 && day <= 12) { phase = 'تحدب فزاینده (کوژماه)'; vis = 'از عصر تا نزدیکی سحر'; }
+    else if (day >= 13 && day <= 15) { phase = 'بدر کامل (شب‌های ۱۳، ۱۴ و ۱۵)'; vis = 'در تمام طول شب در آسمان دیده می‌شود (غروب خورشید تا طلوع)'; }
+    else if (day >= 16 && day <= 21) { phase = 'تحدب کاهنده (کوژماه شامگاهی)'; vis = 'طلوع پس از عشا، غروب پس از صبح'; }
+    else if (day === 22 || day === 23) { phase = 'تربیع دوم (نیم‌ماه صبحگاهی)'; vis = 'از نیمه‌شب تا ظهر در آسمان'; }
+    else { phase = 'هلال کاهنده سحرگاهی (شکل q)'; vis = 'رؤیت در گرگ‌ومیش پیش از طلوع آفتاب'; }
+
+    w5DayLabel.textContent = `روز ${day} ماه قمری (${phase})`;
+    w5PhaseName.textContent = phase;
+    w5ThetaVal.textContent = `${theta.toFixed(1)}°`;
+    w5IllumVal.textContent = `${illum.toFixed(1)}٪`;
+    w5VisibilityVal.textContent = vis;
+
+    // زمان طلوع و غروب ماه (تقریبی بر پایه تاخیر ۵۰ دقیقه روزانه)
+    const baseRise = 5.5; // 05:30
+    const baseSet = 19.5; // 19:30
+    const lagHours = (day - 1) * (50 / 60);
+    const moonRise = (baseRise + lagHours) % 24;
+    const moonSet = (baseSet + lagHours) % 24;
+
+    w5MoonTimes.textContent = `طلوع ${formatHM(moonRise)} | غروب ${formatHM(moonSet)}`;
+    const lagMin = Math.round((day - 1) * 50);
+    w5LagTime.textContent = `${lagMin} دقیقه پس از خورشید (${(lagMin/60).toFixed(1)} ساعت)`;
+
+    // رسم هلال بر روی دایره
+    const r = 32;
+    const cosT = Math.cos(theta * RAD);
+    const sweep = theta < 180 ? 1 : 0;
+    const rx = Math.abs(r * cosT);
+    let d = '';
+    if (theta < 180) {
+      d = `M 0 -${r} A ${r} ${r} 0 0 1 0 ${r} A ${rx} ${r} 0 0 ${cosT >= 0 ? 0 : 1} 0 -${r} Z`;
+    } else {
+      d = `M 0 -${r} A ${r} ${r} 0 0 0 0 ${r} A ${rx} ${r} 0 0 ${cosT >= 0 ? 1 : 0} 0 -${r} Z`;
+    }
+    w5MoonLit.setAttribute('d', d);
+  }
+
+  w5Day.addEventListener('input', updateWidget5);
+  updateWidget5();
+
+  // ==========================================
+  // ابزار ۶: شبیه‌ساز فازهای ماه و قاعده p و q
+  // ==========================================
+  const w6Theta = document.getElementById('w6-theta');
+  const w6ThetaDisplay = document.getElementById('w6-theta-display');
+  const w6MoonPos = document.getElementById('w6-moon-pos');
+  const w6EarthView = document.getElementById('w6-earth-view');
+  const w6PqBadge = document.getElementById('w6-pq-badge');
+  const w6PhaseTitle = document.getElementById('w6-phase-title');
+  const w6ObsTime = document.getElementById('w6-obs-time');
+  const w6MoonLine = document.getElementById('w6-moon-line');
+  const w6AngleArc = document.getElementById('w6-angle-arc');
+  const w6AngleText = document.getElementById('w6-angle-text');
+
+  function updateWidget6() {
+    const theta = parseFloat(w6Theta.value);
+    w6ThetaDisplay.textContent = `${theta}°`;
+
+    // موقعیت در مدار بیضی: x = 200 + 120*cos, y = 100 - 60*sin
+    const mx = 200 + 120 * Math.cos(theta * RAD);
+    const my = 100 - 60 * Math.sin(theta * RAD);
+    w6MoonPos.setAttribute('transform', `translate(${mx.toFixed(1)}, ${my.toFixed(1)})`);
+
+    if (w6MoonLine) {
+      w6MoonLine.setAttribute('x2', mx.toFixed(1));
+      w6MoonLine.setAttribute('y2', my.toFixed(1));
+    }
+
+    if (w6AngleArc && w6AngleText) {
+      const arcR = 36;
+      const rad = theta * RAD;
+      const arcX = 200 + arcR * Math.cos(rad);
+      const arcY = 100 - arcR * Math.sin(rad);
+      const largeArc = theta > 180 ? 1 : 0;
+      let arcD = '';
+      if (theta > 0 && theta < 360) {
+        arcD = `M 200 100 L ${200 + arcR} 100 A ${arcR} ${arcR} 0 ${largeArc} 0 ${arcX.toFixed(1)} ${arcY.toFixed(1)} Z`;
+      }
+      w6AngleArc.setAttribute('d', arcD);
+
+      const midRad = (theta / 2) * RAD;
+      const txtX = 200 + (arcR + 18) * Math.cos(midRad);
+      const txtY = 100 - (arcR + 18) * Math.sin(midRad);
+      w6AngleText.setAttribute('x', txtX.toFixed(1));
+      w6AngleText.setAttribute('y', txtY.toFixed(1));
+      w6AngleText.textContent = `θ = ${Math.round(theta)}°`;
+    }
+
+    // رسم ظاهر ماه از دید زمین (هم‌مرکز با r=22 و cy=0)
+    const r = 22;
+    const cosT = Math.cos(theta * RAD);
+    const rx = Math.abs(r * cosT);
+    let d = '';
+    if (theta < 180) {
+      d = `M 0 -${r} A ${r} ${r} 0 0 1 0 ${r} A ${rx.toFixed(1)} ${r} 0 0 ${cosT >= 0 ? 0 : 1} 0 -${r} Z`;
+    } else {
+      d = `M 0 -${r} A ${r} ${r} 0 0 0 0 ${r} A ${rx.toFixed(1)} ${r} 0 0 ${cosT >= 0 ? 1 : 0} 0 -${r} Z`;
+    }
+    w6EarthView.setAttribute('d', d);
+
+    // تفکیک دقیق فازها و زمان مشاهده به ویژه در نیمه ماه (شب‌های ۱۳، ۱۴ و ۱۵)
+    let badgeText = '';
+    let badgeColor = '#125b50';
+    let phaseTitle = '';
+    let obsTime = '';
+
+    if (theta <= 7 || theta >= 353) {
+      badgeText = '🌑 مقارنه (ماه نو)';
+      badgeColor = '#475569';
+      phaseTitle = 'مقارنه (ماه نو نجومی)';
+      obsTime = 'غیرقابل رؤیت (ماه هم‌راستا با خورشید در آسمان روز است)';
+    } else if (theta > 7 && theta < 80) {
+      badgeText = 'حالت p (اول شب)';
+      badgeColor = '#125b50';
+      phaseTitle = 'هلال فزاینده (قاعدهٔ p)';
+      obsTime = 'اول شب در افق غرب (دقایقی کوتاه پس از غروب آفتاب)';
+    } else if (theta >= 80 && theta <= 100) {
+      badgeText = '🌓 تربیع اول (نیم‌ماه)';
+      badgeColor = '#0284c7';
+      phaseTitle = 'تربیع اول (روشنایی ۵۰٪)';
+      obsTime = 'از ظهر تا نیمه‌شب در آسمان (در غروب در جنوب آسمان است)';
+    } else if (theta > 100 && theta < 165) {
+      badgeText = 'کوژماه فزاینده (پیش از بدر)';
+      badgeColor = '#0d9488';
+      phaseTitle = 'کوژماه فزاینده (تحدب)';
+      obsTime = 'بیشتر ساعات شب (از عصر تا نزدیکی سحر)';
+    } else if (theta >= 165 && theta <= 195) {
+      // وسط ماه: شب‌های ۱۳ و ۱۴ و ۱۵ (مقابله و بدر کامل)
+      badgeText = '🌕 بدر کامل (تمام طول شب)';
+      badgeColor = '#d97706';
+      phaseTitle = 'بدر کامل (ماه شب چهارده - مقابله / روشنایی ۱۰۰٪)';
+      obsTime = 'در تمام طول شب در آسمان دیده می‌شود (هم‌زمان با غروب آفتاب در شرق طلوع و در طلوع آفتاب در غرب غروب می‌کند)';
+    } else if (theta > 195 && theta < 260) {
+      badgeText = 'کوژماه کاهنده (پس از بدر)';
+      badgeColor = '#b45309';
+      phaseTitle = 'کوژماه کاهنده (تحدب)';
+      obsTime = 'بیشتر ساعات شب (طلوع پس از غروب تا پس از طلوع صبح)';
+    } else if (theta >= 260 && theta <= 280) {
+      badgeText = '🌗 تربیع دوم (نیم‌ماه صبحگاهی)';
+      badgeColor = '#0284c7';
+      phaseTitle = 'تربیع دوم (روشنایی ۵۰٪)';
+      obsTime = 'از نیمه‌شب تا ظهر روز بعد در آسمان';
+    } else {
+      badgeText = 'حالت q (سحرگاه)';
+      badgeColor = '#b45309';
+      phaseTitle = 'هلال کاهنده (قاعدهٔ q)';
+      obsTime = 'سحرگاه در افق شرق (دقایقی پیش از طلوع آفتاب)';
+    }
+
+    w6PqBadge.textContent = badgeText;
+    w6PqBadge.style.color = badgeColor;
+    w6PhaseTitle.textContent = phaseTitle;
+    w6ObsTime.textContent = obsTime;
+  }
+
+  w6Theta.addEventListener('input', updateWidget6);
+
+  // ==========================================
+  // مقداردهی اولیه خودکار: تاریخ امروز و ساعت جاری
+  // ==========================================
+  (function initTodayAndNow() {
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = String(now.getMonth() + 1).padStart(2, '0');
+    const d = String(now.getDate()).padStart(2, '0');
+    const todayStr = `${y}-${m}-${d}`;
+
+    if (w2Date) w2Date.value = todayStr;
+    if (w4Date) w4Date.value = todayStr;
+
+    const curMin = now.getHours() * 60 + now.getMinutes();
+    if (w2Time) w2Time.value = curMin;
+  })();
+
+  updateWidget2();
+  updateWidget4();
+  updateWidget6();
+</script>
+
+</body>
+</html>

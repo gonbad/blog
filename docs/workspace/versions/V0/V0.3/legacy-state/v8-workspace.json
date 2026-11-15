@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "kit_version": "0.1",
+  "workflow": "docs/job/workflow.json",
+  "active_project": "002-claude-server",
+  "projects": {
+    "000-index": "docs/projects/000-index/state.json",
+    "001-workshop-7": "docs/projects/001-workshop-7/state.json",
+    "002-claude-server": "docs/projects/002-claude-server/state.json"
+  },
+  "latest_workflow": "docs/job/versions/0.5/workflow.json"
+}

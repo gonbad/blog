@@ -1,0 +1,23 @@
+[Unit]
+Description=Workshop journal static files
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+User=workshop-blog
+Group=workshop-blog
+ExecStart=/usr/bin/caddy run --config /etc/workshop-blog/Caddyfile --adapter caddyfile
+Restart=on-failure
+RestartSec=3
+StateDirectory=workshop-blog
+Environment=XDG_DATA_HOME=/var/lib/workshop-blog
+Environment=XDG_CONFIG_HOME=/var/lib/workshop-blog
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/workshop-blog
+UMask=0022
+
+[Install]
+WantedBy=multi-user.target

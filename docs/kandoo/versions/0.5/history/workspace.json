@@ -1,0 +1,550 @@
+{
+  "schema": 1,
+  "profile": {
+    "origin": "https://blog.agent.kiloapp.ir",
+    "preferred_origin": "https://blog.kiloapp.ir"
+  },
+  "job": {
+    "name": "blog-publisher",
+    "version": "0.2.1",
+    "origin": {
+      "kind": "embedded",
+      "name": "blog-publisher",
+      "version": "0.1.0",
+      "sha256": "0308c60fc6acbd03a81ff323d2dba5b69093233f36e6a34302e0fa748c6e33d3"
+    },
+    "docs": "docs/job/versions/V0/V0.2/V0.2.1",
+    "status": "ready",
+    "verified_digest": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+    "milestones": {}
+  },
+  "active_project": "005-workshop-7-handbook",
+  "first_project": "001-workshop-7",
+  "projects": {
+    "000-index": {
+      "title": "Index",
+      "version": "0.1.4",
+      "docs": "docs/projects/000-index/versions/V0/V0.1/V0.1.4",
+      "legacy_progress": {
+        "record": "docs/workspace/versions/V0/V0.3/legacy-state/000-index.json",
+        "ready": 5,
+        "accepted": 0
+      },
+      "issues": [],
+      "releases": [
+        {
+          "version": "0.1",
+          "next_version": "0.1.1",
+          "note": "Add the authored link to the published Claude server post while preserving the previous index",
+          "snapshot": "projects/000-index/versions/V0.1",
+          "at": "2026-11-09T13:43:41+00:00"
+        },
+        {
+          "version": "0.1.1",
+          "next_version": "0.1.2",
+          "note": "Match the index card to post 002 V0.2: account-closure problem, foreign-server solution and English setup prompt",
+          "snapshot": "projects/000-index/versions/V0.1.1",
+          "at": "2026-11-09T16:54:36+00:00"
+        }
+      ],
+      "id": "000-index",
+      "milestones": {
+        "build": {
+          "artifact": "projects/000-index/dist/index.html",
+          "sha256": "b4736497e5e299621ebaf312a9d641742b3797818392c520ef8a82a80ed3b597",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:29:42+00:00"
+        },
+        "check": {
+          "artifact": "docs/workspace/versions/V0/V0.4/verification/fresh-build.json",
+          "sha256": "a3ba36c33c555cc0d55b687c0fc2cb52bad270ebd0aec1c90c890e597ceb13c2",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:29:42+00:00"
+        },
+        "deploy": {
+          "artifact": "docs/workspace/versions/V0/V0.4/release/deployment-71035c90ce7f65b92782df5ce2943aa977869ae62bbb0673e7b3157cc4bb22b7.json",
+          "sha256": "71035c90ce7f65b92782df5ce2943aa977869ae62bbb0673e7b3157cc4bb22b7",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:56:03+00:00"
+        }
+      },
+      "job_observed": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+      "job_adaptations": [
+        {
+          "note": "Imported complete state; reviewed public source and delivery contract. New output verification pending.",
+          "at": "2026-11-11T04:57:00+00:00",
+          "sha256": "6aca59dd44daa9c5d2c992aa693809de5ad616d9784542722a04639de77650e2"
+        },
+        {
+          "note": "Verified public source boundaries, native workflow operations, offline artifacts and current job after the V9.1 repairs.",
+          "sha256": "664aae7588fde350cfa64af4b965893149ce9dae97d09afe18432c284308208b",
+          "at": "2026-11-11T05:17:10+00:00"
+        },
+        {
+          "note": "Verified the final released Moom 0.3.1 publishing Job against the actual source, outputs and workflow checks.",
+          "sha256": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:46+00:00"
+        },
+        {
+          "note": "Reviewed Job 0.2.1: only early hosting intake/distribution guidance changed; known hosting is retained and render/build/check/package/deploy scripts are unchanged. Preserved existing product behavior and acceptance records.",
+          "sha256": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:16:29+00:00"
+        }
+      ]
+    },
+    "001-workshop-7": {
+      "title": "Workshop 7",
+      "version": "0.1.2",
+      "docs": "docs/projects/001-workshop-7/versions/V0/V0.1/V0.1.2",
+      "legacy_progress": {
+        "record": "docs/workspace/versions/V0/V0.3/legacy-state/001-workshop-7.json",
+        "ready": 9,
+        "accepted": 0
+      },
+      "issues": [
+        {
+          "path": "docs/projects/001-workshop-7/issues/001.md",
+          "scope": "helper",
+          "state": "closed",
+          "title": "Direct seeking marked skipped sections visited"
+        },
+        {
+          "path": "docs/projects/001-workshop-7/issues/002.md",
+          "scope": "workflow",
+          "state": "closed",
+          "title": "Hosting preflight differed from historical notes"
+        },
+        {
+          "path": "docs/projects/001-workshop-7/issues/003.md",
+          "scope": "helper",
+          "state": "closed",
+          "title": "Up/Down stop after clicking a slide control",
+          "verified_release": "0.1.1-1c43ab914ef6",
+          "verification": "docs/projects/001-workshop-7/versions/V0.1.1/releases/0.1.1/verification.json"
+        },
+        {
+          "path": "docs/projects/001-workshop-7/issues/004.md",
+          "scope": "moom",
+          "state": "closed",
+          "title": "Missing fifth workshop, real projects and executable workflow",
+          "verified_release": "0.1.1-1c43ab914ef6",
+          "verification": "docs/projects/001-workshop-7/versions/V0.1.1/releases/0.1.1/verification.json"
+        }
+      ],
+      "releases": [],
+      "id": "001-workshop-7",
+      "milestones": {
+        "build": {
+          "artifact": "projects/001-workshop-7/dist/index.html",
+          "sha256": "6031a2a4dc7a5ba1c3b2e6ee340e332d02686b5b6c3f9530986b5b81cd1a4871",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:29:42+00:00"
+        },
+        "check": {
+          "artifact": "docs/projects/001-workshop-7/versions/V0/V0.1/V0.1.2/verification/browser.json",
+          "sha256": "ee0aeb25a13221e6ebe8742d99d7f7472b22927e0352d61310fea95d01a5d161",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:29:42+00:00"
+        },
+        "package": {
+          "artifact": "projects/001-workshop-7/dist/downloads/workshop-7-v0.1.2.zip",
+          "sha256": "58d593619b5918c60e7b27b4e8270541014ece7fef500a7ccd519a9ae77cba1c",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:29:43+00:00"
+        },
+        "deploy": {
+          "artifact": "docs/workspace/versions/V0/V0.4/release/deployment-71035c90ce7f65b92782df5ce2943aa977869ae62bbb0673e7b3157cc4bb22b7.json",
+          "sha256": "71035c90ce7f65b92782df5ce2943aa977869ae62bbb0673e7b3157cc4bb22b7",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:56:03+00:00"
+        }
+      },
+      "job_observed": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+      "job_adaptations": [
+        {
+          "note": "Imported complete state; reviewed public source and delivery contract. New output verification pending.",
+          "at": "2026-11-11T04:57:00+00:00",
+          "sha256": "6aca59dd44daa9c5d2c992aa693809de5ad616d9784542722a04639de77650e2"
+        },
+        {
+          "note": "Verified public source boundaries, native workflow operations, offline artifacts and current job after the V9.1 repairs.",
+          "sha256": "664aae7588fde350cfa64af4b965893149ce9dae97d09afe18432c284308208b",
+          "at": "2026-11-11T05:17:10+00:00"
+        },
+        {
+          "note": "Verified the final released Moom 0.3.1 publishing Job against the actual source, outputs and workflow checks.",
+          "sha256": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:46+00:00"
+        },
+        {
+          "note": "Reviewed Job 0.2.1: only early hosting intake/distribution guidance changed; known hosting is retained and render/build/check/package/deploy scripts are unchanged. Preserved existing product behavior and acceptance records.",
+          "sha256": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:16:29+00:00"
+        }
+      ]
+    },
+    "002-claude-server": {
+      "title": "Claude on Server",
+      "version": "0.2",
+      "docs": "docs/projects/002-claude-server/versions/V0.2",
+      "legacy_progress": {
+        "record": "docs/workspace/versions/V0/V0.3/legacy-state/002-claude-server.json",
+        "ready": 10,
+        "accepted": 0
+      },
+      "issues": [],
+      "releases": [
+        {
+          "version": "0.1",
+          "next_version": "0.2",
+          "note": "Apply the owner-provided V0.2 transcription after diagnosing and correcting source/actor drift",
+          "snapshot": "projects/002-claude-server/versions/V0.1",
+          "at": "2026-11-09T16:30:16+00:00"
+        }
+      ],
+      "id": "002-claude-server",
+      "milestones": {
+        "brief": {
+          "state": "ready",
+          "artifact": "docs/projects/002-claude-server/versions/V0.2/brief.md",
+          "sha256": "a2e494b7d3870e47a3e0873366df56409d8549282cb40c0d6811c92d47622a18",
+          "evidence": null,
+          "at": "2026-11-09T16:58:58+00:00",
+          "inherited_from": "docs/workspace/versions/V0/V0.3/legacy-state/002-claude-server.json",
+          "job_revision": "docs/job/versions/0.5/workflow.json"
+        },
+        "story": {
+          "state": "ready",
+          "artifact": "docs/projects/002-claude-server/versions/V0.2/story.md",
+          "sha256": "45bbcaa22f407d4f00357dd7a12d518309ebc305b679f26ee6c0b5a6ae4cfcbe",
+          "evidence": null,
+          "at": "2026-11-09T16:58:58+00:00",
+          "inherited_from": "docs/workspace/versions/V0/V0.3/legacy-state/002-claude-server.json",
+          "job_revision": "docs/job/versions/0.5/workflow.json"
+        },
+        "content": {
+          "state": "ready",
+          "artifact": "docs/projects/002-claude-server/versions/V0.2/claims.md",
+          "sha256": "76959d4b343f21f436c586ebb1d4cbb82c4a7bd48cc7d7d2ee4bcc5b18f627b0",
+          "evidence": null,
+          "at": "2026-11-09T16:58:58+00:00",
+          "inherited_from": "docs/workspace/versions/V0/V0.3/legacy-state/002-claude-server.json",
+          "job_revision": "docs/job/versions/0.5/workflow.json"
+        },
+        "fidelity": {
+          "state": "ready",
+          "artifact": "docs/projects/002-claude-server/versions/V0.2/fidelity.md",
+          "sha256": "0ff6ee2ccb8166fca19e2289a5956b46dc9697af8eb75b156d57eaa8f2eec047",
+          "evidence": null,
+          "at": "2026-11-09T16:58:58+00:00",
+          "inherited_from": "docs/workspace/versions/V0/V0.3/legacy-state/002-claude-server.json",
+          "job_revision": "docs/job/versions/0.5/workflow.json"
+        },
+        "layout": {
+          "state": "ready",
+          "artifact": "docs/projects/002-claude-server/versions/V0.2/style.md",
+          "sha256": "11e938878c7cb9db7b788d5f811ed1242e31a315a0f7cb1e973fa07b1af2b73d",
+          "evidence": null,
+          "at": "2026-11-09T16:58:58+00:00",
+          "inherited_from": "docs/workspace/versions/V0/V0.3/legacy-state/002-claude-server.json",
+          "job_revision": "docs/job/versions/0.5/workflow.json"
+        },
+        "build": {
+          "artifact": "dist/002-claude-server/index.html",
+          "sha256": "e8c44c953ae457a677e912c8c95f2235dfe189fa036fda0e6e52332e18cf39d4",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        },
+        "check": {
+          "artifact": "docs/workspace/versions/V0/V0.3/release/browser.json",
+          "sha256": "018c7828d8aa23c76ad7d7b79a2a22842919bbae7d76290f7901ac67eb26e42d",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        },
+        "package": {
+          "artifact": "dist/002-claude-server/downloads/claude-server-v0.2.zip",
+          "sha256": "818ac5ec6864a94d9a808faa51634c0e5ed1dd955747d50bbf4e5c93f8a3864d",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        },
+        "deploy": {
+          "artifact": "docs/workspace/versions/V0/V0.3/release/deployment.json",
+          "sha256": "ab9238eaf16b7f305cce42b86bba8b28e735fad90ebac2d48d21b98eaf7562ca",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        }
+      },
+      "job_observed": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+      "job_adaptations": [
+        {
+          "note": "Imported complete state; reviewed public source and delivery contract. New output verification pending.",
+          "at": "2026-11-11T04:57:00+00:00",
+          "sha256": "6aca59dd44daa9c5d2c992aa693809de5ad616d9784542722a04639de77650e2"
+        },
+        {
+          "note": "Verified public source boundaries, native workflow operations, offline artifacts and current job after the V9.1 repairs.",
+          "sha256": "664aae7588fde350cfa64af4b965893149ce9dae97d09afe18432c284308208b",
+          "at": "2026-11-11T05:17:10+00:00"
+        },
+        {
+          "note": "Verified the final released Moom 0.3.1 publishing Job against the actual source, outputs and workflow checks.",
+          "sha256": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:46+00:00"
+        },
+        {
+          "note": "Reviewed Job 0.2.1: only early hosting intake/distribution guidance changed; known hosting is retained and render/build/check/package/deploy scripts are unchanged. Preserved existing product behavior and acceptance records.",
+          "sha256": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:16:30+00:00"
+        }
+      ]
+    },
+    "003-brah-paper": {
+      "title": "BRAH Security Paper",
+      "version": "6.2.1",
+      "docs": "docs/projects/003-brah-paper/versions/V6/V6.2/V6.2.1",
+      "id": "003-brah-paper",
+      "milestones": {
+        "build": {
+          "artifact": "dist/003-brah-paper/index.html",
+          "sha256": "5dda455ab80a2eee7d523421863b656c461b88f171069f439eb909a57e329c98",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        },
+        "check": {
+          "artifact": "docs/workspace/versions/V0/V0.3/release/browser.json",
+          "sha256": "018c7828d8aa23c76ad7d7b79a2a22842919bbae7d76290f7901ac67eb26e42d",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        },
+        "package": {
+          "artifact": "dist/003-brah-paper/downloads/brah-paper-v6.2.zip",
+          "sha256": "5c36fc11eeb2a9744d72eeb1877f83f356a80a87499026b4dbaa7dbfb2a53b02",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        },
+        "deploy": {
+          "artifact": "docs/workspace/versions/V0/V0.3/release/deployment.json",
+          "sha256": "ab9238eaf16b7f305cce42b86bba8b28e735fad90ebac2d48d21b98eaf7562ca",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        }
+      },
+      "job_observed": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+      "job_adaptations": [
+        {
+          "note": "Imported complete state; reviewed public source and delivery contract. New output verification pending.",
+          "at": "2026-11-11T04:57:00+00:00",
+          "sha256": "6aca59dd44daa9c5d2c992aa693809de5ad616d9784542722a04639de77650e2"
+        },
+        {
+          "note": "Verified public source boundaries, native workflow operations, offline artifacts and current job after the V9.1 repairs.",
+          "sha256": "664aae7588fde350cfa64af4b965893149ce9dae97d09afe18432c284308208b",
+          "at": "2026-11-11T05:17:10+00:00"
+        },
+        {
+          "note": "Verified the final released Moom 0.3.1 publishing Job against the actual source, outputs and workflow checks.",
+          "sha256": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:46+00:00"
+        },
+        {
+          "note": "Reviewed Job 0.2.1: only early hosting intake/distribution guidance changed; known hosting is retained and render/build/check/package/deploy scripts are unchanged. Preserved existing product behavior and acceptance records.",
+          "sha256": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:16:30+00:00"
+        }
+      ]
+    },
+    "004-agent-presentation": {
+      "title": "Agent Presentation (167 slides)",
+      "version": "7.4.1",
+      "docs": "docs/projects/004-agent-presentation/versions/V7/V7.4/V7.4.1",
+      "id": "004-agent-presentation",
+      "milestones": {
+        "build": {
+          "artifact": "dist/004-agent-presentation/index.html",
+          "sha256": "96507089d3ee1008e87cc8e7dc974ca6aa002e134dc5507c3d1c2bfcb48e3d99",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        },
+        "check": {
+          "artifact": "docs/workspace/versions/V0/V0.3/release/browser.json",
+          "sha256": "018c7828d8aa23c76ad7d7b79a2a22842919bbae7d76290f7901ac67eb26e42d",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        },
+        "package": {
+          "artifact": "dist/004-agent-presentation/downloads/agent-presentation-v7.4.zip",
+          "sha256": "dfa8be6ad9b5ca27e78974ef9f1c276e2ddb4e9d3bbdf51e5676d11fc3499719",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        },
+        "deploy": {
+          "artifact": "docs/workspace/versions/V0/V0.3/release/deployment.json",
+          "sha256": "ab9238eaf16b7f305cce42b86bba8b28e735fad90ebac2d48d21b98eaf7562ca",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:47+00:00"
+        }
+      },
+      "job_observed": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+      "job_adaptations": [
+        {
+          "note": "Imported complete state; reviewed public source and delivery contract. New output verification pending.",
+          "at": "2026-11-11T04:57:00+00:00",
+          "sha256": "6aca59dd44daa9c5d2c992aa693809de5ad616d9784542722a04639de77650e2"
+        },
+        {
+          "note": "Verified public source boundaries, native workflow operations, offline artifacts and current job after the V9.1 repairs.",
+          "sha256": "664aae7588fde350cfa64af4b965893149ce9dae97d09afe18432c284308208b",
+          "at": "2026-11-11T05:17:10+00:00"
+        },
+        {
+          "note": "Verified the final released Moom 0.3.1 publishing Job against the actual source, outputs and workflow checks.",
+          "sha256": "b9931d2a0694f4bfb44d4736e205d4208d53ebdfcef556060cc6b31745ed04b2",
+          "at": "2026-11-11T05:25:46+00:00"
+        },
+        {
+          "note": "Reviewed Job 0.2.1: only early hosting intake/distribution guidance changed; known hosting is retained and render/build/check/package/deploy scripts are unchanged. Preserved existing product behavior and acceptance records.",
+          "sha256": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:16:31+00:00"
+        }
+      ]
+    },
+    "005-workshop-7-handbook": {
+      "id": "005-workshop-7-handbook",
+      "title": "راهنمای کارگاه هفتم؛ از آماده‌سازی تا اولین کار واقعی",
+      "created_at": "2026-11-11T19:18:36+00:00",
+      "job_observed": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+      "version": "0.1.0",
+      "docs": "docs/projects/005-workshop-7-handbook/versions/V0/V0.1",
+      "milestones": {
+        "brief": {
+          "artifact": "docs/projects/005-workshop-7-handbook/versions/V0/V0.1/02-brief.md",
+          "sha256": "fe11605067962c997b390110116b64fe089bef8cff083881bae6fabd1b7ef294",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:16:33+00:00"
+        },
+        "story": {
+          "artifact": "docs/projects/005-workshop-7-handbook/versions/V0/V0.1/03-story-and-claims.md",
+          "sha256": "3869bbc665c06e4e9509e6012913010eba6b3486023d8e4e90c90e1f627b7fd3",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:21:27+00:00"
+        },
+        "content": {
+          "artifact": "projects/005-workshop-7-handbook/src/index.html",
+          "sha256": "8da83137220e19774af8fdb443d7b5a7b1409370d2b85edcf63b163ad786b5a5",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:21:27+00:00"
+        },
+        "layout": {
+          "artifact": "projects/005-workshop-7-handbook/src/handbook.css",
+          "sha256": "c0a101fe90bafda0d3b0974dd3e22ee39608e45d9d44e309f18d9e32e87372b9",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:16:33+00:00"
+        },
+        "fidelity": {
+          "artifact": "docs/projects/005-workshop-7-handbook/versions/V0/V0.1/04-source-fidelity.md",
+          "sha256": "15e18f5aa8ff359926e8429e1f9aa885ce08e195d7e7dc1fbb09265c0447dda9",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:21:28+00:00"
+        },
+        "build": {
+          "artifact": "projects/005-workshop-7-handbook/dist/index.html",
+          "sha256": "c616a84d79341e2c7a65ea350f4e009ea6c84d583194434a0185376a84b2cc3a",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:29:43+00:00"
+        },
+        "check": {
+          "artifact": "docs/projects/005-workshop-7-handbook/versions/V0/V0.1/verification/browser.json",
+          "sha256": "bedc637c122217cffef413f4b2873e5ff9a9bcfce3035280384f937111010106",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:29:43+00:00"
+        },
+        "package": {
+          "artifact": "projects/005-workshop-7-handbook/dist/downloads/workshop-7-handbook-v0.1.0.zip",
+          "sha256": "cf31d2e16220f36422e0780eea7ce83598c8927c8a1f98f757be9584830d6d30",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:29:43+00:00"
+        },
+        "deploy": {
+          "artifact": "docs/workspace/versions/V0/V0.4/release/deployment-71035c90ce7f65b92782df5ce2943aa977869ae62bbb0673e7b3157cc4bb22b7.json",
+          "sha256": "71035c90ce7f65b92782df5ce2943aa977869ae62bbb0673e7b3157cc4bb22b7",
+          "state": "ready",
+          "evidence": null,
+          "job_revision": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:56:03+00:00"
+        }
+      },
+      "job_adaptations": [
+        {
+          "note": "Reviewed Job 0.2.1: only early hosting intake/distribution guidance changed; known hosting is retained and render/build/check/package/deploy scripts are unchanged. Preserved existing product behavior and acceptance records.",
+          "sha256": "b61238b1b4a459ab2a9a9d10cc40f6ccd21a1ca019393d81d5585befff1dc73b",
+          "at": "2026-11-12T04:16:31+00:00"
+        }
+      ]
+    }
+  },
+  "workspace": {
+    "version": "0.4.0",
+    "docs": "docs/workspace/versions/V0/V0.4",
+    "milestones": {}
+  },
+  "catalog_removed": true,
+  "v91_migration": {
+    "at": "2026-11-11T04:57:01+00:00",
+    "original_state": "docs/workspace/versions/V0/V0.3/legacy-state/workspace.json",
+    "review": "workshop_docs/versions/V9.1/06-adversarial-review.md"
+  }
+}

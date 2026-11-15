@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "distinct_python_tests": 27,
+  "command": "python3 -m unittest discover -s moom/tests -v",
+  "publishing_tests_rechecked": 9,
+  "release_check": "python3 moom/tools/release.py --check",
+  "skills_validation": "Both reusable Jobs passed quick_validate.py",
+  "moom_version": "0.3.1",
+  "moom_commit": "b14695b82499da3c893d64dbb970c06619aaf38b",
+  "recorded_at": "2026-11-11T05:25:47.237355+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "checked_at": "2026-11-11T05:19:40.043Z",
+  "checks": [
+    "four-card index, both migrated downloads, and every served release hash",
+    "001-workshop-7: extracted package opens offline in a Persian path with spaces",
+    "002-claude-server: extracted package opens offline in a Persian path with spaces",
+    "003-brah-paper: extracted package opens offline in a Persian path with spaces",
+    "004-agent-presentation: extracted package opens offline in a Persian path with spaces",
+    "ltr: rich HTML/image/code, direction-aware navigation, Space overview selection, Up/Down overview rows, history, notes, phone portrait scrolling and landscape",
+    "rtl: rich HTML/image/code, direction-aware navigation, Space overview selection, Up/Down overview rows, history, notes, phone portrait scrolling and landscape",
+    "no browser exceptions or network dependency requests in offline output"
+  ],
+  "release_manifest_sha256": "32b147ce732e5bcf1b28c9e7a0a52c6d72efb6e9f8b0a54d46c9f548d59ae5b6"
+}

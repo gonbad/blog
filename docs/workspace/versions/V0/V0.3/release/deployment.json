@@ -1,0 +1,19 @@
+{
+  "published": true,
+  "origin": "https://blog.agent.kiloapp.ir",
+  "post": "https://blog.agent.kiloapp.ir/004-agent-presentation/",
+  "host": "vm10709-13184.vpsmarket.org",
+  "release": "7.4.1-32b147ce732e",
+  "artifacts_verified": 73,
+  "offline_download_verified": true,
+  "projects": [
+    "000-index",
+    "001-workshop-7",
+    "002-claude-server",
+    "003-brah-paper",
+    "004-agent-presentation"
+  ],
+  "release_manifest_sha256": "32b147ce732e5bcf1b28c9e7a0a52c6d72efb6e9f8b0a54d46c9f548d59ae5b6",
+  "registration_health": true,
+  "other_routes_unchanged": true
+}

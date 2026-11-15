@@ -1,0 +1,1171 @@
+[
+  {
+    "number": 1,
+    "id": 1,
+    "group": "1.1",
+    "title": "برایم سفر بچین.",
+    "kind": "hero"
+  },
+  {
+    "number": 2,
+    "id": 2,
+    "group": "1.1",
+    "title": "اگر فقط راهنمایی بگیریم",
+    "kind": "advice"
+  },
+  {
+    "number": 3,
+    "id": 3,
+    "group": "1.1",
+    "title": "حالا همان درخواست، با یک ایجنت",
+    "kind": "travel"
+  },
+  {
+    "number": 4,
+    "id": 4,
+    "group": "1.1",
+    "title": "قیمت و موجودی را از کجا آورد؟",
+    "kind": "booking-trace"
+  },
+  {
+    "number": 5,
+    "id": 6,
+    "group": "1.2",
+    "title": "چه کسی سامانهٔ سفر را صدا می‌زند؟",
+    "kind": "flow"
+  },
+  {
+    "number": 6,
+    "id": 5,
+    "group": "1.2",
+    "title": "این دو با هم یک ایجنت می‌سازند",
+    "kind": "equation"
+  },
+  {
+    "number": 7,
+    "id": 8,
+    "group": "1.2",
+    "title": "دو پرسش را دنبال می‌کنیم",
+    "kind": "overview"
+  },
+  {
+    "number": 8,
+    "id": 9,
+    "group": "2.1",
+    "title": "هوش مصنوعی با چت شروع نشد",
+    "kind": "early-ai"
+  },
+  {
+    "number": 9,
+    "id": 9.1,
+    "group": "2.1",
+    "title": "فعلاً فقط صفر و یک را تشخیص بدهیم",
+    "kind": "digit-task"
+  },
+  {
+    "number": 10,
+    "id": 9.2,
+    "group": "2.1",
+    "title": "ورودی و خروجی، همین‌جا هستند",
+    "kind": "digit-io"
+  },
+  {
+    "number": 11,
+    "id": 201,
+    "group": "2.1",
+    "title": "این دوازده تصویر، مجموعهٔ آموزش ما هستند",
+    "kind": "dataset"
+  },
+  {
+    "number": 12,
+    "id": 9.3,
+    "group": "2.1",
+    "title": "از تصویر تا حدس، در یک شبکه",
+    "kind": "network-structure"
+  },
+  {
+    "number": 13,
+    "id": 10,
+    "group": "2.1",
+    "title": "با دیدن نمونه‌ها یاد می‌گیرد",
+    "kind": "learning"
+  },
+  {
+    "number": 14,
+    "id": 10.1,
+    "group": "2.1",
+    "title": "وزن یعنی اثرِ یک اتصال",
+    "kind": "learning"
+  },
+  {
+    "number": 15,
+    "id": 11,
+    "group": "2.1",
+    "title": "آموزش تمام شد؛ حالا یک نمونهٔ تازه",
+    "kind": "compare"
+  },
+  {
+    "number": 16,
+    "id": 202,
+    "group": "2.1",
+    "title": "یادگرفتنِ نمونه‌ها با سنجشِ نمونهٔ تازه فرق دارد",
+    "kind": "holdout"
+  },
+  {
+    "number": 17,
+    "id": 12,
+    "group": "2.1",
+    "title": "برای مدل زبانی، ورودی متن است",
+    "kind": "tokens"
+  },
+  {
+    "number": 18,
+    "id": 203,
+    "group": "2.1",
+    "title": "توکن‌ها هم باید به عدد تبدیل شوند",
+    "kind": "language-pipeline"
+  },
+  {
+    "number": 19,
+    "id": 204,
+    "group": "2.1",
+    "title": "مدل زبانی هم پارامترهای آموزش‌دیده دارد",
+    "kind": "parameter-scale"
+  },
+  {
+    "number": 20,
+    "id": 13,
+    "group": "2.1",
+    "title": "قسمت بعدِ جمله چه می‌تواند باشد؟",
+    "kind": "probabilities"
+  },
+  {
+    "number": 21,
+    "id": 13.1,
+    "group": "2.1",
+    "title": "انتخاب را متنوع‌تر کنیم",
+    "kind": "probabilities"
+  },
+  {
+    "number": 22,
+    "id": 13.2,
+    "group": "2.1",
+    "title": "یک جمله، در چند نوبت ساخته می‌شود",
+    "kind": "generation"
+  },
+  {
+    "number": 23,
+    "id": 14,
+    "group": "2.1",
+    "title": "رسیدن به جلسه، فقط انتخاب یک واژه نیست",
+    "kind": "scene"
+  },
+  {
+    "number": 24,
+    "id": 15,
+    "group": "2.1",
+    "title": "متن، تصویر و صدا؛ در یک سفر",
+    "kind": "path"
+  },
+  {
+    "number": 25,
+    "id": 16,
+    "group": "2.2",
+    "title": "این دو پاسخ یک‌قدر مطمئن به نظر می‌رسند",
+    "kind": "contrast"
+  },
+  {
+    "number": 26,
+    "id": 39,
+    "group": "2.2",
+    "title": "دستور را تأیید کرد؛ اما خروجی عوض نشد",
+    "kind": "contrast"
+  },
+  {
+    "number": 27,
+    "id": 40,
+    "group": "2.2",
+    "title": "مسافر نباید سابقهٔ ویرایشِ ما را بخواند",
+    "kind": "contrast"
+  },
+  {
+    "number": 28,
+    "id": 42,
+    "group": "2.2",
+    "title": "معنا را به فارسی بنویسیم",
+    "kind": "contrast"
+  },
+  {
+    "number": 29,
+    "id": 27,
+    "group": "2.3",
+    "title": "با یک دیتاستِ ارزیابی، مدل‌ها را مقایسه کنیم",
+    "kind": "evaluation-set"
+  },
+  {
+    "number": 30,
+    "id": 301,
+    "group": "2.3",
+    "title": "از چند نمونه، چگونه به یک نمره می‌رسیم؟",
+    "kind": "benchmark-score"
+  },
+  {
+    "number": 31,
+    "id": 302,
+    "group": "2.3",
+    "title": "بنچمارک‌های عمومی چه چیزی را می‌سنجند؟",
+    "kind": "benchmark-tour"
+  },
+  {
+    "number": 32,
+    "id": 28,
+    "group": "2.3",
+    "title": "از این نمودار چه می‌توان فهمید؟",
+    "kind": "chart"
+  },
+  {
+    "number": 33,
+    "id": 29,
+    "group": "2.3",
+    "title": "نمره را کنار هزینه بخوانیم",
+    "kind": "chart"
+  },
+  {
+    "number": 34,
+    "id": 23,
+    "group": "2.3",
+    "title": "مدل را چه کسی ساخته؛ ما از چه کسی می‌گیریم؟",
+    "kind": "access-route"
+  },
+  {
+    "number": 35,
+    "id": 26,
+    "group": "2.3",
+    "title": "درخواست بفرستیم یا خودِ مدل را اجرا کنیم؟",
+    "kind": "contrast"
+  },
+  {
+    "number": 36,
+    "id": 24,
+    "group": "2.3",
+    "title": "OpenAI؛ کدام مدل برای کدام کار؟",
+    "kind": "model-card"
+  },
+  {
+    "number": 37,
+    "id": 25,
+    "group": "2.3",
+    "title": "Anthropic؛ کدام مدل برای کدام کار؟",
+    "kind": "model-card"
+  },
+  {
+    "number": 38,
+    "id": 211,
+    "group": "2.3",
+    "title": "Google؛ کدام مدل برای کدام کار؟",
+    "kind": "model-card"
+  },
+  {
+    "number": 39,
+    "id": 212,
+    "group": "2.3",
+    "title": "Meta؛ کدام مدل برای کدام کار؟",
+    "kind": "model-card"
+  },
+  {
+    "number": 40,
+    "id": 303,
+    "group": "2.3",
+    "title": "تخفیف در برابر اجازهٔ استفاده از داده",
+    "kind": "contributor"
+  },
+  {
+    "number": 41,
+    "id": 213,
+    "group": "2.3",
+    "title": "Z.ai؛ کدام مدل برای کدام کار؟",
+    "kind": "model-card"
+  },
+  {
+    "number": 42,
+    "id": 214,
+    "group": "2.3",
+    "title": "Alibaba؛ کدام مدل برای کدام کار؟",
+    "kind": "model-card"
+  },
+  {
+    "number": 43,
+    "id": 304,
+    "group": "2.3",
+    "title": "یک مدلِ ۲۷ میلیاردی روی لپ‌تاپ؟",
+    "kind": "local-weights"
+  },
+  {
+    "number": 44,
+    "id": 215,
+    "group": "2.3",
+    "title": "Xiaomi؛ کدام مدل برای کدام کار؟",
+    "kind": "model-card"
+  },
+  {
+    "number": 45,
+    "id": 216,
+    "group": "2.3",
+    "title": "DeepSeek؛ کدام مدل برای کدام کار؟",
+    "kind": "model-card"
+  },
+  {
+    "number": 46,
+    "id": 305,
+    "group": "2.3",
+    "title": "هزینهٔ همان درخواست، در دو ساعت فرق می‌کند",
+    "kind": "peak-pricing"
+  },
+  {
+    "number": 47,
+    "id": 217,
+    "group": "2.3",
+    "title": "برای ساخت و برای اجرا، دو انتخاب داریم",
+    "kind": "model-roles"
+  },
+  {
+    "number": 48,
+    "id": 31,
+    "group": "2.3",
+    "title": "مدلِ اجرا را با حساسیتِ کار انتخاب کنیم",
+    "kind": "trust-ladder"
+  },
+  {
+    "number": 49,
+    "id": 218,
+    "group": "2.4",
+    "title": "اشتراک یا پرداخت به‌اندازهٔ مصرف؟",
+    "kind": "billing-choice"
+  },
+  {
+    "number": 50,
+    "id": 33,
+    "group": "2.4",
+    "title": "خروجیِ این نوبت، ورودیِ نوبتِ بعد می‌شود",
+    "kind": "cache-cost"
+  },
+  {
+    "number": 51,
+    "id": 38,
+    "group": "2.4",
+    "title": "دسترسیِ مصرفی به مدل را از کجا بگیریم؟",
+    "kind": "access-products"
+  },
+  {
+    "number": 52,
+    "id": 34,
+    "group": "2.4",
+    "title": "اشتراک‌های Claude؛ قیمت و سقفِ مصرف",
+    "kind": "plans"
+  },
+  {
+    "number": 53,
+    "id": 35,
+    "group": "2.4",
+    "title": "اشتراکِ ChatGPT برای استفاده از Codex",
+    "kind": "plans"
+  },
+  {
+    "number": 54,
+    "id": 36,
+    "group": "2.4",
+    "title": "سه انتخابِ دیگر برای دسترسیِ اشتراکی",
+    "kind": "plan-board"
+  },
+  {
+    "number": 55,
+    "id": 47,
+    "group": "3.1",
+    "title": "مدل تنها، سفر را رزرو نمی‌کند",
+    "kind": "harness-map"
+  },
+  {
+    "number": 56,
+    "id": 19,
+    "group": "3.2",
+    "title": "مدل، قیمتِ قطارِ امروز را از کجا بداند؟",
+    "kind": "cutoff-timeline"
+  },
+  {
+    "number": 57,
+    "id": 20,
+    "group": "3.2",
+    "title": "اول اطلاعاتِ تازه؛ بعد پاسخ",
+    "kind": "relay"
+  },
+  {
+    "number": 58,
+    "id": 306,
+    "group": "3.2",
+    "title": "جستجوی وب را از چه سرویسی بگیریم؟",
+    "kind": "search-services"
+  },
+  {
+    "number": 59,
+    "id": 48,
+    "group": "3.2",
+    "title": "مدل، پاسخ می‌دهد یا ابزار می‌خواهد؟",
+    "kind": "tool-dispatch"
+  },
+  {
+    "number": 60,
+    "id": 49,
+    "group": "3.2",
+    "title": "ابزار را با نام، کار و ورودی معرفی می‌کنیم",
+    "kind": "tool-form"
+  },
+  {
+    "number": 61,
+    "id": 50,
+    "group": "3.2",
+    "title": "نتیجهٔ ابزار باید به مدل برگردد",
+    "kind": "relay"
+  },
+  {
+    "number": 62,
+    "id": 307,
+    "group": "3.2",
+    "title": "همین راه، برای ابزارهای دیگر هم کار می‌کند",
+    "kind": "tool-shelf"
+  },
+  {
+    "number": 63,
+    "id": 21,
+    "group": "3.2",
+    "title": "وقتی جواب در آیین‌نامهٔ خودِ شرکت است",
+    "kind": "document-question"
+  },
+  {
+    "number": 64,
+    "id": 221,
+    "group": "3.2",
+    "title": "برای پیدا کردنِ بندِ مرتبط، متن را عددی کنیم",
+    "kind": "passage-vectors"
+  },
+  {
+    "number": 65,
+    "id": 222,
+    "group": "3.2",
+    "title": "جهتِ کدام بردار به پرسش نزدیک‌تر است؟",
+    "kind": "cosine-lab"
+  },
+  {
+    "number": 66,
+    "id": 22,
+    "group": "3.2",
+    "title": "بردارها رتبه می‌دهند؛ متنِ بند به مدل می‌رسد",
+    "kind": "rag-vector"
+  },
+  {
+    "number": 67,
+    "id": 329,
+    "group": "3.2",
+    "title": "سابقه و رزروهای قبلی هم می‌توانند ابزار داشته باشند",
+    "kind": "history-tools"
+  },
+  {
+    "number": 68,
+    "id": 308,
+    "group": "3.3",
+    "title": "دقیقاً چه چیزی را برای مدل می‌فرستیم؟",
+    "kind": "context-packet"
+  },
+  {
+    "number": 69,
+    "id": 17,
+    "group": "3.3",
+    "title": "اگر زمینه کافی باشد، جستجوی سابقه لازم نیست",
+    "kind": "context-lab"
+  },
+  {
+    "number": 70,
+    "id": 18,
+    "group": "3.3",
+    "title": "همهٔ سابقه، در زمینهٔ این نوبت نیست",
+    "kind": "context-stores"
+  },
+  {
+    "number": 71,
+    "id": 309,
+    "group": "3.3",
+    "title": "اگر اشارهٔ کاربر را نفهمیدیم، چه کنیم؟",
+    "kind": "history-lookup"
+  },
+  {
+    "number": 72,
+    "id": 51,
+    "group": "3.4",
+    "title": "حلقهٔ ایجنت: یک سفر، چند رفت‌وبرگشت",
+    "kind": "agent-cycle"
+  },
+  {
+    "number": 73,
+    "id": 327,
+    "group": "3.4",
+    "title": "حلقه همیشه با اجرای ابزار ادامه پیدا نمی‌کند",
+    "kind": "stop-states"
+  },
+  {
+    "number": 74,
+    "id": 52,
+    "group": "3.5",
+    "title": "پیام از کدام حساب رسیده است؟",
+    "kind": "path"
+  },
+  {
+    "number": 75,
+    "id": 53,
+    "group": "3.5",
+    "title": "گفت‌وگوی تازه، همان حسابِ سارا",
+    "kind": "relay"
+  },
+  {
+    "number": 76,
+    "id": 55,
+    "group": "3.5",
+    "title": "چت بسته شد؛ بلیت هنوز صادر شده است",
+    "kind": "context-stores"
+  },
+  {
+    "number": 77,
+    "id": 57,
+    "group": "3.5",
+    "title": "پاسخ نرسید؛ آیا رزرو انجام شده؟",
+    "kind": "timeout"
+  },
+  {
+    "number": 78,
+    "id": 58,
+    "group": "3.5",
+    "title": "برای تکرارِ درخواست، همان شناسه را نگه داریم",
+    "kind": "relay"
+  },
+  {
+    "number": 79,
+    "id": 59,
+    "group": "3.5",
+    "title": "چه کسی جلوی حلقهٔ بی‌پایان را می‌گیرد؟",
+    "kind": "budget-lab"
+  },
+  {
+    "number": 80,
+    "id": 60,
+    "group": "3.5",
+    "title": "از ردِ اجرا بفهمیم چه اتفاقی افتاد",
+    "kind": "relay"
+  },
+  {
+    "number": 81,
+    "id": 30,
+    "group": "3.6",
+    "title": "اگر خودِ مدل درخواستِ نامجاز بدهد چه؟",
+    "kind": "relay"
+  },
+  {
+    "number": 82,
+    "id": 68,
+    "group": "3.6",
+    "title": "همهٔ کارها یک نوع اجازه نمی‌خواهند",
+    "kind": "action-policies"
+  },
+  {
+    "number": 83,
+    "id": 69,
+    "group": "3.6",
+    "title": "پیش‌نویس را مستقیم بساز",
+    "kind": "permission-lab"
+  },
+  {
+    "number": 84,
+    "id": 70,
+    "group": "3.6",
+    "title": "اول در گفت‌وگو بپرس",
+    "kind": "permission-lab"
+  },
+  {
+    "number": 85,
+    "id": 71,
+    "group": "3.6",
+    "title": "خرید فقط از مسیرِ تأییدِ مستقل",
+    "kind": "permission-lab"
+  },
+  {
+    "number": 86,
+    "id": 72,
+    "group": "3.6",
+    "title": "«بله» در متن، مجوزِ خریدِ برنامه نیست",
+    "kind": "relay"
+  },
+  {
+    "number": 87,
+    "id": 73,
+    "group": "3.6",
+    "title": "۶٫۲ میلیون را تأیید کردیم؛ ۷٫۴ میلیون چه؟",
+    "kind": "amount-binding"
+  },
+  {
+    "number": 88,
+    "id": 74,
+    "group": "3.6",
+    "title": "«بدون اجازه بخر» راهِ اجرا را باز نمی‌کند",
+    "kind": "relay"
+  },
+  {
+    "number": 89,
+    "id": 75,
+    "group": "3.7",
+    "title": "سارا خواست رزروِ علی را ببیند",
+    "kind": "relay"
+  },
+  {
+    "number": 90,
+    "id": 76,
+    "group": "3.7",
+    "title": "«من» را از ورودِ معتبر می‌گیریم",
+    "kind": "identity-lab"
+  },
+  {
+    "number": 91,
+    "id": 77,
+    "group": "3.7",
+    "title": "حسابِ علی را با عوض‌کردنِ جمله باز کنیم؟",
+    "kind": "identity-lab"
+  },
+  {
+    "number": 92,
+    "id": 78,
+    "group": "3.7",
+    "title": "دیدنِ بلیت، اجازهٔ لغوِ آن نیست",
+    "kind": "relay"
+  },
+  {
+    "number": 93,
+    "id": 79,
+    "group": "3.8",
+    "title": "سامانه شماره می‌خواهد؛ مدل چرا آن را ببیند؟",
+    "kind": "private-route"
+  },
+  {
+    "number": 94,
+    "id": 80,
+    "group": "3.8",
+    "title": "شماره را در ورودیِ خصوصی بگیریم",
+    "kind": "private-input"
+  },
+  {
+    "number": 95,
+    "id": 81,
+    "group": "3.8",
+    "title": "این ارجاع، خودِ شماره نیست",
+    "kind": "relay"
+  },
+  {
+    "number": 96,
+    "id": 82,
+    "group": "3.8",
+    "title": "مدل ارجاع می‌دهد؛ برنامه شماره را می‌رساند",
+    "kind": "private-route"
+  },
+  {
+    "number": 97,
+    "id": 83,
+    "group": "3.8",
+    "title": "چه کسی می‌تواند این شماره را دریافت کند؟",
+    "kind": "secret-lab"
+  },
+  {
+    "number": 98,
+    "id": 84,
+    "group": "3.8",
+    "title": "مقصد عوض شد؛ شماره باز نمی‌شود",
+    "kind": "relay"
+  },
+  {
+    "number": 99,
+    "id": 85,
+    "group": "3.8",
+    "title": "شماره می‌رود؛ نتیجهٔ صدور برمی‌گردد",
+    "kind": "relay"
+  },
+  {
+    "number": 100,
+    "id": 41,
+    "group": "3.8",
+    "title": "کاربر، نتیجه و قدمِ بعد را می‌خواهد",
+    "kind": "user-response"
+  },
+  {
+    "number": 101,
+    "id": 32,
+    "group": "3.9",
+    "title": "هارنس با مدل از چه قراردادی حرف می‌زند؟",
+    "kind": "contrast"
+  },
+  {
+    "number": 102,
+    "id": 86,
+    "group": "3.9",
+    "title": "کلیدِ سرویس در اختیارِ برنامه است",
+    "kind": "relay"
+  },
+  {
+    "number": 103,
+    "id": 87,
+    "group": "3.9",
+    "title": "برای دیدنِ یک رزرو، کلیدِ همه‌کاره ندهیم",
+    "kind": "relay"
+  },
+  {
+    "number": 104,
+    "id": 88,
+    "group": "3.9",
+    "title": "دو بررسی، در دو جای مستقل",
+    "kind": "relay"
+  },
+  {
+    "number": 105,
+    "id": 90,
+    "group": "3.10",
+    "title": "مدل قطع است؛ بلیتِ صادرشده چه می‌شود؟",
+    "kind": "outage-lab"
+  },
+  {
+    "number": 106,
+    "id": 91,
+    "group": "3.10",
+    "title": "دو راه، برای رسیدن به همان بلیت",
+    "kind": "relay"
+  },
+  {
+    "number": 107,
+    "id": 92,
+    "group": "3.10",
+    "title": "پیامِ وقفه باید راهِ ادامه را نشان بدهد",
+    "kind": "outage-message"
+  },
+  {
+    "number": 108,
+    "id": 93,
+    "group": "3.10",
+    "title": "مدل برگشت؛ از وضعیتِ ثبت‌شده ادامه بدهیم",
+    "kind": "relay"
+  },
+  {
+    "number": 109,
+    "id": 310,
+    "group": "4.1",
+    "title": "این بار، محصولِ ما را ایجنت می‌سازد",
+    "kind": "product-factory"
+  },
+  {
+    "number": 110,
+    "id": 311,
+    "group": "4.1",
+    "title": "سازنده، روشِ کار و محصول را جدا ببینیم",
+    "kind": "producer-product"
+  },
+  {
+    "number": 111,
+    "id": 44,
+    "group": "4.1",
+    "title": "محصولِ بزرگ را در چند گامِ قابل بررسی بسازیم",
+    "kind": "production-method"
+  },
+  {
+    "number": 112,
+    "id": 312,
+    "group": "4.1",
+    "title": "«بررسی» برای هر محصول، یک شکل ندارد",
+    "kind": "quality-lab"
+  },
+  {
+    "number": 113,
+    "id": 43,
+    "group": "4.1",
+    "title": "یک جمله را تا نسخهٔ قابل انتشار دنبال کنیم",
+    "kind": "relay"
+  },
+  {
+    "number": 114,
+    "id": 313,
+    "group": "4.1",
+    "title": "برای ترجمهٔ کتاب، از یک فصل شروع کنیم",
+    "kind": "translation-workflow"
+  },
+  {
+    "number": 115,
+    "id": 314,
+    "group": "4.1",
+    "title": "پژوهش هم خروجیِ مرحله‌ای می‌خواهد",
+    "kind": "research-workflow"
+  },
+  {
+    "number": 116,
+    "id": 61,
+    "group": "4.2",
+    "title": "با ایجنتِ آماده کار کنیم یا محیطِ مخصوص بسازیم؟",
+    "kind": "production-choices"
+  },
+  {
+    "number": 117,
+    "id": 62,
+    "group": "4.2",
+    "title": "یک ایجنتِ عمومی، با ابزارهای مناسب",
+    "kind": "general-agent"
+  },
+  {
+    "number": 118,
+    "id": 315,
+    "group": "4.2",
+    "title": "ایجنتِ تولیدکنندهٔ نرم‌افزار، محیطِ کار می‌خواهد",
+    "kind": "coding-workbench"
+  },
+  {
+    "number": 119,
+    "id": 318,
+    "group": "4.2",
+    "title": "وقتی ترجمهٔ کتاب، کارِ همیشگیِ ماست",
+    "kind": "specialized-producer"
+  },
+  {
+    "number": 120,
+    "id": 63,
+    "group": "4.2",
+    "title": "چارچوب، قطعاتِ ساختنِ این برنامه را می‌دهد",
+    "kind": "table"
+  },
+  {
+    "number": 121,
+    "id": 64,
+    "group": "4.2",
+    "title": "مثل سایت: تنظیمِ ابزارِ آماده یا ساختِ برنامه",
+    "kind": "contrast"
+  },
+  {
+    "number": 122,
+    "id": 66,
+    "group": "4.3",
+    "title": "زمانِ ساخت: دستیار، پروژه را تغییر می‌دهد",
+    "kind": "builder-runtime"
+  },
+  {
+    "number": 123,
+    "id": 67,
+    "group": "4.3",
+    "title": "زمانِ اجرا: محصول، به کاربر خدمت می‌دهد",
+    "kind": "builder-runtime"
+  },
+  {
+    "number": 124,
+    "id": 317,
+    "group": "4.3",
+    "title": "بعضی بررسی‌ها پیش از اجرا؛ بعضی هنگام اجرا",
+    "kind": "build-analogy"
+  },
+  {
+    "number": 125,
+    "id": 65,
+    "group": "4.3",
+    "title": "پیش از ساختِ خدمت، سه شرطِ روشن بنویسیم",
+    "kind": "scene"
+  },
+  {
+    "number": 126,
+    "id": 316,
+    "group": "4.4",
+    "title": "کدو، روشِ کار را کنارِ دستیار می‌گذارد",
+    "kind": "codo-workflows"
+  },
+  {
+    "number": 127,
+    "id": 94,
+    "group": "4.4",
+    "title": "حالا محصولِ ما: یک ایجنتِ سفرِ کوچک",
+    "kind": "path"
+  },
+  {
+    "number": 128,
+    "id": 95,
+    "group": "4.4",
+    "title": "قبل از کد، یک گفت‌وگوی مورد انتظار بنویسیم",
+    "kind": "scene"
+  },
+  {
+    "number": 129,
+    "id": 96,
+    "group": "4.4",
+    "title": "دو سندِ مشخص از همین سناریو می‌نویسیم",
+    "kind": "contrast"
+  },
+  {
+    "number": 130,
+    "id": 97,
+    "group": "4.4",
+    "title": "جدولِ پیام‌ها با جدولِ رزرو فرق دارد",
+    "kind": "contrast"
+  },
+  {
+    "number": 131,
+    "id": 45,
+    "group": "4.4",
+    "title": "یک درخواست را دوبار بفرستیم؛ چند رزرو می‌سازد؟",
+    "kind": "tests"
+  },
+  {
+    "number": 132,
+    "id": 46,
+    "group": "4.4",
+    "title": "خطا را همین‌جا ببینیم و اصلاح کنیم",
+    "kind": "path"
+  },
+  {
+    "number": 133,
+    "id": 98,
+    "group": "4.4",
+    "title": "آزمونِ پروژه باید موفقیت و مرزها را بسنجد",
+    "kind": "scene"
+  },
+  {
+    "number": 134,
+    "id": 99,
+    "group": "4.4",
+    "title": "مدل و سامانه را در /wire وصل می‌کنیم",
+    "kind": "path"
+  },
+  {
+    "number": 135,
+    "id": 100,
+    "group": "4.4",
+    "title": "کاربر باید از بیرون به خدمت برسد",
+    "kind": "scene"
+  },
+  {
+    "number": 136,
+    "id": 101,
+    "group": "5.1",
+    "title": "دستیارِ سارا با ایجنتِ آژانس فرق دارد",
+    "kind": "assistant-roles"
+  },
+  {
+    "number": 137,
+    "id": 102,
+    "group": "5.1",
+    "title": "از سارا تا سامانهٔ موجودِ آژانس",
+    "kind": "assistant-chain"
+  },
+  {
+    "number": 138,
+    "id": 104,
+    "group": "5.1",
+    "title": "یک سفر، چند ایجنتِ خدمت‌رسان",
+    "kind": "assistant-network"
+  },
+  {
+    "number": 139,
+    "id": 319,
+    "group": "5.1",
+    "title": "MCP؛ یک روشِ مشترک برای اتصال به ابزارها",
+    "kind": "mcp-integrations"
+  },
+  {
+    "number": 140,
+    "id": 105,
+    "group": "5.1",
+    "title": "ابزار، ایجنت و رابطِ کاربر؛ سه ارتباط",
+    "kind": "table"
+  },
+  {
+    "number": 141,
+    "id": 320,
+    "group": "5.2",
+    "title": "سیستم‌عامل: از چند برنامه به یک دستیار",
+    "kind": "os-vision"
+  },
+  {
+    "number": 142,
+    "id": 106,
+    "group": "5.2",
+    "title": "همان کارهای گوشی، از یک گفت‌وگو",
+    "kind": "phone-orchestration"
+  },
+  {
+    "number": 143,
+    "id": 107,
+    "group": "5.2",
+    "title": "دستیار، مسیرِ مناسبِ هر کار را انتخاب می‌کند",
+    "kind": "path"
+  },
+  {
+    "number": 144,
+    "id": 108,
+    "group": "5.2",
+    "title": "Cyclon می‌خواهد این تجربه را روی گوشی بسازد",
+    "kind": "product-visual"
+  },
+  {
+    "number": 145,
+    "id": 109,
+    "group": "5.2",
+    "title": "ممکن است خودِ ابزارِ لازم ساخته شود",
+    "kind": "path"
+  },
+  {
+    "number": 146,
+    "id": 110,
+    "group": "5.2",
+    "title": "از صبح تا پایانِ سفر، یک گفت‌وگو ادامه دارد",
+    "kind": "phone-orchestration"
+  },
+  {
+    "number": 147,
+    "id": 111,
+    "group": "5.3",
+    "title": "برای یک توانِ ثابت، مسیرِ ارزان‌تر پیدا می‌شود",
+    "kind": "capability-visual"
+  },
+  {
+    "number": 148,
+    "id": 112,
+    "group": "5.3",
+    "title": "دو حرکت را هم‌زمان ببینیم",
+    "kind": "contrast"
+  },
+  {
+    "number": 149,
+    "id": 113,
+    "group": "5.3",
+    "title": "هوشِ محلی را با قطعِ اینترنت امتحان کنیم",
+    "kind": "local-lab"
+  },
+  {
+    "number": 150,
+    "id": 321,
+    "group": "5.4",
+    "title": "چیزهایی که جادو به نظر می‌رسیدند…",
+    "kind": "magic-ingredients"
+  },
+  {
+    "number": 151,
+    "id": 115,
+    "group": "5.4",
+    "title": "از نوشته‌ها و صدا، به گفت‌وگو با یک لحن",
+    "kind": "cinema"
+  },
+  {
+    "number": 152,
+    "id": 116,
+    "group": "5.4",
+    "title": "متن، صدا، چهره و بدن؛ چهار تجربهٔ متفاوت",
+    "kind": "embodiment"
+  },
+  {
+    "number": 153,
+    "id": 117,
+    "group": "5.4",
+    "title": "تابلوی سخنگو: تصویر، صدا و گفت‌وگو",
+    "kind": "cinema"
+  },
+  {
+    "number": 154,
+    "id": 118,
+    "group": "5.4",
+    "title": "دفترچه‌ای که از گفت‌وگو به صحنه می‌رسد",
+    "kind": "diary-story"
+  },
+  {
+    "number": 155,
+    "id": 119,
+    "group": "5.4",
+    "title": "عکس، ورودیِ یک صحنه می‌شود",
+    "kind": "cinema"
+  },
+  {
+    "number": 156,
+    "id": 120,
+    "group": "5.4",
+    "title": "عکس، صدا و روایت؛ مصالحِ یک دنیای قابل دیدن",
+    "kind": "cinema"
+  },
+  {
+    "number": 157,
+    "id": 322,
+    "group": "5.5",
+    "title": "این توانایی‌ها با شغل‌ها چه می‌کنند؟",
+    "kind": "jobs-question"
+  },
+  {
+    "number": 158,
+    "id": 121,
+    "group": "5.5",
+    "title": "پیش از کارخانه، یک لباس از چند دست می‌گذشت",
+    "kind": "textile"
+  },
+  {
+    "number": 159,
+    "id": 122,
+    "group": "5.5",
+    "title": "ماشین و کارخانه، زنجیره را عوض کردند",
+    "kind": "textile"
+  },
+  {
+    "number": 160,
+    "id": 123,
+    "group": "5.5",
+    "title": "اگر این تغییر، وسطِ زندگیِ کاری برسد",
+    "kind": "career-timeline"
+  },
+  {
+    "number": 161,
+    "id": 124,
+    "group": "5.5",
+    "title": "اگر ایجنت، بخشِ اصلیِ کارِ تخصصی را انجام دهد",
+    "kind": "expert-deliverable"
+  },
+  {
+    "number": 162,
+    "id": 126,
+    "group": "5.5",
+    "title": "مقاومتِ حرفه‌ای: کار آماده است؛ مُهرِ انسان می‌خواهد",
+    "kind": "professional-gate"
+  },
+  {
+    "number": 163,
+    "id": 127,
+    "group": "5.5",
+    "title": "کار را از ایجنت می‌گیرند؛ مُهر را از انسان",
+    "kind": "stamp-market"
+  },
+  {
+    "number": 164,
+    "id": 323,
+    "group": "5.5",
+    "title": "وقتی وعدهٔ حذفِ این مانع، رأی بیاورد",
+    "kind": "political-change"
+  },
+  {
+    "number": 165,
+    "id": 324,
+    "group": "5.5",
+    "title": "پس کدام کارها دیرتر جایگزین می‌شوند؟",
+    "kind": "relational-work"
+  },
+  {
+    "number": 166,
+    "id": 125,
+    "group": "5.5",
+    "title": "تاکتیک را مدل می‌دهد؛ سرمربی با تیم چه می‌کند؟",
+    "kind": "coach-story"
+  },
+  {
+    "number": 167,
+    "id": 128,
+    "group": "5.5",
+    "title": "از شناختِ ایجنت تا ساختنِ یک محصولِ مفید",
+    "kind": "closing"
+  }
+]

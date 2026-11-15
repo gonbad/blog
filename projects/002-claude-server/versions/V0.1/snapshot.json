@@ -1,0 +1,28 @@
+{
+  "version": "0.1",
+  "workflow": "docs/job/versions/0.4.1/workflow.json",
+  "at": "2026-11-09T16:30:16+00:00",
+  "sha256": {
+    "README.md": "3c7d5cf387456fd4c08b9e090f38b3dcf3df63e3341cacd59edc85cbb40854df",
+    "inputs/README.md": "e37adececff7be44c07bb413436075c43ec0360e75a30fc7956c710df0c65259",
+    "inputs/canada-example.json": "76013c45fdb28da2d23f8190e57446ae6a0ddfb30d1661ebb98da6454f15e4d9",
+    "inputs/vpsmarket-ca4-2026-11-09.png": "412c8b838f86688e59a4f95a1a66cf802561291dbeb9a403b4b089e9481b8585",
+    "inputs/vpsmarket-ca4-ubuntu-2026-11-09.png": "7f14ada10d4e3a7c0abb2300595f83b9da0f76795f6d31a53efea329e77c103a",
+    "inputs/vpsmarket-comparison-2026-11-09.json": "feb5d5c39388f0aa4122d21686e0c08a597a10845116a091bccc34f439a7dbc8",
+    "inputs/vpsmarket-de4-2026-11-09.png": "61b967e69277e157f9d37d39ed584af94601766383d39f739432995c9ae487b7",
+    "inputs/vpsmarket-de4-ubuntu-2026-11-09.png": "6de56116ed983de8153dc60f863d4e0060a6098c7e484ba8edcf59cacfbba06f",
+    "project.json": "68881d8a0cdc7900f2222e104b0bd449b7cd9414bf66f52a33ece7ca047b5eda",
+    "roadmap.md": "4ddda6f77ce507ce0f45fa01328fd8b102a987886f5896e332101a004a2a84e1",
+    "site/assets/fonts/Estedad-400.ttf": "350bb4afb18fb09f0e74925ad04c710739b289feffe83066830aa14f6dbc4f6f",
+    "site/assets/fonts/Estedad-600.ttf": "bd5022cfa45e362a94b0a97e4399e46a9241929382b14c1b2568f835585c2b9a",
+    "site/assets/fonts/Estedad-800.ttf": "7386239ad1f239ec8c2c039db8f371ad31ce25dd46e60535bded3d5436566711",
+    "site/assets/fonts/OFL.txt": "0417da48fc44780476e074f02f8400028ee704b3e222be5855fa6d960b9200ca",
+    "site/assets/mark.svg": "ed6baa147100646fb20166fc5619dc7166161bd917b81ec8609f5c6a5ac7435b",
+    "site/assets/vpsmarket-ca4-ubuntu.png": "7f14ada10d4e3a7c0abb2300595f83b9da0f76795f6d31a53efea329e77c103a",
+    "site/assets/vpsmarket-ca4.png": "412c8b838f86688e59a4f95a1a66cf802561291dbeb9a403b4b089e9481b8585",
+    "site/generator.js": "b08d339b8a4c0f53427be3665ed11906fdc77d98916315ba7b1c4aca90d764db",
+    "site/index.html": "a5075ad9b3ed772405904158b674aed8bab55af2518e7e1df09f9ecc7b803016",
+    "site/post.css": "4105a23ebadd4385690e95f2628c5921efdfee663a304e76e9444b307c063955",
+    "site/post.js": "271e053af5633540574f4ee00a87c65a24bf55838261f98b4956c4b4a0268e3d"
+  }
+}

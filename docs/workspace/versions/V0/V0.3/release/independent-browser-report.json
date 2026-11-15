@@ -1,0 +1,337 @@
+{
+  "checks": [
+    {
+      "name": "index loads offline without horizontal overflow",
+      "ok": true,
+      "detail": {
+        "width": 1280,
+        "scroll": 1280
+      }
+    },
+    {
+      "name": "authored index has two independent entries and two ZIP links",
+      "ok": true
+    },
+    {
+      "name": "article link opens the built article",
+      "ok": true
+    },
+    {
+      "name": "article code whitespace preserved by minification",
+      "ok": true
+    },
+    {
+      "name": "built presentation contains five authored slides",
+      "ok": true
+    },
+    {
+      "name": "presentation canvas is 16:9",
+      "ok": true,
+      "detail": {
+        "x": 38.40625,
+        "y": 61.5625,
+        "width": 1203.1875,
+        "height": 676.859375
+      }
+    },
+    {
+      "name": "all five slides contain speaker notes",
+      "ok": true
+    },
+    {
+      "name": "N opens actual speaker notes",
+      "ok": true
+    },
+    {
+      "name": "Escape closes notes",
+      "ok": true
+    },
+    {
+      "name": "Right advances LTR slide",
+      "ok": true,
+      "detail": "slide-2"
+    },
+    {
+      "name": "browser back restores slide hash",
+      "ok": true,
+      "detail": "slide-1"
+    },
+    {
+      "name": "browser forward restores slide hash",
+      "ok": true,
+      "detail": "slide-2"
+    },
+    {
+      "name": "G opens overview and focuses current tile",
+      "ok": true,
+      "detail": "1"
+    },
+    {
+      "name": "Tab moves overview focus",
+      "ok": true,
+      "detail": "2"
+    },
+    {
+      "name": "Enter selects overview tile without extra advance",
+      "ok": true,
+      "detail": "slide-3"
+    },
+    {
+      "name": "Space selects current overview tile without advancing",
+      "ok": true,
+      "detail": "slide-3"
+    },
+    {
+      "name": "overview Left changes focused tile",
+      "ok": true,
+      "detail": "1"
+    },
+    {
+      "name": "overview arrow then Enter selects slide",
+      "ok": true,
+      "detail": "slide-2"
+    },
+    {
+      "name": "overview Tab stays within the modal",
+      "ok": true
+    },
+    {
+      "name": "G closes overview",
+      "ok": true
+    },
+    {
+      "name": "Escape closes overview",
+      "ok": true
+    },
+    {
+      "name": "F enters fullscreen",
+      "ok": true
+    },
+    {
+      "name": "F exits fullscreen",
+      "ok": true
+    },
+    {
+      "name": "local SVG chart loads",
+      "ok": true
+    },
+    {
+      "name": "deck code whitespace preserved by minification",
+      "ok": true
+    },
+    {
+      "name": "overview Down moves spatially to next row",
+      "ok": true,
+      "detail": {
+        "expected": "4",
+        "actual": "4",
+        "cards": [
+          {
+            "index": "0",
+            "top": 90,
+            "left": 28
+          },
+          {
+            "index": "1",
+            "top": 92,
+            "left": 239.875
+          },
+          {
+            "index": "2",
+            "top": 92,
+            "left": 451.75
+          },
+          {
+            "index": "3",
+            "top": 92,
+            "left": 663.625
+          },
+          {
+            "index": "4",
+            "top": 387.25,
+            "left": 28
+          }
+        ]
+      }
+    },
+    {
+      "name": "overview Up moves spatially to previous row",
+      "ok": true,
+      "detail": {
+        "expected": "0",
+        "actual": "0"
+      }
+    },
+    {
+      "name": "extracted article ZIP works offline with adapted navigation",
+      "ok": true
+    },
+    {
+      "name": "extracted deck ZIP loads chart",
+      "ok": true
+    },
+    {
+      "name": "extracted deck ZIP overview selection works",
+      "ok": true,
+      "detail": "slide-4"
+    },
+    {
+      "name": "extracted deck ZIP notes work",
+      "ok": true
+    },
+    {
+      "name": "RTL diagnostic Left advances",
+      "ok": true,
+      "detail": "slide-2"
+    },
+    {
+      "name": "RTL diagnostic Right returns",
+      "ok": true,
+      "detail": "slide-1"
+    },
+    {
+      "name": "RTL diagnostic overview Left follows reading order",
+      "ok": true,
+      "detail": "1"
+    },
+    {
+      "name": "phone index has no horizontal overflow",
+      "ok": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "phone article has no horizontal page overflow",
+      "ok": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "phone slide 1 has readable size and contained horizontal layout",
+      "ok": true,
+      "detail": {
+        "client": 151,
+        "scroll": 415,
+        "width": 321,
+        "scrollWidth": 321,
+        "font": "16px"
+      }
+    },
+    {
+      "name": "phone slide 1 can reach its bottom",
+      "ok": true
+    },
+    {
+      "name": "phone slide 2 has readable size and contained horizontal layout",
+      "ok": true,
+      "detail": {
+        "client": 151,
+        "scroll": 462,
+        "width": 321,
+        "scrollWidth": 321,
+        "font": "16px"
+      }
+    },
+    {
+      "name": "phone slide 2 can reach its bottom",
+      "ok": true
+    },
+    {
+      "name": "phone slide 3 has readable size and contained horizontal layout",
+      "ok": true,
+      "detail": {
+        "client": 151,
+        "scroll": 289,
+        "width": 321,
+        "scrollWidth": 321,
+        "font": "16px"
+      }
+    },
+    {
+      "name": "phone slide 3 can reach its bottom",
+      "ok": true
+    },
+    {
+      "name": "phone slide 4 has readable size and contained horizontal layout",
+      "ok": true,
+      "detail": {
+        "client": 151,
+        "scroll": 466,
+        "width": 321,
+        "scrollWidth": 321,
+        "font": "16px"
+      }
+    },
+    {
+      "name": "phone slide 4 can reach its bottom",
+      "ok": true
+    },
+    {
+      "name": "phone slide 5 has readable size and contained horizontal layout",
+      "ok": true,
+      "detail": {
+        "client": 151,
+        "scroll": 505,
+        "width": 321,
+        "scrollWidth": 321,
+        "font": "16px"
+      }
+    },
+    {
+      "name": "phone slide 5 can reach its bottom",
+      "ok": true
+    },
+    {
+      "name": "actual vertical touch gesture scrolls current phone slide",
+      "ok": true,
+      "detail": {
+        "active": "slide-2",
+        "scroll": 311,
+        "area": {
+          "x": 35.38023376464844,
+          "y": 355.4438171386719,
+          "width": 319.23951721191406,
+          "height": 150.02737426757812
+        }
+      }
+    },
+    {
+      "name": "actual horizontal phone swipe advances slide",
+      "ok": true,
+      "detail": "slide-3"
+    },
+    {
+      "name": "phone overview opens and supports selection",
+      "ok": true
+    },
+    {
+      "name": "phone overview tile tap selects slide",
+      "ok": true,
+      "detail": "slide-5"
+    },
+    {
+      "name": "no remote runtime requests attempted",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "no local asset loads failed",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "no browser script errors",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "remoteRequests": [],
+  "fileFailures": [],
+  "browserErrors": [],
+  "passed": 53,
+  "failed": 0
+}

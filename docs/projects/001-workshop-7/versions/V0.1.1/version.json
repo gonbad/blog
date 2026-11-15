@@ -1,0 +1,12 @@
+{
+  "version": "0.1.1",
+  "status": "published",
+  "change_input": {
+    "file": "docs/projects/001-workshop-7/versions/V0.1.1/brief.md",
+    "entry_mode": "agent-assisted",
+    "sha256": "9258ba04a58fe394e6c97260b3c285064d49970c18c34cd699231e4a0ee40195"
+  },
+  "created_at": "2026-11-09T12:53:42+00:00",
+  "published_release": "7.4.1-32b147ce732e",
+  "publication_evidence": "docs/workspace/versions/V0/V0.3/release/public-verification.json"
+}

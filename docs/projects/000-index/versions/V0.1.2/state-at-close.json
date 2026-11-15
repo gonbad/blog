@@ -1,0 +1,37 @@
+{
+  "title": "Index",
+  "version": "0.1.2",
+  "docs": "docs/projects/000-index/versions/V0.1.2",
+  "legacy_progress": {
+    "record": "docs/workspace/versions/V0/V0.3/legacy-state/000-index.json",
+    "ready": 5,
+    "accepted": 0
+  },
+  "issues": [],
+  "releases": [
+    {
+      "version": "0.1",
+      "next_version": "0.1.1",
+      "note": "Add the authored link to the published Claude server post while preserving the previous index",
+      "snapshot": "projects/000-index/versions/V0.1",
+      "at": "2026-11-09T13:43:41+00:00"
+    },
+    {
+      "version": "0.1.1",
+      "next_version": "0.1.2",
+      "note": "Match the index card to post 002 V0.2: account-closure problem, foreign-server solution and English setup prompt",
+      "snapshot": "projects/000-index/versions/V0.1.1",
+      "at": "2026-11-09T16:54:36+00:00"
+    }
+  ],
+  "id": "000-index",
+  "milestones": {},
+  "job_observed": "6aca59dd44daa9c5d2c992aa693809de5ad616d9784542722a04639de77650e2",
+  "job_adaptations": [
+    {
+      "note": "Imported complete state; reviewed public source and delivery contract. New output verification pending.",
+      "at": "2026-11-11T04:57:00+00:00",
+      "sha256": "6aca59dd44daa9c5d2c992aa693809de5ad616d9784542722a04639de77650e2"
+    }
+  ]
+}

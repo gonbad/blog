@@ -1,0 +1,729 @@
+/* Feedback revision: a consistent light canvas and concrete teaching demos. */
+.slide.dark,
+.slide.blue,
+.roadmap,
+.cinema {
+  background: var(--paper);
+  color: var(--ink);
+  --muted: #62717a;
+  --line: #d5d8d4;
+  --pale: #e5ecfb;
+}
+.map-title .section-num {
+  color: var(--blue);
+}
+.map-subtitle {
+  color: var(--muted);
+}
+.map-row {
+  color: #7b858b;
+  border-color: var(--line);
+}
+.map-row.done {
+  color: #67776d;
+}
+.map-row.current {
+  color: var(--ink);
+  border-color: var(--blue);
+  background: var(--pale);
+}
+.map-row .map-num {
+  color: #74808c;
+}
+.map-row.current .map-num,
+.map-parents span.current {
+  color: var(--blue);
+}
+.map-parents span {
+  color: var(--muted);
+}
+.cinema {
+  padding: 75px 90px 70px;
+}
+.cinema:after {
+  display: none;
+}
+.cinema-layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  align-items: center;
+  gap: 65px;
+}
+.cinema .cinema-copy {
+  position: static;
+  width: auto;
+  color: var(--ink);
+}
+.cinema .cinema-copy h2 {
+  font-size: 59px;
+}
+.cinema .cinema-copy p {
+  font-size: 27px;
+  color: var(--muted);
+}
+.cinema .eyebrow {
+  font-size: 15px;
+  color: var(--blue);
+}
+.cinema figure {
+  margin: 0;
+  overflow: hidden;
+}
+.cinema .cinema-image {
+  position: static;
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 8px;
+  animation: none;
+  scale: 1;
+}
+.slide[data-source-id="117"] .cinema-image {
+  scale: 1;
+}
+.cinema .image-caption {
+  position: static;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: left;
+}
+.cinema .slide-footer {
+  color: var(--muted);
+}
+.human-figure circle {
+  fill: var(--blue);
+}
+.end-layout:after {
+  border-color: #2159dd24;
+  box-shadow:
+    0 0 0 85px #2159dd05,
+    0 0 0 170px #2159dd03;
+}
+.end-layout .eyebrow {
+  color: var(--blue);
+}
+.code-block {
+  background: #e8edf3;
+  color: var(--ink);
+}
+.code-block .key {
+  color: var(--blue);
+}
+.test-output {
+  background: #e5ede7;
+  color: #215a41;
+}
+.test-output span {
+  color: var(--ink) !important;
+}
+.advice-layout {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 85px;
+  align-items: center;
+}
+.advice-conversation {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.advice-conversation .bubble {
+  font-size: 27px;
+  padding: 23px 28px;
+  line-height: 1.9;
+}
+.advice-result {
+  padding-right: 20px;
+}
+.empty-ticket {
+  border: 2px dashed #bec6c8;
+  background: #fffdf8;
+  border-radius: 8px;
+  padding: 35px 30px;
+  transform: rotate(-3deg);
+  margin-bottom: 35px;
+}
+.empty-ticket span {
+  display: block;
+  font-size: 18px;
+  color: var(--muted);
+}
+.empty-ticket strong {
+  display: block;
+  font-size: 36px;
+  margin-top: 18px;
+  color: #73808a;
+}
+.travel-content {
+  margin-top: 0;
+}
+.travel-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 70px;
+  align-items: center;
+}
+.travel-phone {
+  height: 650px;
+  width: 455px;
+  border-radius: 36px;
+}
+.travel-phone .phone-top {
+  background: #e5ecfb;
+  color: var(--ink);
+  border-bottom: 1px solid #cbd6e7;
+}
+.travel-phone .phone-top small {
+  margin-right: auto;
+  font-size: 12px;
+  color: var(--muted);
+}
+.travel-phone .conversation {
+  padding: 22px 18px;
+  gap: 16px;
+}
+.travel-phone .bubble {
+  font-size: 22px;
+  line-height: 1.85;
+  padding: 17px 20px;
+}
+.travel-explainer h2 {
+  font-size: 58px;
+  line-height: 1.6;
+}
+.travel-explainer h3 {
+  font-size: 34px;
+  line-height: 1.8;
+  max-width: 620px;
+}
+.travel-explainer .lead {
+  font-size: 25px;
+  max-width: 610px;
+  margin-top: 20px;
+}
+.travel-explainer .caption {
+  font-size: 16px;
+  margin-top: 35px;
+}
+.travel-explainer .state-label {
+  margin-top: 35px;
+}
+.trip-options {
+  display: grid;
+  gap: 12px;
+}
+.trip-option {
+  display: grid;
+  text-align: right;
+  gap: 6px;
+  padding: 16px 18px;
+  background: #fffdfa;
+  border: 1px solid #c4cfdf;
+  border-radius: 9px;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.8;
+}
+.trip-option b {
+  color: var(--blue);
+  font-size: 20px;
+}
+.trip-option small {
+  font-size: 15px;
+  color: var(--blue);
+  margin-top: 8px;
+}
+.trip-option:not(:disabled):hover {
+  background: var(--pale);
+  border-color: var(--blue);
+}
+.trip-option:disabled {
+  cursor: default;
+}
+.travel-approve {
+  background: var(--green);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 16px;
+  font-size: 23px;
+}
+.trip-downloads {
+  display: grid;
+  gap: 9px;
+}
+.trip-downloads a {
+  display: block;
+  background: #e5ede7;
+  border: 1px solid #bfd0c4;
+  color: #205f45;
+  border-radius: 6px;
+  padding: 13px 18px;
+  font-size: 22px;
+  text-decoration: none;
+}
+.trip-downloads a:hover {
+  background: #d9e8df;
+}
+.early-ai {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  align-items: center;
+}
+.early-example {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.early-symbol {
+  font-size: 100px;
+  font-weight: 900;
+  color: var(--blue);
+  height: 155px;
+}
+.early-example h3 {
+  font-size: 31px;
+}
+.early-example p {
+  font-size: 25px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-top: 18px;
+}
+.pixel-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 175px;
+  height: 175px;
+  gap: 4px;
+  background: #e4e6e1;
+  padding: 7px;
+  border-radius: 5px;
+  direction: ltr;
+}
+.pixel {
+  display: block;
+  min-width: 0;
+  padding: 0;
+  background: #fffef9;
+  border: 1px solid #d5d8d2;
+  border-radius: 2px;
+}
+.pixel.filled {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+button.pixel:hover {
+  outline: 2px solid var(--gold);
+}
+.digit-example {
+  height: calc(100% - 65px);
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr 50px 1fr;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+.digit-example .pixel-grid {
+  width: 230px;
+  height: 230px;
+  margin: 25px auto;
+}
+.digit-machine h3 {
+  margin-top: 25px;
+}
+.big-arrow {
+  font-size: 50px;
+  color: var(--blue);
+}
+.digit-answer {
+  font-size: 140px;
+  font-weight: 900;
+  color: var(--blue);
+  line-height: 1.4;
+}
+.digit-bottom {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 21px;
+}
+.learning-slide {
+  padding: 55px 80px 65px;
+}
+.learning-slide .slide-header h2 {
+  font-size: 48px;
+}
+.learning-slide .slide-header .eyebrow {
+  margin-bottom: 12px;
+}
+.learning-slide .slide-header .lead {
+  font-size: 23px;
+  line-height: 1.8;
+  max-width: 1360px;
+}
+.learning-slide .content {
+  margin-top: 18px;
+}
+.learning-demo {
+  height: 100%;
+  position: relative;
+}
+.nn-main {
+  display: grid;
+  grid-template-columns: 215px 1fr 235px;
+  gap: 25px;
+  align-items: center;
+  height: 330px;
+}
+.nn-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nn-input .state-label {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+.nn-input .caption {
+  font-size: 13px;
+  margin-top: 9px;
+  max-width: 205px;
+  text-align: center;
+}
+.digit-select {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+.digit-select button {
+  font-size: 15px;
+  padding: 6px 12px;
+  background: #fffdf8;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+.nn-diagram svg {
+  width: 100%;
+  height: 330px;
+  overflow: visible;
+}
+.nn-node-value {
+  font:
+    11px ui-monospace,
+    monospace;
+  text-anchor: middle;
+  fill: var(--ink);
+}
+.nn-output-label {
+  font: 800 30px Estedad;
+  text-anchor: middle;
+}
+.nn-layer-label {
+  font: 15px Estedad;
+  text-anchor: middle;
+  fill: var(--muted);
+}
+.nn-result {
+  border-right: 1px solid var(--line);
+  padding-right: 22px;
+}
+.nn-result .state-label {
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+.nn-guess {
+  font-size: 77px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.nn-guess.correct {
+  color: var(--green);
+}
+.nn-guess.wrong {
+  color: var(--red);
+}
+.nn-prob {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  align-items: center;
+  margin: 14px 0;
+  font-size: 18px;
+}
+.nn-prob strong {
+  text-align: left;
+}
+.nn-prob > i {
+  grid-column: 1/-1;
+  background: linear-gradient(
+    to left,
+    var(--blue) var(--value),
+    #dde2e6 var(--value)
+  );
+  height: 8px;
+  border-radius: 4px;
+}
+.nn-result .caption {
+  font-size: 16px;
+}
+.nn-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin: 13px 0;
+  padding: 12px 0;
+}
+.nn-metrics > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+.nn-metrics span {
+  font-size: 16px;
+  color: var(--muted);
+}
+.nn-metrics b {
+  font-size: 27px;
+}
+.learning-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 17px;
+}
+.learning-controls button,
+.temperature-controls button {
+  border: 0;
+  background: var(--blue);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+.learning-controls button.secondary {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  margin-right: auto;
+}
+.learning-controls button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.learning-controls .caption {
+  font-size: 16px;
+}
+.manual-weight {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 19px;
+}
+.manual-weight input {
+  width: 255px;
+  accent-color: var(--gold);
+}
+.nn-footnote {
+  font-size: 14px;
+  margin-top: 13px;
+}
+.training .nn-diagram line {
+  transition:
+    stroke-width 0.12s,
+    opacity 0.12s;
+}
+.probability-demo {
+  max-width: 1160px;
+  margin: auto;
+}
+.sentence-prompt {
+  font-size: 39px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.sentence-prompt > span {
+  border-bottom: 3px solid var(--blue);
+  padding: 0 22px;
+  color: var(--blue);
+}
+.candidate-row {
+  display: grid;
+  grid-template-columns: 145px 1fr 95px;
+  gap: 20px;
+  align-items: center;
+  height: 57px;
+  font-size: 26px;
+}
+.candidate-row b {
+  text-align: left;
+  font-size: 23px;
+}
+.candidate-track {
+  background: #e1e5e5;
+  height: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.candidate-track i {
+  display: block;
+  height: 100%;
+  background: var(--blue);
+  transition: width 0.2s;
+}
+.temperature-controls {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 26px 0 15px;
+}
+.temperature-controls label {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  font-size: 23px;
+}
+.temperature-controls input {
+  accent-color: var(--blue);
+  width: 245px;
+}
+.temperature-controls label b {
+  font-size: 21px;
+  min-width: 48px;
+}
+.sample-output {
+  font-size: 23px;
+  color: var(--blue);
+}
+.sample-history {
+  display: flex;
+  gap: 8px;
+  min-height: 35px;
+  margin-bottom: 10px;
+}
+.sample-history span {
+  font-size: 16px;
+  border-bottom: 2px solid var(--blue);
+  padding: 2px 10px;
+  background: var(--pale);
+}
+.probability-demo > .caption {
+  font-size: 16px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .candidate-track i,
+  .training .nn-diagram line {
+    transition: none;
+  }
+}
+.network-structure {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.network-structure > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.network-structure .pixel-grid {
+  width: 225px;
+  height: 225px;
+}
+.network-structure svg {
+  width: 100%;
+  height: 350px;
+}
+.network-structure > p {
+  grid-column: 1/-1;
+  text-align: center;
+  font-size: 24px;
+}
+.network-structure .caption {
+  line-height: 1.9;
+}
+.candidate-row {
+  height: 52px;
+}
+.temperature-controls {
+  margin-top: 18px;
+}
+.sample-history {
+  min-height: 30px;
+}
+.mechanical-test {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 55px;
+  align-items: center;
+  height: 100%;
+}
+.mechanical-test .timeline-row {
+  font-size: 21px;
+}
+.mechanical-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 25px;
+}
+.mechanical-controls button {
+  background: var(--blue);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 14px 20px;
+  font-size: 20px;
+}
+.mechanical-controls label {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mechanical-controls input {
+  accent-color: var(--blue);
+  width: 18px;
+  height: 18px;
+}
+.mechanical-output {
+  background: #e8edf3;
+  padding: 26px 30px;
+  border-right: 4px solid var(--line);
+  font-size: 23px;
+  line-height: 1.9;
+  min-height: 180px;
+}
+.mechanical-output.pass {
+  border-color: var(--green);
+  background: #e5ede7;
+}
+.mechanical-output.fail {
+  border-color: var(--red);
+  background: #f3e8e3;
+}
+.mechanical-output .test-label {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.mechanical-output .test-conclusion {
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 12px;
+}
+.mechanical-output.pass .test-conclusion {
+  color: var(--green);
+}
+.mechanical-output.fail .test-conclusion {
+  color: var(--red);
+}

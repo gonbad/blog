@@ -1,0 +1,8 @@
+{
+  "version": "0.1",
+  "status": "archived",
+  "workflow_at_start": "docs/job/versions/0.1/workflow.json",
+  "source": "projects/000-index/",
+  "created_at": "2026-11-09T12:53:42+00:00",
+  "snapshot": "projects/000-index/versions/V0.1"
+}

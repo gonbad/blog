@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "node_checks": [
+    "verify_presentation_learning.cjs",
+    "verify_presentation_journeys.cjs",
+    "verify_presentation_lessons.cjs",
+    "verify_presentation_scenes.cjs"
+  ],
+  "production_browser_states": 60,
+  "production_browser_errors": [],
+  "production_remote_requests": [],
+  "production_layout_issues": [],
+  "command": "PLAYWRIGHT_MODULE=/tmp/workshop-blog-qa/node_modules/playwright DECK_DIR=blog/projects/004-agent-presentation/dist node scripts/verify_presentation_production.cjs"
+}

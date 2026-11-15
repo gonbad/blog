@@ -1,0 +1,24 @@
+{
+  "published": true,
+  "origin": "https://blog.agent.kiloapp.ir",
+  "post": "https://blog.agent.kiloapp.ir/005-workshop-7-handbook/",
+  "host": "vm10709-13184.vpsmarket.org",
+  "release": "0.1.0-897fbe248837",
+  "upload_root": "dist/",
+  "uploaded_files": 85,
+  "artifacts_verified": 84,
+  "serving_server": "Caddy",
+  "offline_download_verified": true,
+  "projects": [
+    "000-index",
+    "001-workshop-7",
+    "002-claude-server",
+    "003-brah-paper",
+    "004-agent-presentation",
+    "005-workshop-7-handbook"
+  ],
+  "release_manifest_sha256": "897fbe2488378954910cf14022e75a84a2d0fca9a0325dafd4219f723ff0cb0d",
+  "registration_health": true,
+  "other_routes_unchanged": true,
+  "server_configuration_unchanged": true
+}

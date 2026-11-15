@@ -1,0 +1,10 @@
+{
+  "name": "001-workshop-7-checks",
+  "private": true,
+  "scripts": {
+    "check": "node verify.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "003-brah-paper",
+  "title": "Byzantine-Resilient Agent Harnesses (BRAH) — v6.2",
+  "kind": "post",
+  "source": "site",
+  "public_path": "003-brah-paper",
+  "version": "6.2.0",
+  "publish": true,
+  "archive": "brah-paper-v6.2.zip"
+}

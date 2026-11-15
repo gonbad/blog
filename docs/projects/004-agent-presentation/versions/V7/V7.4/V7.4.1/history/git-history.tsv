@@ -1,0 +1,76 @@
+a9020c7b64aab51965cc7bf062fef7edcf3b5638	2026-11-11T07:46:09+03:30	continue V9.1
+a6332cddfd6263f4a02d0ada4c4cbe8f89402c29	2026-11-10T19:48:36+03:30	continue V9.1
+e5211078f03e36a4df6f9b0fc31bd2c104dd88cc	2026-11-10T19:40:49+03:30	continue V9.1
+342505a53af40598741d85647b512a3c09c37b0d	2026-11-10T14:48:59+03:30	Add public Moom V9 template as a submodule
+a7ebc5661f6aaef053216af4e9ba3f92977c12b8	2026-11-10T10:50:56+03:30	continue V9
+c9fb997f1840dd5c2ad9b478f035eb3b0289c9ae	2026-11-09T20:38:37+03:30	Apply post 002 V0.2 and correct source fidelity and manual version entry
+ac34bbcb683e630a005116c82a8c713aeae22055	2026-11-09T14:09:08+03:30	Add workshop journal and first Moom workshop post
+7374939b9154a4ae6e7b24b8c9086b41acce67b0	2026-11-09T11:08:30+03:30	continue V8
+52d75787d4d4a62bb0317f39a503bb9c0d5dfe09	2026-11-09T08:30:13+03:30	continue V8
+4902f777341e2269b42a70ed8dace6b17e3839aa	2026-11-08T18:10:18+03:30	V8.0 started
+c087e8d22d5618dea3aa06243fafd64fd980c677	2026-11-05T12:32:41+03:30	V7.5 started
+aaa0940d2160a0b4012926ea1950a9b8ccfed160	2026-11-04T22:07:18+03:30	V7.4
+5cf0e4383dabbb3f5a5e067684de9650c6fca2f8	2026-11-04T09:28:18+03:30	V7.3
+9c4952621fc0b477dcac300a0d4d8462ec69743e	2026-11-01T16:17:45+03:30	V7.1
+1acbaaaa3651fb59ac1640061d9df288f8340e4e	2026-10-31T19:08:55+03:30	presentation OK
+8afeeaa8d2a07e2818126218c989d0b7e71fb748	2026-10-31T16:23:46+03:30	before gemini
+65ca5eca8ba3c275ae8810ba33ec98059ff61044	2026-10-27T18:03:34+03:30	V6.1.1
+a4df1124c8d8f55654c920be9dbc8560bcb55f2e	2026-10-26T13:40:11+03:30	V6.1 clean-slate: single-owner codo-core 0.4.0, @action modes, envelopes, Kandoo Cloud seats
+0692151c9568e121240e2f0cf2d21d01cf971e5b	2026-10-26T09:01:19+03:30	V6.1 2
+ca1ecd1ec15fc3685d43d3e073e8571875ada4e9	2026-10-26T08:06:27+03:30	V6.1 started
+138896248d311e168a8daed96802cd11b486ef5b	2026-10-19T19:46:09+03:30	round 7
+3538b319052d4fb0b1bfa2d770f4f0469477cdc2	2026-10-18T19:38:29+03:30	some more docs
+69999b9ae3f7514f85da4664cb8aa86ce78fddc0	2026-10-18T13:43:17+03:30	V6.0: codo template, tool bank, server published, kit compiled
+bd5e3a51ab136b12f3eeb7a83aa25cc3a5dd4972	2026-10-18T13:28:42+03:30	V6.0: kandoo+cookbook scaffold, workshop services, codo-core 0.1.0
+ef3abfdb4454441cfd863b7c268095777b6dbb95	2026-10-17T09:36:46+03:30	analysis of V6 started
+68d34e62c190f9494c6bb2fec27bcfb9f7343bd7	2026-10-08T11:25:37+03:30	V4.1: VPN route for antigravity, per-IP Shecan, Moneyro referral
+7101ae976def74866922b8cb1539f9710c206aa5	2026-10-08T10:50:04+03:30	V4.1: kandoo small files, compile README, Persian cookbook, 4.1 artifacts
+83b7608cd3cb008ac6b42efc1c6cbe1da915aa5a	2026-10-08T10:39:12+03:30	V4.1: Opus quota
+bc9279b24b81b40a74cdb173b1de16310f6407c2	2026-10-04T21:45:16+03:30	V4.0: handover becomes the checklist's 14th step; rehearsal handover audited
+03273ffdf2864d212e780679ebfe576b1ed81fdd	2026-10-04T21:35:54+03:30	V4.0: commit and push after every meaningful step, not just at phase close
+2cd99f7e25d94394d4b17f78265a24232ea540d8	2026-10-04T21:23:14+03:30	V4.0: unpin kandoo commands — fixes live commands killed by raw placeholders
+c5ef82e0e2f0061e2f4207d2f6e1b4d9dfeeb92e	2026-10-04T19:54:16+03:30	V4.0: model pins become recommendations — commands respect the user's selection
+487afb95ac129a6b39ca6b0b7ee3bbba78befe0f	2026-10-04T19:29:37+03:30	V4.0: hand the approved design page itself to /prototype's delegate
+1ceaad1c684930fda410fd03ce6a7c4e9253bdb7	2026-10-04T19:01:51+03:30	codo design delegate: pin kimi-k3#max — verified variant=max on the live run
+d43aa0c9dfcc7337407bb84a626e95dd7bb28c70	2026-10-04T18:17:10+03:30	kandoo tools: keep team-<id> proxy aliases on re-seed; mcp_call reads *_TOKEN= files
+9d0c79962abf27d4c9d8e4b3a327fdf2ad9e529b	2026-10-04T18:00:33+03:30	kandoo: seat-id accounts (no email); /rehearse removed — rehearsal is one seat through codo
+1f67da36895351b0457a20faadf5b14783e9d783	2026-10-04T17:08:04+03:30	kandoo /prepare: create Coolify admin + root token itself via tinker
+3923bfbff48912097be18447d6e7b2185fdd3a1a	2026-10-04T16:33:52+03:30	kandoo: add docs/rules.md, .gitattributes, secrets templates, docs/README
+1f970a5381e4e123a6a6687efa2974498b842dac	2026-10-04T16:30:27+03:30	Asking convention: every option on its own line, explained in full
+0909b138c964f1c3cb3ddcdbec9dcddbabea8fce	2026-10-04T16:25:45+03:30	kandoo /start: one question at a time, starting with language; no name/email
+63c220511ef959bc459e2cc36b21990e29e6ef23	2026-10-04T15:51:03+03:30	V4.0: implement every audit finding — Gitea, PG schemas, baked-in deploy, handover
+f819f9545066e8a5da6ee4b23bbce86389cc5244	2026-10-04T14:30:14+03:30	V4.0 audit before rehearsal: decisions vs what was actually built
+3f477aa27c862bcd37bf036f1684380372e39578	2026-10-04T14:17:32+03:30	V4.0: RTL rule enforced, staff responsibilities + participant handout
+73a3fb5378daecf927c3acb161bf7857bab8a012	2026-10-04T14:07:51+03:30	V4.0 private line: public/private split, kandoo, proxy+research, one-day workshop
+216f39af8d2df0c5e0bc1fa49aff7e130c7073d4	2026-10-04T13:46:41+03:30	before V4.0 rehearsal
+1c0c272299187562e79d32e5d7b357f0b56e0c34	2026-09-29T12:54:25+03:30	V3.1.1
+b47117b4224c9c11c03fb76c6aa84f7d24d0983c	2026-09-25T10:44:56+00:00	V3.0 round 4: real services from 0.1, a fallback ladder for the server, Cloudflare records by MCP
+e4baac1f299e5a8507d218980c9a0d82a62421f7	2026-09-25T10:21:08+00:00	V3.0: OpenCode on the laptop, the server as proxy and host
+1c04cd934ca74d9769c41c28526012cd3214ffc7	2026-09-25T08:17:29+00:00	V3.0 round 2 — model per stage, Cloudflare DNS, password-first login
+6c6bb0af3f0b932a255092395da799d006eabc0a	2026-09-25T05:59:25+00:00	V3.0 analysis — OpenCode on the laptop, the server as proxy and deploy host
+a43daa64bdf1f120258a3a5b0ac33719abaf03c5	2026-09-24T15:21:38+00:00	Book V2.0 content, the builder's --tool/--os, and the script fixes
+c04db17074197d9678e6f7b6aa60b4d5b7161394	2026-09-24T14:35:21+00:00	V2.0 round 2 — three design directions, questions format, Squid, Docker, CODO delivery
+4e66961acae3f97d4222648dd363e688e95901e9	2026-09-24T13:29:13+00:00	V2.0 analysis — the platform, virtual-first, and the Part 1 / Part 2 split
+cbbf937cad5f8c56702ddb2d84123bbd0c4ef683	2026-09-06T15:01:37+03:30	after kandoo
+ad9720e988ff8d600f0eb526c257965358dd453b	2026-09-04T17:54:58+03:30	V1.3
+d4455450196929ce144d8b70be3fef6dd999a0e1	2026-08-26T20:09:33+03:30	V1.1 analysis — the two-day branch: decisions, critique, and both feedback rounds
+09eec9d83b8dcac94a9257c9ef0803cfeb56257e	2026-08-20T13:48:14+03:30	V1.0
+441249f5a20bbde5a14574c3e760c91134cc1e17	2026-08-18T17:29:44+03:30	V0.13 feedback round 3 — design fixes, effort, and the /plan + /build split
+427b974612acdaf1c7826a0e6d44cd1ddda34ed9	2026-08-18T14:41:20+03:30	V0.13 feedback round 2 — Claude environment, three language options, one window
+f15c7b26b983a09a04cc7c64d73587717dc4d6ef	2026-08-18T12:20:23+03:30	V0.13 feedback round 1 — slogan, Ubuntu 24.04, participant-owned repo flow
+738785c9e56d7500a469f30c9c73f6bad463f735	2026-08-18T00:45:06+03:30	V0.13 — server-only workshop, BMAD removed, book rebuilt
+d4b57e57734cf3fd5825f704af773e498dbca6b5	2026-08-17T22:26:45+03:30	V0.13 started
+83d2777f95c05b12aeb4c26f3ea29adc039e995d	2026-08-09T05:21:03+03:30	V0.10
+e495baaeccb9caf11976298c3c7a1c090dae73f2	2026-07-02T02:23:14+00:00	V0.9 round 4 — login bot lands on Bale; scope guarantee documented
+ef2d808a18b60a495d534bfd200cca0810e54b1a	2026-07-02T02:13:16+00:00	V0.9 round 3 — dev-side route for filtered/sanctioned services
+23f15dd5fb3b4bca22ae69e77f3b5ba140e62a7c	2026-07-02T02:11:01+00:00	V0.9 round 2 — abroad VPS, login bot, organizer S3, front/back ports + HTTPS
+e813b7383eeb73d9b2ce06e967f43ba404bb2aae	2026-07-02T01:21:37+00:00	V0.9 — back to the workshop VPS (no Hamravesh), drop Ehrazyar
+eec071c2c02764a6e96f2ff9f3dfb9476b8b0823	2026-07-02T04:27:57+03:30	v0.8
+4e0049386817ba7e66c89c6c0600c8d252b54f66	2026-07-01T10:55:53+03:30	V0.6
+1e74d6f7f5a12a3fcfbb0193536b71f5d647be53	2026-06-15T10:10:13+03:30	V0.۳ book
+9bf17053f188ed3cac5d8ca567f7bd5fff42de15	2026-06-14T17:19:17+03:30	V0.2 done
+f5d4598528a1860fbb8a7663e1e3ff131ae2a601	2026-06-14T15:19:55+03:30	V0.2 round2 docs
+64c47ac0d9ec2f5dd71a6b3baece86d8b2b1a5b7	2026-06-14T14:18:27+03:30	V0.2 docs
+0ffab84ed58d21b950ac8484488bd8c97d3fc77f	2026-06-11T18:37:32+03:30	زخددثزفهخد
+de306769917562cb2edcfe5a94c6e2ac74af8e6e	2026-06-11T18:05:24+03:30	book done
+283e6d2cd7af9a7b101bb60a15faab1b266249c6	2026-06-09T17:14:29+03:30	Initial workshop project

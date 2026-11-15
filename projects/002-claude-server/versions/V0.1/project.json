@@ -1,0 +1,10 @@
+{
+  "id": "002-claude-server",
+  "title": "کامپیوترت را ببند. به کارت برگرد.",
+  "kind": "post",
+  "source": "site",
+  "version": "0.1",
+  "publish": true,
+  "public_path": "002-claude-server",
+  "archive": "claude-server-v0.1.zip"
+}

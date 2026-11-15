@@ -1,0 +1,27 @@
+{
+  "id": "001-workshop-7",
+  "title": "Workshop 7 — reusable methods for repeated work",
+  "kind": "post",
+  "source": "site",
+  "public_path": "001-workshop-7",
+  "version": "0.1.1",
+  "publish": true,
+  "archive": "workshop-7-v0.1.1.zip",
+  "archive_aliases": [
+    "workshop-7-v0.1.zip"
+  ],
+  "materials": [
+    {
+      "source": "materials/moom-0.1.zip",
+      "target": "downloads/moom-0.1.zip"
+    },
+    {
+      "source": "materials/handbook-0.1.html",
+      "target": "downloads/handbook-0.1.html"
+    }
+  ],
+  "build_command": [
+    "python3",
+    "../../../workshops/public-workflow/tools/package.py"
+  ]
+}

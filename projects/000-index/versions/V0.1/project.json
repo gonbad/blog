@@ -1,0 +1,9 @@
+{
+  "id": "000-index",
+  "title": "Workshop journal index",
+  "kind": "index",
+  "source": "site",
+  "public_path": "",
+  "version": "0.1",
+  "publish": true
+}

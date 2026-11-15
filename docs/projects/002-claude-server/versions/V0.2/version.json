@@ -1,0 +1,16 @@
+{
+  "version": "0.2",
+  "previous": "0.1",
+  "status": "published",
+  "workflow_at_start": "docs/job/versions/0.4.1/workflow.json",
+  "change": "Apply the owner-provided V0.2 transcription after diagnosing and correcting source/actor drift",
+  "change_input": {
+    "file": "docs/projects/002-claude-server/versions/V0.2/01-transcription.md",
+    "entry_mode": "owner-prepared",
+    "sha256": "98145a0973e9a389ac6f85493d5479c0511599f2ac588ca1234452d7e1336e99"
+  },
+  "created_at": "2026-11-09T16:30:16+00:00",
+  "published_release": "7.4.1-32b147ce732e",
+  "workflow_at_publication": "0.5",
+  "publication_evidence": "docs/workspace/versions/V0/V0.3/release/public-verification.json"
+}

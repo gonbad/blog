@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "workflow": "docs/job/versions/0.4/workflow.json",
+  "at": "2026-11-09T13:43:41+00:00",
+  "sha256": {
+    "README.md": "bb2322e28991f1ba40670cd960eb0b7eefd9aa81ef116ab4ac140c466921cfeb",
+    "inputs/brief.md": "9b73575c158aa5b12deb6b509ec43e428ba1c2dd4fe16f0362c3f0941cd40e33",
+    "project.json": "edb7fad27a86da7c3e5d06bd8bc93d0dd62a871ef5b5db98e2a324979c4b10cf",
+    "roadmap.md": "33dbae024ed0e4c3e7e81705fdd1ca718b7f88bfb489b7a3a8313ec247873356",
+    "site/assets/fonts/Estedad-400.ttf": "350bb4afb18fb09f0e74925ad04c710739b289feffe83066830aa14f6dbc4f6f",
+    "site/assets/fonts/Estedad-800.ttf": "7386239ad1f239ec8c2c039db8f371ad31ce25dd46e60535bded3d5436566711",
+    "site/assets/fonts/OFL.txt": "0417da48fc44780476e074f02f8400028ee704b3e222be5855fa6d960b9200ca",
+    "site/assets/index.css": "205e616f6b5dcca74920e977645b21010c5a17cea4a7e054e64e719fe7faa500",
+    "site/assets/mark.svg": "ed6baa147100646fb20166fc5619dc7166161bd917b81ec8609f5c6a5ac7435b",
+    "site/index.html": "dab9a5e1bf8a0b0c80e90025a9ecc369f25d92921c2dde172ca1c90ee62ec6c1"
+  }
+}

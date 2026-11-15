@@ -1,0 +1,158 @@
+const selectedProject = process.env.MOOM_PROJECT;
+if (selectedProject === '002-claude-server') {
+  require(require('node:path').join(process.env.MOOM_BUNDLE || process.env.MOOM_WORKSPACE || require('node:path').resolve(__dirname, '..'), 'tools/verify-server.cjs'));
+} else {
+if (selectedProject && !['000-index', '001-workshop-7'].includes(selectedProject)) {
+  throw new Error(`No acceptance checks registered for ${selectedProject}; add that project's checks before verification.`);
+}
+/* Browser acceptance checks. PLAYWRIGHT_MODULE may point to a local installation.
+   Start the static preview first; BLOG_URL defaults to http://127.0.0.1:4173. */
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const { execFileSync } = require('node:child_process');
+const { pathToFileURL } = require('node:url');
+const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const root = process.env.MOOM_WORKSPACE || path.resolve(__dirname, '..');
+const url = process.env.BLOG_URL || 'http://127.0.0.1:4173';
+const out = process.env.REVIEW_DIR || path.join(os.tmpdir(), 'workshop-blog-review');
+fs.mkdirSync(out, { recursive: true });
+
+(async () => {
+  const browser = await chromium.launch({ executablePath: process.env.CHROME_BIN || '/usr/bin/google-chrome', args: ['--no-sandbox'] });
+  const errors = [], failed = [], checks = [];
+  const context = await browser.newContext({ viewport: { width: 1440, height: 960 }, reducedMotion: 'reduce' });
+  const page = await context.newPage();
+  page.on('pageerror', error => errors.push(String(error)));
+  page.on('response', response => { if (response.status() >= 400) failed.push(`${response.status()} ${response.url()}`); });
+  try {
+    assert.equal((await page.goto(url)).status(), 200);
+    await page.evaluate(() => document.fonts.ready);
+    assert.ok(await page.locator('.post-card').count() >= 1);
+    await page.screenshot({ path: path.join(out, 'journal-desktop.png'), fullPage: true });
+    await page.locator('.read-post[href="001-workshop-7/"]').click();
+    await page.evaluate(() => document.fonts.ready);
+    assert.equal(await page.locator('.slide').count(), 8);
+    assert.equal(await page.locator('.segment[aria-current="step"]').count(), 1);
+    await page.screenshot({ path: path.join(out, 'post-desktop.png') });
+    await page.emulateMedia({ reducedMotion: 'no-preference' });
+    await page.locator('.segment[href="#your-task"]').click();
+    await page.waitForFunction(() => document.querySelector('#slide-title').textContent === 'کارِ شما');
+    await page.waitForFunction(() => Math.abs(document.querySelector('#your-task').getBoundingClientRect().top) < 5);
+    assert.equal(await page.locator('.segment[href="#the-repeat"]').evaluate(el => el.classList.contains('is-visited')), false, 'A direct jump must not mark a skipped slide visited');
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.locator('[data-example="translation"]').click();
+    assert.match(await page.locator('#example-input-title').textContent(), /فصل/);
+    await page.keyboard.press('ArrowLeft');
+    assert.equal(await page.locator('[data-example="content"]').getAttribute('aria-selected'), 'true');
+    await page.keyboard.press('ArrowDown');
+    await page.waitForFunction(() => document.querySelector('#slide-title').textContent === 'از نمونه به روش');
+    await page.keyboard.press('ArrowUp');
+    await page.waitForFunction(() => document.querySelector('#slide-title').textContent === 'کارِ شما');
+    await page.locator('.segment[href="#your-decisions"]').click();
+    await page.locator('[data-decision="separate"]').click();
+    assert.match(await page.locator('#decision-result').textContent(), /دو فایل جدا/);
+    await page.locator('[data-decision="together"]').click();
+    assert.match(await page.locator('#decision-result').textContent(), /همان فایل/);
+    await page.locator('[data-decision="separate"]').focus();
+    await page.keyboard.press('Space');
+    await page.waitForFunction(() => document.querySelector('#decision-result').textContent.includes('دو فایل جدا'));
+    assert.equal(await page.locator('#slide-title').textContent(), 'تصمیم با شما');
+    await page.keyboard.press('ArrowDown');
+    await page.waitForFunction(() => document.querySelector('#slide-title').textContent === 'چه می‌ماند؟');
+    checks.push('examples, native tab keys and Space activation, decision buttons followed by vertical navigation, direct seeking');
+    await page.locator('#reading-toggle').click();
+    assert.equal(await page.locator('#reading-toggle').getAttribute('aria-pressed'), 'true');
+    await page.locator('#reading-toggle').click();
+    await page.locator('.segment[href="#intro"]').click();
+    await page.locator('#intro-title').focus();
+    await page.keyboard.press('ArrowDown');
+    await page.waitForFunction(() => document.querySelector('#slide-title').textContent === 'کارِ تکراری');
+    await page.locator('#next-slide').click();
+    await page.keyboard.press('ArrowDown');
+    await page.waitForFunction(() => document.querySelector('#slide-title').textContent === 'از نمونه به روش');
+    await page.keyboard.press('ArrowUp');
+    await page.waitForFunction(() => document.querySelector('#slide-title').textContent === 'کارِ شما');
+    await page.evaluate(() => {
+      const editor = document.createElement('textarea');
+      editor.id = 'keyboard-editor-check';
+      editor.style.cssText = 'position:fixed;top:100px;left:10px;z-index:50';
+      document.body.append(editor);
+    });
+    await page.locator('#keyboard-editor-check').fill('First line\nSecond line');
+    await page.keyboard.press('ArrowUp');
+    assert.equal(await page.locator('#slide-title').textContent(), 'کارِ شما');
+    await page.evaluate(() => document.querySelector('#keyboard-editor-check').remove());
+    checks.push('reading mode, Up/Down after focused navigation buttons, native text editing');
+    for (const viewport of [{ width: 1440, height: 960 }, { width: 1366, height: 768 }, { width: 390, height: 844 }, { width: 320, height: 640 }]) {
+      await page.setViewportSize(viewport);
+      for (const id of ['intro', 'your-task', 'your-decisions', 'two-days', 'start-small']) {
+        await page.locator(`.segment[href="#${id}"]`).click();
+        await page.evaluate(() => document.fonts.ready);
+        const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+        assert.ok(overflow <= 1, `Horizontal overflow at ${viewport.width}, ${id}: ${overflow}`);
+      }
+      await page.locator('.segment[href="#intro"]').click();
+      await page.screenshot({ path: path.join(out, `post-${viewport.width}.png`), fullPage: viewport.width < 400 });
+      checks.push(`layout at ${viewport.width}×${viewport.height}`);
+    }
+    const calendar = await context.request.get(`${url}/001-workshop-7/workshop-7.ics`);
+    const calendarText = await calendar.text();
+    assert.match(calendarText, /DTSTART;VALUE=DATE:20261119/);
+    assert.match(calendarText, /DTEND;VALUE=DATE:20261121/);
+    assert.ok(calendarText.split('\r\n').every(line => Buffer.byteLength(line) <= 75));
+    for (const name of ['moom-0.1.zip', 'handbook-0.1.html']) {
+      const material = await context.request.get(`${url}/001-workshop-7/downloads/${name}`);
+      assert.equal(material.status(), 200, `Working material download: ${name}`);
+    }
+    await page.locator('.segment[href="#start-small"]').click();
+    await Promise.all([page.waitForEvent('download'), page.locator('a[href="workshop-7.ics"]').click()]);
+    await page.keyboard.press('ArrowUp');
+    await page.waitForFunction(() => document.querySelector('#slide-title').textContent === 'دو روز کارگاه');
+    checks.push('Up after clicking a download link, real Moom and handbook downloads');
+    const work = fs.mkdtempSync(path.join(os.tmpdir(), 'workshop-offline-'));
+    const extracted = path.join(work, 'آزمون آفلاین با فاصله');
+    fs.mkdirSync(extracted);
+    const manifest = JSON.parse(fs.readFileSync(path.join(root, 'dist', 'release.json'), 'utf8'));
+    const archive = path.join(root, 'dist', manifest.projects['001-workshop-7'].targets.offline);
+    execFileSync('python3', ['-m', 'zipfile', '-e', archive, extracted]);
+    const offline = await browser.newContext({ offline: true, viewport: { width: 1366, height: 900 }, reducedMotion: 'reduce' });
+    const local = await offline.newPage();
+    const remote = [];
+    local.on('pageerror', error => errors.push(String(error)));
+    local.on('request', request => { if (/^https?:/.test(request.url())) remote.push(request.url()); });
+    await local.goto(pathToFileURL(path.join(extracted, 'index.html')).href);
+    await local.evaluate(() => document.fonts.ready);
+    assert.equal(await local.locator('.offline-download').isVisible(), false);
+    await local.locator('.segment[href="#your-task"]').click();
+    await local.locator('[data-example="deck"]').click();
+    assert.match(await local.locator('#example-input-title').textContent(), /ارائه/);
+    await local.locator('.segment[href="#start-small"]').click();
+    await local.locator('#copy-brief').click();
+    await local.waitForFunction(() => /کپی شد|متن انتخاب شد/.test(document.querySelector('#copy-status').textContent));
+    assert.match(await local.locator('#copy-status').textContent(), /کپی شد|متن انتخاب شد/);
+    await local.keyboard.press('ArrowUp');
+    await local.waitForFunction(() => document.querySelector('#slide-title').textContent === 'دو روز کارگاه');
+    assert.ok(fs.existsSync(path.join(extracted, 'downloads/moom-0.1.zip')));
+    assert.ok(fs.existsSync(path.join(extracted, 'downloads/handbook-0.1.html')));
+    assert.deepEqual(remote, [], 'Offline runtime must make no network requests');
+    await local.screenshot({ path: path.join(out, 'offline.png') });
+    await local.goto(pathToFileURL(path.join(extracted, 'downloads/handbook-0.1.html')).href);
+    await local.evaluate(() => document.fonts.ready);
+    assert.equal(await local.locator('.chapter').count(), 5);
+    await local.locator('nav a').nth(1).click();
+    assert.match(local.url(), /#chapter-01-first-example$/);
+    assert.deepEqual(remote, []);
+    await offline.close();
+    fs.rmSync(work, { recursive: true });
+    checks.push('calendar dates and UTF-8 line folding', 'ZIP extraction in Persian/space path, offline navigation, interactions and clipboard fallback');
+    assert.deepEqual(errors, []);
+    assert.deepEqual(failed, []);
+    const result = { passed: true, checks, browserErrors: errors, failedRequests: failed, screenshots: out };
+    fs.writeFileSync(path.join(out, 'checks.json'), JSON.stringify(result, null, 2) + '\n');
+    console.log(JSON.stringify(result, null, 2));
+  } finally { await browser.close(); }
+})().catch(error => { console.error(error); process.exitCode = 1; });
+
+}

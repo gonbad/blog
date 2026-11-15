@@ -1,0 +1,10 @@
+{
+  "name": "002-claude-server-checks",
+  "private": true,
+  "scripts": {
+    "check": "node verify-server.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0"
+  }
+}

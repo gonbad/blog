@@ -1,0 +1,10 @@
+{
+  "version": "6.2",
+  "status": "published",
+  "change_input": {
+    "file": "docs/projects/003-brah-paper/versions/V6/V6.2/01-input.md",
+    "entry_mode": "owner-prepared",
+    "sha256": "965f87ed9fa0a4eaec4aebd2670d3d563631d26c2d7dfce151348bd1ca60c872"
+  },
+  "created_at": "2026-11-10T18:50:00+00:00"
+}

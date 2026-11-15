@@ -1,0 +1,36 @@
+{
+  "id": "000-index",
+  "title": "Workshop journal index",
+  "version": "0.1",
+  "workflow": "docs/job/versions/0.4/workflow.json",
+  "created_at": "2026-11-09T11:17:18+00:00",
+  "milestones": {},
+  "issues": [],
+  "migrations": [
+    {
+      "from": "docs/job/workflow.json",
+      "to": "docs/job/versions/0.1/workflow.json",
+      "affected": [],
+      "note": "Adopt the actual extracted publishing method",
+      "at": "2026-11-09T11:37:38+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.1/workflow.json",
+      "to": "docs/job/versions/0.4/workflow.json",
+      "affected": [
+        "blog-brief",
+        "blog-build",
+        "blog-check",
+        "blog-content",
+        "blog-package",
+        "blog-publish",
+        "blog-sample",
+        "blog-story",
+        "blog-style"
+      ],
+      "note": "Use the snapshot-aware publisher for the index update",
+      "at": "2026-11-09T13:43:41+00:00"
+    }
+  ],
+  "docs": "docs/projects/000-index/versions/V0.1"
+}

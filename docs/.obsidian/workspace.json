@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "e66e490a0c622df9",
+    "type": "split",
+    "children": [
+      {
+        "id": "1bbaf3af9defb8eb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4a546908cd898e50",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/007-islamic-astronomy/versions/0.1/08-issue-tool6-full-moon-all-night.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "08-issue-tool6-full-moon-all-night"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0f3e0745eb8b7378",
+    "type": "split",
+    "children": [
+      {
+        "id": "018d651c4f271fd0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3bd47ac33a59ea35",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5ac1c9cd97d724d1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "fec3138535d643ea",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "eb791ea30a2971d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "0a0bada1b24d616a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eb06a85ff4af53c4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "projects/007-islamic-astronomy/versions/0.1/08-issue-tool6-full-moon-all-night.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "bfc90870ed398d61",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "projects/007-islamic-astronomy/versions/0.1/08-issue-tool6-full-moon-all-night.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "911fa9c131eb3855",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "07429982589ca6a5",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "faab6f865e01a016",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "projects/007-islamic-astronomy/versions/0.1/08-issue-tool6-full-moon-all-night.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "4a546908cd898e50",
+  "lastOpenFiles": [
+    "kandoo/versions/0.6/01-delivery-verification.md",
+    "projects/007-islamic-astronomy/versions/0.1/09-shared-policy-verification.md",
+    "kandoo/versions/0.6/release/deployment.json",
+    "kandoo/versions/0.6/release/deployment-3237b82bb3e7148b30ba9834bb21700983338e91b5bac6315d17a6e8152270e6.json",
+    "kandoo/versions/0.6/release",
+    "projects/007-islamic-astronomy/living/sources.md",
+    "kandoo/versions/0.6/00-iteration-input.md",
+    "kandoo/versions/0.6",
+    "kandoo/maintenance.md",
+    "projects/007-islamic-astronomy/versions/0.1/deploy-notes.md",
+    "kandoo/versions/0.5/release/deployment.json",
+    "kandoo/versions/0.5/release/deployment-dd47f91d761e3c3817053e55559bd3531f59ff2d1220f59b5b4ec7c827f3c4d0.json",
+    "kandoo/versions/0.5/release",
+    "projects/007-islamic-astronomy/living/publication.md",
+    "projects/007-islamic-astronomy/versions/0.1/07-issue-interactive-tools-and-lunar-svg.md",
+    "projects/007-islamic-astronomy/versions/0.1/08-issue-tool6-full-moon-all-night.md",
+    "projects/007-islamic-astronomy/versions/0.1/06-issue-widget2-azimuth-and-time.md",
+    "projects/007-islamic-astronomy/living/layout.md",
+    "projects/007-islamic-astronomy/versions/0.1/05-build-verification.md",
+    "projects/007-islamic-astronomy/living/content.md",
+    "projects/007-islamic-astronomy/versions/0.1/04-layout-review.md",
+    "projects/007-islamic-astronomy/versions/0.1/03-content-review.md",
+    "projects/007-islamic-astronomy/living/roadmap.md",
+    "projects/007-islamic-astronomy/living/brief.md",
+    "projects/007-islamic-astronomy/versions/0.1/claim-source-map.md",
+    "projects/007-islamic-astronomy/living/story.md",
+    "projects/007-islamic-astronomy/versions/0.1/02-questions.md",
+    "projects/007-islamic-astronomy/living/idea.md",
+    "projects/007-new-post/versions/0.1/01-questions.md",
+    "projects/007-islamic-astronomy/versions/0.1/channel-notes.md",
+    "projects/007-islamic-astronomy/versions/0.1/00-idea-input.md",
+    "projects/007-islamic-astronomy/versions/0.1/01-questions.md",
+    "projects/007-islamic-astronomy/versions/0.1/01-channel-posts.md",
+    "projects/007-islamic-astronomy/versions/0.1",
+    "projects/007-islamic-astronomy/versions",
+    "projects/007-islamic-astronomy/living"
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "checked_date": "2026-11-09",
+  "scope": "VPS Market public international country offerings; not a global market comparison",
+  "rows": [
+    {
+      "country": "germany",
+      "source": "https://vpsmarket.org/vps-germany/",
+      "plan": "DE 4",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 30,
+      "advertised_toman_month": 1143000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=2"
+    },
+    {
+      "country": "france",
+      "source": "https://vpsmarket.org/vps-france/",
+      "plan": "FR 4",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 30,
+      "advertised_toman_month": 1143000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=7"
+    },
+    {
+      "country": "canada",
+      "source": "https://vpsmarket.org/vps-canada/",
+      "plan": "CA 4",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 30,
+      "advertised_toman_month": 1143000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=23"
+    },
+    {
+      "country": "uk",
+      "source": "https://vpsmarket.org/vps-uk/",
+      "plan": "UK 4",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 30,
+      "advertised_toman_month": 1187000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=11"
+    },
+    {
+      "country": "netherlands",
+      "source": "https://vpsmarket.org/vps-netherlands/",
+      "plan": "NL 4",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 30,
+      "advertised_toman_month": 1197000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=31"
+    },
+    {
+      "country": "usa",
+      "source": "https://vpsmarket.org/vps-usa/",
+      "plan": "US 4",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 30,
+      "advertised_toman_month": 1252000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=27"
+    },
+    {
+      "country": "uae",
+      "source": "https://vpsmarket.org/vps-uae/",
+      "plan": "UAE 4 PRO",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 25,
+      "advertised_toman_month": 1252000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=156"
+    },
+    {
+      "country": "spain",
+      "source": "https://vpsmarket.org/vps-spain/",
+      "plan": "SP 4",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 30,
+      "advertised_toman_month": 1296000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=181"
+    },
+    {
+      "country": "turkey",
+      "source": "https://vpsmarket.org/vps-turkey/",
+      "plan": "TR 4",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 30,
+      "advertised_toman_month": 1296000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=19"
+    },
+    {
+      "country": "italy",
+      "source": "https://vpsmarket.org/vps-italy/",
+      "plan": "IT 4",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 30,
+      "advertised_toman_month": 1300000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=224"
+    },
+    {
+      "country": "switzerland",
+      "source": "https://vpsmarket.org/vps-switzerland/",
+      "plan": "SW 4",
+      "ram_gb": 4,
+      "cpu": 2,
+      "disk_gb": 30,
+      "advertised_toman_month": 1360000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=232"
+    },
+    {
+      "country": "poland",
+      "source": "https://vpsmarket.org/vps-poland/",
+      "plan": "PL 16",
+      "ram_gb": 16,
+      "cpu": 4,
+      "disk_gb": 50,
+      "advertised_toman_month": 2797000,
+      "product_url": "https://my.vpsmarket.org/cart.php?a=add&pid=251"
+    }
+  ],
+  "poland_exclusion": "PL4 has only 1 CPU; the displayed PL8 disk was 1 GB, so it did not establish disk eligibility.",
+  "selected_configuration": {
+    "source": "https://my.vpsmarket.org/cart.php?a=add&pid=2",
+    "captured_at": "2026-11-09T13:02:14.669Z",
+    "product": "DE/VPS/4GB/H/KVM",
+    "prices": "11,434,880 ریال ماهانه\n34,304,640 ریال سه ماهه\n68,609,280 ریال شش ماهه\n137,218,560 ریال سالانه",
+    "os": "ubuntu-24.04-x86_64",
+    "order_submitted": false
+  },
+  "screenshots": {
+    "vpsmarket-de4-2026-11-09.png": "61b967e69277e157f9d37d39ed584af94601766383d39f739432995c9ae487b7",
+    "vpsmarket-de4-ubuntu-2026-11-09.png": "6de56116ed983de8153dc60f863d4e0060a6098c7e484ba8edcf59cacfbba06f"
+  },
+  "checkout_or_payment_submitted": false
+}

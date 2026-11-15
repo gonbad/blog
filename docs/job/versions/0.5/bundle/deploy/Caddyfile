@@ -1,0 +1,16 @@
+{
+    admin off
+    auto_https off
+}
+
+:8014 {
+    bind 10.0.1.1
+    root * /srv/workshop-blog/current
+    encode zstd gzip
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy strict-origin-when-cross-origin
+        Cache-Control "no-cache"
+    }
+    file_server
+}

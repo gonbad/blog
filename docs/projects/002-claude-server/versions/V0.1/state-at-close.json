@@ -1,0 +1,167 @@
+{
+  "id": "002-claude-server",
+  "title": "Claude Code on your own server",
+  "version": "0.1",
+  "workflow": "docs/job/versions/0.4.1/workflow.json",
+  "created_at": "2026-11-09T12:08:19+00:00",
+  "milestones": {
+    "blog-brief": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.1/brief.md",
+      "sha256": "f75be415af75541d9da9ea01e5778cd19fc1d9ce20fac43472b0a76d171d2f57",
+      "evidence": null,
+      "at": "2026-11-09T13:47:19+00:00"
+    },
+    "blog-story": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.1/story.md",
+      "sha256": "8180a571e832cbbd78b927b8b2fe0c8cfe4eb58b9f5d076a45d708509a216567",
+      "evidence": null,
+      "at": "2026-11-09T13:47:19+00:00"
+    },
+    "blog-content": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.1/claims.md",
+      "sha256": "10125ff6fe4a7b6124c310f857453fc4d8921590de22d2ae07e1ef8b650bb975",
+      "evidence": null,
+      "at": "2026-11-09T13:47:19+00:00"
+    },
+    "blog-style": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.1/style.md",
+      "sha256": "5a664466c84d38072487e3391874039c4c177d01ae087f0eeca751341b250c05",
+      "evidence": null,
+      "at": "2026-11-09T13:47:19+00:00"
+    },
+    "blog-sample": {
+      "state": "ready",
+      "artifact": "projects/002-claude-server/site",
+      "sha256": "05043677c48718e68ec8677e0bd3b5722cd93f4ec0fc26dbc4d5d11016599ad0",
+      "evidence": null,
+      "at": "2026-11-09T13:47:19+00:00"
+    },
+    "blog-build": {
+      "state": "ready",
+      "artifact": "projects/002-claude-server/site",
+      "sha256": "05043677c48718e68ec8677e0bd3b5722cd93f4ec0fc26dbc4d5d11016599ad0",
+      "evidence": null,
+      "at": "2026-11-09T13:47:19+00:00"
+    },
+    "blog-check": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.1/releases/0.1/verification.json",
+      "sha256": "6a50c4121cc0c34cd7bc831b781917be54d098c0d1ec2639806f716571d536b3",
+      "evidence": null,
+      "at": "2026-11-09T13:51:12+00:00"
+    },
+    "blog-package": {
+      "state": "ready",
+      "artifact": "dist/002-claude-server/downloads/claude-server-v0.1.zip",
+      "sha256": "8aa84b7dbdc5b56fcd4a8207baa40d855ac2f7d22537928bedf0fd69b6b3a3d7",
+      "evidence": null,
+      "at": "2026-11-09T13:51:13+00:00"
+    },
+    "blog-publish": {
+      "state": "ready",
+      "artifact": "docs/projects/002-claude-server/versions/V0.1/releases/0.1/deployment.json",
+      "sha256": "0d2ea98c91e29bbc9a61862c415ba8fa60d3b8f6d4c46fc9636e7ece8780426e",
+      "evidence": null,
+      "at": "2026-11-09T13:51:13+00:00"
+    }
+  },
+  "issues": [],
+  "pending_review": {
+    "round": 2,
+    "state": "answered",
+    "file": "docs/projects/002-claude-server/versions/V0.1/002-review.md",
+    "before": "blog-content",
+    "created_at": "2026-11-09T12:59:20+00:00",
+    "submission": "Owner submitted round 002 and explicitly delegates blank answers as soft project choices.",
+    "sha256": "6d158f9ae01a3e0ffcc53c1118cab684026a8b1c46e79862078d359de5d1d464"
+  },
+  "migrations": [
+    {
+      "from": "docs/job/versions/0.1/workflow.json",
+      "to": "docs/job/versions/0.2/workflow.json",
+      "affected": [
+        "blog-brief",
+        "blog-build",
+        "blog-check",
+        "blog-content",
+        "blog-package",
+        "blog-publish",
+        "blog-sample",
+        "blog-story",
+        "blog-style"
+      ],
+      "note": "Apply the owner-requested file review procedure to post 002; wait for saved answers before implementation",
+      "at": "2026-11-09T12:16:38+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.2/workflow.json",
+      "to": "docs/job/versions/0.3/workflow.json",
+      "affected": [
+        "blog-brief",
+        "blog-build",
+        "blog-check",
+        "blog-content",
+        "blog-package",
+        "blog-publish",
+        "blog-sample",
+        "blog-story",
+        "blog-style"
+      ],
+      "note": "Use numbered review rounds, separate question/decision formats, versioned documents, project roadmaps and snapshot-aware builds for post 002",
+      "at": "2026-11-09T13:05:21+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.3/workflow.json",
+      "to": "docs/job/versions/0.4/workflow.json",
+      "affected": [
+        "blog-brief",
+        "blog-build",
+        "blog-check",
+        "blog-content",
+        "blog-package",
+        "blog-publish",
+        "blog-sample",
+        "blog-story",
+        "blog-style"
+      ],
+      "note": "Apply submitted-review delegation and selected-post QA/deployment corrections",
+      "at": "2026-11-09T13:43:41+00:00"
+    },
+    {
+      "from": "docs/job/versions/0.4/workflow.json",
+      "to": "docs/job/versions/0.4.1/workflow.json",
+      "affected": [
+        "blog-check",
+        "blog-package",
+        "blog-publish"
+      ],
+      "note": "Reject unknown-project acceptance dispatch instead of certifying a different post",
+      "at": "2026-11-09T13:49:18+00:00"
+    }
+  ],
+  "docs": "docs/projects/002-claude-server/versions/V0.1",
+  "review_history": [
+    {
+      "state": "answered",
+      "file": "docs/projects/002-claude-server/versions/V0.1/001-review.md",
+      "before": "blog-content",
+      "reason": "Owner requested file answers before implementation; all proposals remain unconfirmed.",
+      "round": 1,
+      "submission": "Owner stated the file was answered; read saved answers and COMMENTs on 2026-11-09",
+      "sha256": "2c3b637520d8825b70f316f923c34e9e68c15b86d92188a5e6e3da1bf4749734"
+    },
+    {
+      "round": 2,
+      "state": "answered",
+      "file": "docs/projects/002-claude-server/versions/V0.1/002-review.md",
+      "before": "blog-content",
+      "created_at": "2026-11-09T12:59:20+00:00",
+      "submission": "Owner submitted round 002 and explicitly delegates blank answers as soft project choices.",
+      "sha256": "6d158f9ae01a3e0ffcc53c1118cab684026a8b1c46e79862078d359de5d1d464"
+    }
+  ]
+}

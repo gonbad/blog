@@ -1,0 +1,10 @@
+{
+  "version": "0.3.0",
+  "status": "draft",
+  "change_input": {
+    "file": "docs/workspace/versions/V0/V0.3/01-request.md",
+    "entry_mode": "agent-assisted",
+    "sha256": "ba458f5c8c7cf9a7df5f1ff2966fd18e75689f993d423b576ec0a98596385322"
+  },
+  "created_at": "2026-11-11T04:57:00+00:00"
+}
