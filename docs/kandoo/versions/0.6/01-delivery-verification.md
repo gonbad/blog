@@ -32,12 +32,15 @@ Immutable receipt:
 
 ## Git backup
 
-The public remote `https://github.com/gonbad/blog.git` exists and was confirmed empty
-before the snapshot commit. The snapshot contains the independent Journal source and
-public-safe working documentation. `.gitignore` excludes `docs/**/secrets/`, local
-credential files, build outputs, previews, caches and rollback history. The current
-Workshop origin commit that owned the moved tree is
-`1023c9b62df555ac49504847519633fc3a0165ef`.
+The public remote `https://github.com/gonbad/blog.git` was confirmed empty before the
+snapshot commit. It now contains the independent Journal source and public-safe working
+documentation. `.gitignore` excludes `docs/**/secrets/`, local credential files, build
+outputs, previews, caches and rollback history. The initial root commit
+`904e11b1bb2bfa1c402c82f79dc62981852958bf` contains 1,105 files. GitHub's repository
+API returned the public `main` commit and its README after the push. Local `main` tracks
+`origin/main`.
 
-The initial Journal snapshot commit and remote verification will be recorded here after
-the push completes. Public source backup is separate from website deployment.
+The Workshop origin commit that owned the moved tree is
+`1023c9b62df555ac49504847519633fc3a0165ef`. Its history was not copied or rewritten;
+this Journal begins with the reviewed current snapshot. Public source backup is separate
+from website deployment.

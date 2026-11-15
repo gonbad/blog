@@ -48,8 +48,9 @@ version and local-delivery state remain as shown above.
 Current input: `docs/kandoo/versions/0.6/00-iteration-input.md`.
 Job revision 0.5 is installed; the table above preserves Project 007's completed
 0.4 execution. No article ZIP is selected under the new shared policy. Both hostnames,
-TLS, the revised content release and all 84 artifact hashes are verified. The initial
-public Git snapshot push is the remaining backup step. Source inspection, browser
+TLS, the revised content release, all 84 artifact hashes and the public Git backup are
+verified. The Journal snapshot is commit
+`904e11b1bb2bfa1c402c82f79dc62981852958bf` on `origin/main`. Source inspection, browser
 verification, human acceptance and public deployment remain separate evidence. The
 owner must reopen the AI host to load revised commands.
 
