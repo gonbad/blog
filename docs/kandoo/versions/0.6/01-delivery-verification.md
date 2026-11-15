@@ -44,3 +44,16 @@ The Workshop origin commit that owned the moved tree is
 `1023c9b62df555ac49504847519633fc3a0165ef`. Its history was not copied or rewritten;
 this Journal begins with the reviewed current snapshot. Public source backup is separate
 from website deployment.
+
+## Pinned Moom material
+
+The Handbook Project continues to distribute the previously imported
+`moom-0.6.0.zip` with SHA-256
+`511f00242facf5df8f5a4983889acfe3ca66425ab36024e069913ebfa5781bbf`. Its material
+record identifies the source as an untagged candidate, not an official Moom release.
+Packaging the current Moom working tree produces a different archive hash
+(`14fd6565d8153a80e478c6b04e4c31202962b8f378393dce96cef6114763839f`), so the existing
+file was preserved and not silently replaced under the same version name. The
+configured `gonbad/moom` remote is protected from pushes by the Moom setup command; no
+alternative participant-owned Moom release remote is configured. The Journal's
+intentional download remains the pinned candidate shown in its materials record.
